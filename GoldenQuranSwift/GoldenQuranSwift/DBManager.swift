@@ -21,12 +21,11 @@ class DBManager: NSObject {
     func getDefaultMus7afs()->[Mus7af]? {
         
         do {
-            dbQueue = try DatabaseQueue(path: Constants.db.defaultMus7afListDBPath())
+            dbQueue = try DatabaseQueue(path: Constants.db.defaultMus7afListDBPath)
         } catch {
             print("could not create/ open DB")
             return nil
         }
-        
         
         var mus7afList:[Mus7af] = []
         do {

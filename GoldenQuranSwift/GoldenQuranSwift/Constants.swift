@@ -18,8 +18,8 @@ struct Constants {
     
     struct db {
         static let defaultMus7afList = "Mus7af"
-        static func defaultMus7afListDBPath() -> String {
-            return  Bundle.main.path(forResource: Constants.db.defaultMus7afList, ofType: "db")!
+        static var defaultMus7afListDBPath:String{
+            get{ return  Bundle.main.path(forResource: Constants.db.defaultMus7afList, ofType: "db")!}
         }
     }
     

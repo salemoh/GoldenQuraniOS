@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */; };
+		17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */; };
+		17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */; };
+		17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7B1E5CC3BF003CC179 /* GradientView.swift */; };
+		17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */; };
 		8118FE823460C8039945042C /* Pods_GoldenQuranSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */; };
 		97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */ = {isa = PBXBuildFile; fileRef = 97318D3D1E5A4D0500A4463B /* GoldenQuranRes */; };
 		976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A893A1E50E81700697DD2 /* AppDelegate.swift */; };
-		976A893D1E50E81700697DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A893C1E50E81700697DD2 /* ViewController.swift */; };
 		976A89401E50E81700697DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A893E1E50E81700697DD2 /* Main.storyboard */; };
 		976A89421E50E81700697DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976A89411E50E81700697DD2 /* Assets.xcassets */; };
 		976A89451E50E81700697DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A89431E50E81700697DD2 /* LaunchScreen.storyboard */; };
@@ -23,12 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafViewController.swift; sourceTree = "<group>"; };
+		17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafCollectionViewCell.swift; sourceTree = "<group>"; };
+		17C13D7B1E5CC3BF003CC179 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenQuranSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5684535C192D348D0F469C4A /* Pods-GoldenQuranSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenQuranSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift.release.xcconfig"; sourceTree = "<group>"; };
 		97318D3D1E5A4D0500A4463B /* GoldenQuranRes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoldenQuranRes; sourceTree = "<group>"; };
 		976A89371E50E81700697DD2 /* GoldenQuranSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenQuranSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		976A893A1E50E81700697DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		976A893C1E50E81700697DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		976A893F1E50E81700697DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		976A89411E50E81700697DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976A89441E50E81700697DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +62,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17C13D771E5CC27E003CC179 /* AddMushafViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */,
+				17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */,
+			);
+			name = AddMushafViewController;
+			sourceTree = "<group>";
+		};
+		17C13D7A1E5CC39D003CC179 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				17C13D7B1E5CC3BF003CC179 /* GradientView.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		17C13D7D1E5CC5A0003CC179 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */,
+				170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
 		976A892E1E50E81700697DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +111,8 @@
 			children = (
 				976A893A1E50E81700697DD2 /* AppDelegate.swift */,
 				976A89561E50F07A00697DD2 /* Constants.swift */,
+				17C13D7D1E5CC5A0003CC179 /* Extentions */,
+				17C13D7A1E5CC39D003CC179 /* Utilities */,
 				976A89581E510AD100697DD2 /* Objects */,
 				976A894F1E50EDF300697DD2 /* Managers */,
 				976A894C1E50ED9800697DD2 /* UIStoryboards */,
@@ -100,7 +136,7 @@
 		976A894D1E50EDC300697DD2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				976A893C1E50E81700697DD2 /* ViewController.swift */,
+				17C13D771E5CC27E003CC179 /* AddMushafViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -277,11 +313,15 @@
 			files = (
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
-				976A893D1E50E81700697DD2 /* ViewController.swift in Sources */,
+				17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */,
 				976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */,
 				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
+				17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */,
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
 				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
+				17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */,
+				170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */,
+				17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
