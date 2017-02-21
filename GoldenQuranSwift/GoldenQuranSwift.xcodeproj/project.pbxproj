@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8118FE823460C8039945042C /* Pods_GoldenQuranSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */; };
+		97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */ = {isa = PBXBuildFile; fileRef = 97318D3D1E5A4D0500A4463B /* GoldenQuranRes */; };
+		976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A893A1E50E81700697DD2 /* AppDelegate.swift */; };
+		976A893D1E50E81700697DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A893C1E50E81700697DD2 /* ViewController.swift */; };
+		976A89401E50E81700697DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A893E1E50E81700697DD2 /* Main.storyboard */; };
+		976A89421E50E81700697DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976A89411E50E81700697DD2 /* Assets.xcassets */; };
+		976A89451E50E81700697DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976A89431E50E81700697DD2 /* LaunchScreen.storyboard */; };
+		976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A89501E50EE2500697DD2 /* NotificationsManager.swift */; };
+		976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A89521E50EEAA00697DD2 /* DBManager.swift */; };
+		976A89571E50F07A00697DD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A89561E50F07A00697DD2 /* Constants.swift */; };
+		976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A89591E510B0E00697DD2 /* Mus7af.swift */; };
+		976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A895B1E510B5A00697DD2 /* Mus7afManager.swift */; };
+		976A895F1E51174100697DD2 /* Mus7af.db in Resources */ = {isa = PBXBuildFile; fileRef = 976A895E1E51174100697DD2 /* Mus7af.db */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenQuranSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5684535C192D348D0F469C4A /* Pods-GoldenQuranSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenQuranSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift.release.xcconfig"; sourceTree = "<group>"; };
+		97318D3D1E5A4D0500A4463B /* GoldenQuranRes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoldenQuranRes; sourceTree = "<group>"; };
+		976A89371E50E81700697DD2 /* GoldenQuranSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenQuranSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		976A893A1E50E81700697DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		976A893C1E50E81700697DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		976A893F1E50E81700697DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		976A89411E50E81700697DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		976A89441E50E81700697DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		976A89461E50E81700697DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		976A89501E50EE2500697DD2 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		976A89521E50EEAA00697DD2 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		976A89561E50F07A00697DD2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		976A89591E510B0E00697DD2 /* Mus7af.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mus7af.swift; sourceTree = "<group>"; };
+		976A895B1E510B5A00697DD2 /* Mus7afManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mus7afManager.swift; sourceTree = "<group>"; };
+		976A895E1E51174100697DD2 /* Mus7af.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mus7af.db; sourceTree = "<group>"; };
+		C2DFA96C066E8CAB036B33C3 /* Pods-GoldenQuranSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenQuranSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		976A89341E50E81700697DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8118FE823460C8039945042C /* Pods_GoldenQuranSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		976A892E1E50E81700697DD2 = {
+			isa = PBXGroup;
+			children = (
+				976A89391E50E81700697DD2 /* GoldenQuranSwift */,
+				976A89381E50E81700697DD2 /* Products */,
+				DD50508A076B3D39AEA7C3E3 /* Pods */,
+				B179E955D6E37765A3575CF6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		976A89381E50E81700697DD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				976A89371E50E81700697DD2 /* GoldenQuranSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		976A89391E50E81700697DD2 /* GoldenQuranSwift */ = {
+			isa = PBXGroup;
+			children = (
+				976A893A1E50E81700697DD2 /* AppDelegate.swift */,
+				976A89561E50F07A00697DD2 /* Constants.swift */,
+				976A89581E510AD100697DD2 /* Objects */,
+				976A894F1E50EDF300697DD2 /* Managers */,
+				976A894C1E50ED9800697DD2 /* UIStoryboards */,
+				976A894D1E50EDC300697DD2 /* ViewControllers */,
+				976A895D1E51170E00697DD2 /* Resources */,
+				976A89411E50E81700697DD2 /* Assets.xcassets */,
+				976A89431E50E81700697DD2 /* LaunchScreen.storyboard */,
+				976A89461E50E81700697DD2 /* Info.plist */,
+			);
+			path = GoldenQuranSwift;
+			sourceTree = "<group>";
+		};
+		976A894C1E50ED9800697DD2 /* UIStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				976A893E1E50E81700697DD2 /* Main.storyboard */,
+			);
+			name = UIStoryboards;
+			sourceTree = "<group>";
+		};
+		976A894D1E50EDC300697DD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				976A893C1E50E81700697DD2 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		976A894F1E50EDF300697DD2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				976A89501E50EE2500697DD2 /* NotificationsManager.swift */,
+				976A89521E50EEAA00697DD2 /* DBManager.swift */,
+				976A895B1E510B5A00697DD2 /* Mus7afManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		976A89581E510AD100697DD2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				976A89591E510B0E00697DD2 /* Mus7af.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		976A895D1E51170E00697DD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				976A895E1E51174100697DD2 /* Mus7af.db */,
+				97318D3D1E5A4D0500A4463B /* GoldenQuranRes */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B179E955D6E37765A3575CF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD50508A076B3D39AEA7C3E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2DFA96C066E8CAB036B33C3 /* Pods-GoldenQuranSwift.debug.xcconfig */,
+				5684535C192D348D0F469C4A /* Pods-GoldenQuranSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		976A89361E50E81700697DD2 /* GoldenQuranSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 976A89491E50E81700697DD2 /* Build configuration list for PBXNativeTarget "GoldenQuranSwift" */;
+			buildPhases = (
+				4D7580484144F06DE13813D4 /* [CP] Check Pods Manifest.lock */,
+				976A89331E50E81700697DD2 /* Sources */,
+				976A89341E50E81700697DD2 /* Frameworks */,
+				976A89351E50E81700697DD2 /* Resources */,
+				60ADD95CEDD1E668EA317D85 /* [CP] Embed Pods Frameworks */,
+				62E153412F661D4115DA3896 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldenQuranSwift;
+			productName = GoldenQuranSwift;
+			productReference = 976A89371E50E81700697DD2 /* GoldenQuranSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		976A892F1E50E81700697DD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Omar Fraiwan";
+				TargetAttributes = {
+					976A89361E50E81700697DD2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = R3BUTRB464;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 976A89321E50E81700697DD2 /* Build configuration list for PBXProject "GoldenQuranSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 976A892E1E50E81700697DD2;
+			productRefGroup = 976A89381E50E81700697DD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				976A89361E50E81700697DD2 /* GoldenQuranSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		976A89351E50E81700697DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				976A895F1E51174100697DD2 /* Mus7af.db in Resources */,
+				976A89451E50E81700697DD2 /* LaunchScreen.storyboard in Resources */,
+				97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */,
+				976A89421E50E81700697DD2 /* Assets.xcassets in Resources */,
+				976A89401E50E81700697DD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D7580484144F06DE13813D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		60ADD95CEDD1E668EA317D85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62E153412F661D4115DA3896 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		976A89331E50E81700697DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
+				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
+				976A893D1E50E81700697DD2 /* ViewController.swift in Sources */,
+				976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */,
+				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
+				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
+				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		976A893E1E50E81700697DD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				976A893F1E50E81700697DD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		976A89431E50E81700697DD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				976A89441E50E81700697DD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		976A89471E50E81700697DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		976A89481E50E81700697DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		976A894A1E50E81700697DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2DFA96C066E8CAB036B33C3 /* Pods-GoldenQuranSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R3BUTRB464;
+				INFOPLIST_FILE = GoldenQuranSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoldenSoft.GoldenQuranSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		976A894B1E50E81700697DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5684535C192D348D0F469C4A /* Pods-GoldenQuranSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R3BUTRB464;
+				INFOPLIST_FILE = GoldenQuranSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GoldenSoft.GoldenQuranSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		976A89321E50E81700697DD2 /* Build configuration list for PBXProject "GoldenQuranSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				976A89471E50E81700697DD2 /* Debug */,
+				976A89481E50E81700697DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		976A89491E50E81700697DD2 /* Build configuration list for PBXNativeTarget "GoldenQuranSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				976A894A1E50E81700697DD2 /* Debug */,
+				976A894B1E50E81700697DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 976A892F1E50E81700697DD2 /* Project object */;
+}
