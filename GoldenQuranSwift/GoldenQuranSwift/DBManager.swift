@@ -36,7 +36,7 @@ class DBManager: NSObject {
                     let mus7afItem = Mus7af()
                     mus7afItem.id = row.value(named: "id")
                     mus7afItem.numberOfPages = row.value(named: "numberOfPages")
-                    mus7afItem.type = row.value(named: "type")
+                    mus7afItem.type = MushafType(rawValue: row.value(named: "type"))
                     mus7afItem.baseImagesDownloadUrl = row.value(named: "baseDownloadURL")
                     mus7afItem.name = row.value(named: "name")
                     mus7afItem.startOffset = row.value(named: "startOffset")

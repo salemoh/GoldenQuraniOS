@@ -8,12 +8,18 @@
 
 import UIKit
 
+
+enum MushafType:String{
+    case HAFS = "HAFS"
+    case WARSH = "WARSH"
+}
+
 class Mus7af: NSObject {
 
     var id:Int?
 
     var numberOfPages:Int?
-    var type:String?
+    var type:MushafType?
     var baseImagesDownloadUrl:String?
     var name:String?
     var startOffset:Int?

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */; };
+		170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE471E5EDB7A00083424 /* StringExtensions.swift */; };
 		17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */; };
 		17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */; };
 		17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7B1E5CC3BF003CC179 /* GradientView.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		170AFE471E5EDB7A00083424 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafViewController.swift; sourceTree = "<group>"; };
 		17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafCollectionViewCell.swift; sourceTree = "<group>"; };
 		17C13D7B1E5CC3BF003CC179 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */,
 				170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */,
+				170AFE471E5EDB7A00083424 /* StringExtensions.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */,
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
 				17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */,
