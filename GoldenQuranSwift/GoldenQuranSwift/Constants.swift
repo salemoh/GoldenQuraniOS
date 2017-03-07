@@ -21,6 +21,9 @@ struct Constants {
         static var defaultMus7afListDBPath:String{
             get{ return  Bundle.main.path(forResource: Constants.db.defaultMus7afList, ofType: "db")!}
         }
+        static var userMus7afListDBPath:String{
+            get{ return  Constants.path.library.appending("/\(Constants.db.defaultMus7afList).db")}
+        }
     }
     
 }

@@ -46,9 +46,28 @@ class AddMushafViewController: UIViewController  {
 
 //MARK: Collection View Delegate
 extension AddMushafViewController:UICollectionViewDelegate {
-
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        
+        let addMushafNameVC = self.storyboard?.instantiateViewController(withIdentifier: "AddMushafNameViewController") as! AddMushafNameViewController
+        addMushafNameVC.modalPresentationStyle = .custom
+        addMushafNameVC.defaultMushaf = defaultMus7afArray?[indexPath.row]
+        addMushafNameVC.delegate = self
+        self.present(addMushafNameVC, animated: true, completion: nil)
+        
+//      let storyboard = UIStoryboard(name:"Mushaf" , bundle: nil)
+//        let mushafViewer = storyboard.instantiateViewController(withIdentifier: "MushafViewerViewController")
+//        Mus7afManager.shared.currentMus7af = defaultMus7afArray![indexPath.row]
+//        self.present(mushafViewer, animated: true, completion: nil)
+        
+    }
 }
 
+extension AddMushafViewController:AddMushafNameViewControllerDelegate{
+    func mushafAddedSuccessfully() {
+        let mushafList = self.storyboard?.instantiateViewController(withIdentifier: "MushafListViewController") as! MushafListViewController
+        self.present(mushafList, animated: true, completion: nil)
+    }
+}
 //MARK: Collection View DataSource
 extension AddMushafViewController:UICollectionViewDataSource {
     

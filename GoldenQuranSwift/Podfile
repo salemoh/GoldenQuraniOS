@@ -10,5 +10,13 @@ target 'GoldenQuranSwift' do
   # Database Pod
   pod 'GRDB.swift'
   
+  # Menu Pod
+  pod 'SideMenu'
+  
+  # Keyboard Manager
+  pod 'IQKeyboardManagerSwift'
+  
+#  # Date Relative
+#  pod 'AFDateHelper'
 
 end

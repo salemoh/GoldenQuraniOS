@@ -17,6 +17,7 @@ enum MushafType:String{
 class Mus7af: NSObject {
 
     var id:Int?
+    var guid:String?
 
     var numberOfPages:Int?
     var type:MushafType?
@@ -29,6 +30,8 @@ class Mus7af: NSObject {
     var currentPage:Int?
     var currentSurah:Int?
     var currentAyah:Int?
+    var createdAt:Double?
+    var updatedAt:Double?
     
     
 //    var logo:String?

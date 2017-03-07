@@ -27,6 +27,30 @@ extension UIView {
         }
     }
     
+    @IBInspectable var borderWidth: Float {
+        get {
+            return Float(self.layer.borderWidth)
+        }
+        set {
+            self.layer.borderWidth = CGFloat(newValue)
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor {
+        get {
+            if let currentShadowColor = self.layer.borderColor {
+                return  UIColor(cgColor:currentShadowColor)
+            } else {
+                return  UIColor.black
+            }
+        }
+        set {
+            self.layer.borderColor = newValue.cgColor
+            
+            
+        }
+    }
+    
     @IBInspectable var shadowOffset: CGSize {
         get {
             return layer.shadowOffset

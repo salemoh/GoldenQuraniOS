@@ -9,10 +9,19 @@
 /* Begin PBXBuildFile section */
 		170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */; };
 		170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE471E5EDB7A00083424 /* StringExtensions.swift */; };
+		1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */; };
+		1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0851E677E400026A7FC /* MushafPageViewController.swift */; };
+		1761D0881E677E840026A7FC /* Mushaf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1761D0871E677E840026A7FC /* Mushaf.storyboard */; };
+		1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0891E686C9C0026A7FC /* UIImageExtensions.swift */; };
+		177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177226561E6CC1AD001AA714 /* AddMushafNameViewController.swift */; };
 		17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */; };
 		17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */; };
 		17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7B1E5CC3BF003CC179 /* GradientView.swift */; };
 		17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */; };
+		17EA2E2B1E6DFFF10087FFF5 /* MushafListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA2E2A1E6DFFF10087FFF5 /* MushafListViewController.swift */; };
+		17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA2E2D1E6E02D20087FFF5 /* MushafListTableViewCell.swift */; };
+		17EA2E301E6E05280087FFF5 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA2E2F1E6E05280087FFF5 /* DateExtensions.swift */; };
+		17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB648F1E6F35AE00D518C2 /* DateHelper.swift */; };
 		8118FE823460C8039945042C /* Pods_GoldenQuranSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */; };
 		97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */ = {isa = PBXBuildFile; fileRef = 97318D3D1E5A4D0500A4463B /* GoldenQuranRes */; };
 		976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A893A1E50E81700697DD2 /* AppDelegate.swift */; };
@@ -30,10 +39,19 @@
 /* Begin PBXFileReference section */
 		170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		170AFE471E5EDB7A00083424 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafViewerViewController.swift; sourceTree = "<group>"; };
+		1761D0851E677E400026A7FC /* MushafPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafPageViewController.swift; sourceTree = "<group>"; };
+		1761D0871E677E840026A7FC /* Mushaf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mushaf.storyboard; sourceTree = "<group>"; };
+		1761D0891E686C9C0026A7FC /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		177226561E6CC1AD001AA714 /* AddMushafNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafNameViewController.swift; sourceTree = "<group>"; };
 		17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafViewController.swift; sourceTree = "<group>"; };
 		17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafCollectionViewCell.swift; sourceTree = "<group>"; };
 		17C13D7B1E5CC3BF003CC179 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		17EA2E2A1E6DFFF10087FFF5 /* MushafListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafListViewController.swift; sourceTree = "<group>"; };
+		17EA2E2D1E6E02D20087FFF5 /* MushafListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafListTableViewCell.swift; sourceTree = "<group>"; };
+		17EA2E2F1E6E05280087FFF5 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		17EB648F1E6F35AE00D518C2 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenQuranSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5684535C192D348D0F469C4A /* Pods-GoldenQuranSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenQuranSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift.release.xcconfig"; sourceTree = "<group>"; };
 		97318D3D1E5A4D0500A4463B /* GoldenQuranRes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoldenQuranRes; sourceTree = "<group>"; };
@@ -64,11 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1761D0841E677DE20026A7FC /* MushafViewer */ = {
+			isa = PBXGroup;
+			children = (
+				1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */,
+				1761D0851E677E400026A7FC /* MushafPageViewController.swift */,
+			);
+			name = MushafViewer;
+			sourceTree = "<group>";
+		};
 		17C13D771E5CC27E003CC179 /* AddMushafViewController */ = {
 			isa = PBXGroup;
 			children = (
 				17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */,
 				17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */,
+				177226561E6CC1AD001AA714 /* AddMushafNameViewController.swift */,
 			);
 			name = AddMushafViewController;
 			sourceTree = "<group>";
@@ -87,8 +115,20 @@
 				17C13D7E1E5CC5ED003CC179 /* UIViewExtensions.swift */,
 				170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */,
 				170AFE471E5EDB7A00083424 /* StringExtensions.swift */,
+				1761D0891E686C9C0026A7FC /* UIImageExtensions.swift */,
+				17EA2E2F1E6E05280087FFF5 /* DateExtensions.swift */,
+				17EB648F1E6F35AE00D518C2 /* DateHelper.swift */,
 			);
 			name = Extentions;
+			sourceTree = "<group>";
+		};
+		17EA2E2C1E6DFFFB0087FFF5 /* MushafListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17EA2E2A1E6DFFF10087FFF5 /* MushafListViewController.swift */,
+				17EA2E2D1E6E02D20087FFF5 /* MushafListTableViewCell.swift */,
+			);
+			name = MushafListViewController;
 			sourceTree = "<group>";
 		};
 		976A892E1E50E81700697DD2 = {
@@ -118,7 +158,7 @@
 				17C13D7A1E5CC39D003CC179 /* Utilities */,
 				976A89581E510AD100697DD2 /* Objects */,
 				976A894F1E50EDF300697DD2 /* Managers */,
-				976A894C1E50ED9800697DD2 /* UIStoryboards */,
+				976A894C1E50ED9800697DD2 /* Storyboards */,
 				976A894D1E50EDC300697DD2 /* ViewControllers */,
 				976A895D1E51170E00697DD2 /* Resources */,
 				976A89411E50E81700697DD2 /* Assets.xcassets */,
@@ -128,18 +168,21 @@
 			path = GoldenQuranSwift;
 			sourceTree = "<group>";
 		};
-		976A894C1E50ED9800697DD2 /* UIStoryboards */ = {
+		976A894C1E50ED9800697DD2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				976A893E1E50E81700697DD2 /* Main.storyboard */,
+				1761D0871E677E840026A7FC /* Mushaf.storyboard */,
 			);
-			name = UIStoryboards;
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		976A894D1E50EDC300697DD2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				17C13D771E5CC27E003CC179 /* AddMushafViewController */,
+				1761D0841E677DE20026A7FC /* MushafViewer */,
+				17EA2E2C1E6DFFFB0087FFF5 /* MushafListViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -253,6 +296,7 @@
 			files = (
 				976A895F1E51174100697DD2 /* Mus7af.db in Resources */,
 				976A89451E50E81700697DD2 /* LaunchScreen.storyboard in Resources */,
+				1761D0881E677E840026A7FC /* Mushaf.storyboard in Resources */,
 				97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */,
 				976A89421E50E81700697DD2 /* Assets.xcassets in Resources */,
 				976A89401E50E81700697DD2 /* Main.storyboard in Resources */,
@@ -315,15 +359,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */,
+				17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */,
+				1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */,
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
+				17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */,
+				17EA2E2B1E6DFFF10087FFF5 /* MushafListViewController.swift in Sources */,
+				17EA2E301E6E05280087FFF5 /* DateExtensions.swift in Sources */,
 				17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */,
 				976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */,
 				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
 				17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */,
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
+				1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */,
 				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
+				177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */,
 				17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */,
+				1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */,
 				170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */,
 				17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */,
 			);

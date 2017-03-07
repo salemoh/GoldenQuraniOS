@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mushaf Viewer View Controller-->
+        <scene sceneID="udX-Us-gmG">
+            <objects>
+                <viewController storyboardIdentifier="MushafViewerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cMw-mJ-fjC" customClass="MushafViewerViewController" customModule="GoldenQuranSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f2U-5x-8BP"/>
+                        <viewControllerLayoutGuide type="bottom" id="NqF-po-LmJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J2i-yq-1HJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZI-fB-G2N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bZI-fB-G2N" secondAttribute="trailing" id="bbL-OZ-IlV"/>
+                            <constraint firstItem="bZI-fB-G2N" firstAttribute="top" secondItem="J2i-yq-1HJ" secondAttribute="top" id="lbI-n9-gnd"/>
+                            <constraint firstItem="bZI-fB-G2N" firstAttribute="leading" secondItem="J2i-yq-1HJ" secondAttribute="leading" id="ntA-Et-KRU"/>
+                            <constraint firstItem="NqF-po-LmJ" firstAttribute="top" secondItem="bZI-fB-G2N" secondAttribute="bottom" id="ovh-pi-gK0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollViewMain" destination="bZI-fB-G2N" id="fzO-hw-A84"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTe-3a-CvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="-530.28485757121439"/>
+        </scene>
+        <!--Mushaf Page View Controller-->
+        <scene sceneID="T4y-V3-rsP">
+            <objects>
+                <viewController storyboardIdentifier="MushafPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jg7-QL-GeE" customClass="MushafPageViewController" customModule="GoldenQuranSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FxI-23-Jry"/>
+                        <viewControllerLayoutGuide type="bottom" id="aW8-e3-P1G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4bG-rc-rSp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="62F-xx-Cqu" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="62F-xx-Cqu" firstAttribute="top" secondItem="4bG-rc-rSp" secondAttribute="top" id="Eyw-Nu-5pI"/>
+                            <constraint firstAttribute="trailing" secondItem="62F-xx-Cqu" secondAttribute="trailing" id="F28-HD-MDf"/>
+                            <constraint firstItem="aW8-e3-P1G" firstAttribute="top" secondItem="62F-xx-Cqu" secondAttribute="bottom" id="Po8-d5-lL1"/>
+                            <constraint firstItem="62F-xx-Cqu" firstAttribute="leading" secondItem="4bG-rc-rSp" secondAttribute="leading" id="x9q-aF-gRw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgPageBackground" destination="62F-xx-Cqu" id="9yI-Of-Hlc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieS-Us-DZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="-530.28485757121439"/>
+        </scene>
+    </scenes>
+</document>
