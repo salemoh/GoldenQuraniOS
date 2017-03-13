@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OhD-w9-LwQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,13 +33,70 @@
                             <constraint firstItem="NqF-po-LmJ" firstAttribute="top" secondItem="bZI-fB-G2N" secondAttribute="bottom" id="ovh-pi-gK0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ORn-8n-Kgb"/>
                     <connections>
                         <outlet property="scrollViewMain" destination="bZI-fB-G2N" id="fzO-hw-A84"/>
+                        <segue destination="WCi-FH-im7" kind="presentation" identifier="toFeaturesLeft" id="kvW-za-kNf"/>
+                        <segue destination="EjA-Ka-hFK" kind="presentation" identifier="toFeaturesRight" id="Znm-wz-Mkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTe-3a-CvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141.59999999999999" y="-530.28485757121439"/>
+            <point key="canvasLocation" x="340" y="-1067"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gYA-mw-1mz">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="OhD-w9-LwQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GWF-pW-4vM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cMw-mJ-fjC" kind="relationship" relationship="rootViewController" id="YY9-a9-yZs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QX-Av-jCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="-1199"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="WGz-aS-XCq">
+            <objects>
+                <navigationController storyboardIdentifier="MushafFeaturesLeftNavigationViewController" id="WCi-FH-im7" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RxC-I8-buF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="mWS-rr-2Mk" kind="relationship" relationship="rootViewController" id="YZy-JP-LQu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ib2-uF-0UA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="-1445"/>
+        </scene>
+        <!--Mushaf Features View Controller-->
+        <scene sceneID="HVH-bj-GTS">
+            <objects>
+                <viewController storyboardIdentifier="MushafFeaturesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mWS-rr-2Mk" customClass="MushafFeaturesViewController" customModule="GoldenQuranSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEQ-5j-swk"/>
+                        <viewControllerLayoutGuide type="bottom" id="4FH-y1-2SM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="agT-Sr-COV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UqP-1d-Ahl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZ3-23-htl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="-1155"/>
         </scene>
         <!--Mushaf Page View Controller-->
         <scene sceneID="T4y-V3-rsP">
@@ -56,22 +113,62 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="62F-xx-Cqu" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-Zm-35S">
+                                <rect key="frame" x="16" y="41" width="343" height="606"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZV-nA-jQQ">
+                                <rect key="frame" x="11" y="8" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CjQ-hJ-vHQ"/>
+                                    <constraint firstAttribute="width" constant="32" id="NIz-11-tzS"/>
+                                </constraints>
+                                <state key="normal" image="menuIcon"/>
+                                <connections>
+                                    <action selector="showSideMenuPressed" destination="Jg7-QL-GeE" eventType="touchUpInside" id="7QR-0d-tcJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="62F-xx-Cqu" firstAttribute="top" secondItem="4bG-rc-rSp" secondAttribute="top" id="Eyw-Nu-5pI"/>
                             <constraint firstAttribute="trailing" secondItem="62F-xx-Cqu" secondAttribute="trailing" id="F28-HD-MDf"/>
                             <constraint firstItem="aW8-e3-P1G" firstAttribute="top" secondItem="62F-xx-Cqu" secondAttribute="bottom" id="Po8-d5-lL1"/>
+                            <constraint firstItem="JZV-nA-jQQ" firstAttribute="leading" secondItem="4bG-rc-rSp" secondAttribute="leading" constant="11" id="gMf-2n-b6h"/>
+                            <constraint firstItem="JZV-nA-jQQ" firstAttribute="top" secondItem="4bG-rc-rSp" secondAttribute="top" constant="8" id="wuv-C0-cr1"/>
                             <constraint firstItem="62F-xx-Cqu" firstAttribute="leading" secondItem="4bG-rc-rSp" secondAttribute="leading" id="x9q-aF-gRw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgMushafPage" destination="YfA-Zm-35S" id="cLb-uV-Tbv"/>
                         <outlet property="imgPageBackground" destination="62F-xx-Cqu" id="9yI-Of-Hlc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieS-Us-DZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784.79999999999995" y="-530.28485757121439"/>
+            <point key="canvasLocation" x="340" y="-422"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="eJC-lV-gNm">
+            <objects>
+                <navigationController storyboardIdentifier="MushafFeaturesRightNavigationViewController" id="EjA-Ka-hFK" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kPs-nS-IcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mWS-rr-2Mk" kind="relationship" relationship="rootViewController" id="0SR-CD-LKj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbd-aB-Ffr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="-769"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuIcon" width="32" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YZy-JP-LQu"/>
+    </inferredMetricsTieBreakers>
 </document>

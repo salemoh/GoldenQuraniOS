@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
+    
+    static let iOS_LANGUAGES_KEY = "AppleLanguages"
+    static let CURRENT_MUSHAF_KEY = "CurrentMushafGUID"
     
     struct path {
         static let documents = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -24,6 +28,11 @@ struct Constants {
         static var userMus7afListDBPath:String{
             get{ return  Constants.path.library.appending("/\(Constants.db.defaultMus7afList).db")}
         }
+    }
+    
+    struct storyboard {
+        static let main =  UIStoryboard(name:"main" , bundle:nil)
+        static let mushaf = UIStoryboard(name:"Mushaf" , bundle:nil)
     }
     
 }

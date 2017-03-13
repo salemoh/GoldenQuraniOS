@@ -10,6 +10,7 @@ import UIKit
 
 class AddMushafViewController: UIViewController  {
 
+    @IBOutlet weak var segmentLanguageControl: GQSegmentedControl!
     @IBOutlet weak var mushafListCollectionView: UICollectionView!
     
     let defaultMus7afArray = DBManager.shared.getDefaultMus7afs()
@@ -21,6 +22,11 @@ class AddMushafViewController: UIViewController  {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if UIApplication.isAr() {
+            self.segmentLanguageControl.selectedSegmentIndex = 1
+        } else {
+            self.segmentLanguageControl.selectedSegmentIndex = 0
+        }
         
     }
 
@@ -30,15 +36,44 @@ class AddMushafViewController: UIViewController  {
     }
     
 
-    /*
+    @IBAction func languageSegmentChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            // English
+            LanguageManager.changeLanguageTo(lang: .en)
+        } else {
+            // Arabic
+            LanguageManager.changeLanguageTo(lang: .ar)
+        }
+        
+        
+        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+        
+        
+        rootviewcontroller.rootViewController = self.storyboard?.instantiateInitialViewController()
+        
+        let mainwindow = (UIApplication.shared.delegate?.window!)!
+//        mainwindow.backgroundColor = UIColor(hue: 0.6477, saturation: 0.6314, brightness: 0.6077, alpha: 0.8)
+        UIView.transition(with: mainwindow, duration: 0.55001, options: .transitionFlipFromLeft, animations: { () -> Void in
+        }) { _ -> Void in
+        }
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "AddName" {
+            let addMushafNameVC = segue.destination as! AddMushafNameViewController
+            addMushafNameVC.modalPresentationStyle = .custom
+            addMushafNameVC.defaultMushaf = sender as? Mus7af
+            addMushafNameVC.delegate = self
+        
+        }
     }
-    */
+ 
 
     
     
@@ -48,24 +83,19 @@ class AddMushafViewController: UIViewController  {
 extension AddMushafViewController:UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
-        let addMushafNameVC = self.storyboard?.instantiateViewController(withIdentifier: "AddMushafNameViewController") as! AddMushafNameViewController
-        addMushafNameVC.modalPresentationStyle = .custom
-        addMushafNameVC.defaultMushaf = defaultMus7afArray?[indexPath.row]
-        addMushafNameVC.delegate = self
-        self.present(addMushafNameVC, animated: true, completion: nil)
+        Mus7afManager.shared.currentMus7af = defaultMus7afArray![indexPath.row]
+        self.performSegue(withIdentifier: "AddName", sender: defaultMus7afArray![indexPath.row])
         
-//      let storyboard = UIStoryboard(name:"Mushaf" , bundle: nil)
-//        let mushafViewer = storyboard.instantiateViewController(withIdentifier: "MushafViewerViewController")
-//        Mus7afManager.shared.currentMus7af = defaultMus7afArray![indexPath.row]
-//        self.present(mushafViewer, animated: true, completion: nil)
         
     }
 }
 
 extension AddMushafViewController:AddMushafNameViewControllerDelegate{
     func mushafAddedSuccessfully() {
-        let mushafList = self.storyboard?.instantiateViewController(withIdentifier: "MushafListViewController") as! MushafListViewController
-        self.present(mushafList, animated: true, completion: nil)
+//        let mushafList = self.storyboard?.instantiateViewController(withIdentifier: "MushafListViewController") as! MushafListViewController
+//        self.navigationController?.pushViewController(mushafList, animated: true)
+        self.performSegue(withIdentifier: "GoToList", sender: nil)
+//        self.present(mushafList, animated: true, completion: nil)
     }
 }
 //MARK: Collection View DataSource
@@ -83,13 +113,7 @@ extension AddMushafViewController:UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddMushafCollectionViewCell", for: indexPath) as! AddMus7afCollectionViewCell
         let mushaf = defaultMus7afArray?[indexPath.row]
-        
-        cell.lblMushafName.text = mushaf?.name
-        
-        
-        let pagesAttributedText = NSMutableAttributedString().getAttributedString(originalString: "Number of pages \((mushaf?.numberOfPages)!)", stringToAttribute: "\((mushaf?.numberOfPages)!)", font: nil, isUnderlined: true, color: UIColor.green)
-        cell.lblNumberOfPages.attributedText = pagesAttributedText
-        
+        cell.fillFromMushaf(mushaf: mushaf!)
         
         return cell
     }

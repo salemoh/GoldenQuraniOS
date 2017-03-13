@@ -95,9 +95,7 @@ class DBManager: NSObject {
     func createUserMushafDB(){
         do {
             try dbQueueLibrary?.inDatabase { db in
-                
-                try db.create(table: "Mushaf") { t in
-                    
+                try db.create(table: "Mushaf", temporary: false, ifNotExists: true, body: { (t) in
                     t.column("id", .integer)
                     t.column("guid", .text)
                     t.column("numberOfPages", .integer)
@@ -108,8 +106,22 @@ class DBManager: NSObject {
                     t.column("dbName", .text)
                     t.column("createdAt", .double)
                     t.column("updatedAt", .double)
-                    
-                }
+                })
+                
+//                try db.create(table: "Mushaf") { t in
+//                    
+//                    t.column("id", .integer)
+//                    t.column("guid", .text)
+//                    t.column("numberOfPages", .integer)
+//                    t.column("type", .text)
+//                    t.column("baseDownloadURL", .text)
+//                    t.column("name", .text)
+//                    t.column("startOffset", .integer)
+//                    t.column("dbName", .text)
+//                    t.column("createdAt", .double)
+//                    t.column("updatedAt", .double)
+//                    
+//                }
             }
         } catch  {
             print("Failed to create UserMushafDB \(error.localizedDescription)")
@@ -122,11 +134,12 @@ class DBManager: NSObject {
         var mus7afList:[Mus7af] = []
         do {
             try dbQueueLibrary?.inDatabase { db in
-                let rows = try Row.fetchCursor(db, "SELECT id, numberOfPages,type,baseDownloadURL,name,startOffset, dbName createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
+                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
                 
                 while let row = try rows.next() {
                     let mus7afItem = Mus7af()
                     mus7afItem.id = row.value(named: "id")
+                    mus7afItem.guid = row.value(named: "guid")
                     mus7afItem.numberOfPages = row.value(named: "numberOfPages")
                     mus7afItem.type = MushafType(rawValue: row.value(named: "type"))
                     mus7afItem.baseImagesDownloadUrl = row.value(named: "baseDownloadURL")
@@ -135,6 +148,7 @@ class DBManager: NSObject {
                     mus7afItem.dbName = row.value(named: "dbName")
                     mus7afItem.createdAt = row.value(named: "createdAt")
                     mus7afItem.updatedAt = row.value(named: "updatedAt")
+                    
                     
                     mus7afList.append(mus7afItem)
                 }

@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */; };
 		170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AFE471E5EDB7A00083424 /* StringExtensions.swift */; };
+		1744B2591E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */; };
+		1744B25A1E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */; };
+		1744B25B1E70512E00641FA0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */; };
+		1744B25C1E70512E00641FA0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2581E70512E00641FA0 /* Roboto-Regular.ttf */; };
+		1744B25F1E70567600641FA0 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B25E1E70567600641FA0 /* FontManager.swift */; };
+		1744B2611E70584400641FA0 /* GQLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2601E70584400641FA0 /* GQLabel.swift */; };
+		1744B2631E705E7300641FA0 /* GQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2621E705E7300641FA0 /* GQButton.swift */; };
+		1744B2651E705F3C00641FA0 /* GQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2641E705F3C00641FA0 /* GQTextField.swift */; };
+		1744B2681E74276200641FA0 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2671E74276200641FA0 /* SideMenuViewController.swift */; };
+		1744B26A1E74279100641FA0 /* MushafFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */; };
+		1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2701E744B2300641FA0 /* GQSegmentedControl.swift */; };
 		1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */; };
 		1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0851E677E400026A7FC /* MushafPageViewController.swift */; };
 		1761D0881E677E840026A7FC /* Mushaf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1761D0871E677E840026A7FC /* Mushaf.storyboard */; };
@@ -22,6 +33,9 @@
 		17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA2E2D1E6E02D20087FFF5 /* MushafListTableViewCell.swift */; };
 		17EA2E301E6E05280087FFF5 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA2E2F1E6E05280087FFF5 /* DateExtensions.swift */; };
 		17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB648F1E6F35AE00D518C2 /* DateHelper.swift */; };
+		17EB64951E6F381700D518C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17EB64971E6F381700D518C2 /* Localizable.strings */; };
+		17EB649B1E6F4C1300D518C2 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB649A1E6F4C1300D518C2 /* UIApplicationExtension.swift */; };
+		17EB649D1E6F4D1C00D518C2 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB649C1E6F4D1C00D518C2 /* LanguageManager.swift */; };
 		8118FE823460C8039945042C /* Pods_GoldenQuranSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */; };
 		97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */ = {isa = PBXBuildFile; fileRef = 97318D3D1E5A4D0500A4463B /* GoldenQuranRes */; };
 		976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A893A1E50E81700697DD2 /* AppDelegate.swift */; };
@@ -39,6 +53,17 @@
 /* Begin PBXFileReference section */
 		170AFE451E5CDCA300083424 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		170AFE471E5EDB7A00083424 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Bd.ttf"; sourceTree = "<group>"; };
+		1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Reg.ttf"; sourceTree = "<group>"; };
+		1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		1744B2581E70512E00641FA0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		1744B25E1E70567600641FA0 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		1744B2601E70584400641FA0 /* GQLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQLabel.swift; sourceTree = "<group>"; };
+		1744B2621E705E7300641FA0 /* GQButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQButton.swift; sourceTree = "<group>"; };
+		1744B2641E705F3C00641FA0 /* GQTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQTextField.swift; sourceTree = "<group>"; };
+		1744B2671E74276200641FA0 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesViewController.swift; sourceTree = "<group>"; };
+		1744B2701E744B2300641FA0 /* GQSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQSegmentedControl.swift; sourceTree = "<group>"; };
 		1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafViewerViewController.swift; sourceTree = "<group>"; };
 		1761D0851E677E400026A7FC /* MushafPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafPageViewController.swift; sourceTree = "<group>"; };
 		1761D0871E677E840026A7FC /* Mushaf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mushaf.storyboard; sourceTree = "<group>"; };
@@ -52,6 +77,12 @@
 		17EA2E2D1E6E02D20087FFF5 /* MushafListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafListTableViewCell.swift; sourceTree = "<group>"; };
 		17EA2E2F1E6E05280087FFF5 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		17EB648F1E6F35AE00D518C2 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		17EB64911E6F378500D518C2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		17EB64921E6F378500D518C2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		17EB64961E6F381700D518C2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17EB64991E6F382300D518C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17EB649A1E6F4C1300D518C2 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		17EB649C1E6F4D1C00D518C2 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		4F458ADCCD9FAF5DB9F49930 /* Pods_GoldenQuranSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenQuranSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5684535C192D348D0F469C4A /* Pods-GoldenQuranSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenQuranSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift.release.xcconfig"; sourceTree = "<group>"; };
 		97318D3D1E5A4D0500A4463B /* GoldenQuranRes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoldenQuranRes; sourceTree = "<group>"; };
@@ -82,6 +113,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1744B25D1E70563700641FA0 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				17C13D7B1E5CC3BF003CC179 /* GradientView.swift */,
+				1744B2601E70584400641FA0 /* GQLabel.swift */,
+				1744B2621E705E7300641FA0 /* GQButton.swift */,
+				1744B2641E705F3C00641FA0 /* GQTextField.swift */,
+				1744B2701E744B2300641FA0 /* GQSegmentedControl.swift */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
 		1761D0841E677DE20026A7FC /* MushafViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +147,6 @@
 		17C13D7A1E5CC39D003CC179 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				17C13D7B1E5CC3BF003CC179 /* GradientView.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -118,6 +160,7 @@
 				1761D0891E686C9C0026A7FC /* UIImageExtensions.swift */,
 				17EA2E2F1E6E05280087FFF5 /* DateExtensions.swift */,
 				17EB648F1E6F35AE00D518C2 /* DateHelper.swift */,
+				17EB649A1E6F4C1300D518C2 /* UIApplicationExtension.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -154,6 +197,7 @@
 			children = (
 				976A893A1E50E81700697DD2 /* AppDelegate.swift */,
 				976A89561E50F07A00697DD2 /* Constants.swift */,
+				1744B25D1E70563700641FA0 /* Subclasses */,
 				17C13D7D1E5CC5A0003CC179 /* Extentions */,
 				17C13D7A1E5CC39D003CC179 /* Utilities */,
 				976A89581E510AD100697DD2 /* Objects */,
@@ -164,6 +208,7 @@
 				976A89411E50E81700697DD2 /* Assets.xcassets */,
 				976A89431E50E81700697DD2 /* LaunchScreen.storyboard */,
 				976A89461E50E81700697DD2 /* Info.plist */,
+				17EB64971E6F381700D518C2 /* Localizable.strings */,
 			);
 			path = GoldenQuranSwift;
 			sourceTree = "<group>";
@@ -183,6 +228,8 @@
 				17C13D771E5CC27E003CC179 /* AddMushafViewController */,
 				1761D0841E677DE20026A7FC /* MushafViewer */,
 				17EA2E2C1E6DFFFB0087FFF5 /* MushafListViewController */,
+				1744B2671E74276200641FA0 /* SideMenuViewController.swift */,
+				1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +240,8 @@
 				976A89501E50EE2500697DD2 /* NotificationsManager.swift */,
 				976A89521E50EEAA00697DD2 /* DBManager.swift */,
 				976A895B1E510B5A00697DD2 /* Mus7afManager.swift */,
+				17EB649C1E6F4D1C00D518C2 /* LanguageManager.swift */,
+				1744B25E1E70567600641FA0 /* FontManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -208,6 +257,10 @@
 		976A895D1E51170E00697DD2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */,
+				1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */,
+				1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */,
+				1744B2581E70512E00641FA0 /* Roboto-Regular.ttf */,
 				976A895E1E51174100697DD2 /* Mus7af.db */,
 				97318D3D1E5A4D0500A4463B /* GoldenQuranRes */,
 			);
@@ -294,12 +347,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1744B25B1E70512E00641FA0 /* Roboto-Medium.ttf in Resources */,
+				1744B25C1E70512E00641FA0 /* Roboto-Regular.ttf in Resources */,
 				976A895F1E51174100697DD2 /* Mus7af.db in Resources */,
 				976A89451E50E81700697DD2 /* LaunchScreen.storyboard in Resources */,
 				1761D0881E677E840026A7FC /* Mushaf.storyboard in Resources */,
+				17EB64951E6F381700D518C2 /* Localizable.strings in Resources */,
+				1744B2591E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf in Resources */,
 				97318D3E1E5A4D0500A4463B /* GoldenQuranRes in Resources */,
 				976A89421E50E81700697DD2 /* Assets.xcassets in Resources */,
 				976A89401E50E81700697DD2 /* Main.storyboard in Resources */,
+				1744B25A1E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,29 +423,48 @@
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
 				17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */,
 				17EA2E2B1E6DFFF10087FFF5 /* MushafListViewController.swift in Sources */,
+				1744B2681E74276200641FA0 /* SideMenuViewController.swift in Sources */,
+				17EB649D1E6F4D1C00D518C2 /* LanguageManager.swift in Sources */,
+				1744B2611E70584400641FA0 /* GQLabel.swift in Sources */,
 				17EA2E301E6E05280087FFF5 /* DateExtensions.swift in Sources */,
 				17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */,
+				1744B2651E705F3C00641FA0 /* GQTextField.swift in Sources */,
+				1744B2631E705E7300641FA0 /* GQButton.swift in Sources */,
 				976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */,
 				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
 				17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */,
+				17EB649B1E6F4C1300D518C2 /* UIApplicationExtension.swift in Sources */,
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
 				1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */,
+				1744B25F1E70567600641FA0 /* FontManager.swift in Sources */,
 				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
 				177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */,
+				1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */,
 				17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */,
 				1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */,
 				170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */,
 				17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */,
+				1744B26A1E74279100641FA0 /* MushafFeaturesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		17EB64971E6F381700D518C2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17EB64961E6F381700D518C2 /* ar */,
+				17EB64991E6F382300D518C2 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		976A893E1E50E81700697DD2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				976A893F1E50E81700697DD2 /* Base */,
+				17EB64911E6F378500D518C2 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -396,6 +473,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				976A89441E50E81700697DD2 /* Base */,
+				17EB64921E6F378500D518C2 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -407,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -457,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

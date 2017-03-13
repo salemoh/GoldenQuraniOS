@@ -26,5 +26,15 @@ class MushafListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func fillFromMushaf(mushaf:Mus7af){
+        
+        let date = Date(timeIntervalSince1970: mushaf.updatedAt!)
+        
+        self.lblName.text = mushaf.name
+        self.lblType.text = NSLocalizedString("\(mushaf.type!)_NOVEL", comment: "")
+        self.imgMushafIcon.image = mushaf.logo
+        self.lblUpdatedAt.text =  date.toStringWithRelativeTime().correctLanguageNumbers()
+    }
 
 }

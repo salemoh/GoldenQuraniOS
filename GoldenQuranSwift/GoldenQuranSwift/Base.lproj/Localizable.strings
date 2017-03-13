@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  GoldenQuranSwift
+
+  Created by Omar Fraiwan on 3/7/17.
+  Copyright © 2017 Omar Fraiwan. All rights reserved.
+*/
+
+"HAFS_NOVEL" = "Hafs novel";
+"WARSH_NOVEL" = "Warsh novel";
+
+"ADD_MUSHAF_SAVE_BTN" = "Save";
+"ADD_MUSHAF_CANCEL_BTN" = "Cancel";
+"NUMBER_OF_PAGES" = "Number of pages";
+"SAVE_MUSHAF_WITH_NAME" = "Add name to your Quran:";
+"MUSHAF_NAME_EXAMPLE" = "ex: Daily reading Quran";

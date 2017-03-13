@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MushafViewerViewController: UIViewController {
+class MushafViewerViewController: SideMenuViewController {
 
     @IBOutlet weak var scrollViewMain: UIScrollView!
     var pageController:UIPageViewController?
@@ -40,15 +40,10 @@ class MushafViewerViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        for view in view.subviews {
-//            if view is UIScrollView {
-//                view.frame = UIScreen.main.bounds // Why? I don't know.
-//            }
-//            else if view is UIPageControl {
-//                view.backgroundColor = UIColor.clear
-//            }
-//        }
+
     }
+    
+    
     
     /*
     // MARK: - Navigation
@@ -63,6 +58,7 @@ class MushafViewerViewController: UIViewController {
         if pageNumber <= Mus7afManager.shared.currentMus7af.numberOfPages! {
             let mushafVC = self.storyboard?.instantiateViewController(withIdentifier: "MushafPageViewController") as! MushafPageViewController
             mushafVC.pageNumber = pageNumber
+            mushafVC.mushafViewerVC = self
             return mushafVC
         }
         
@@ -77,12 +73,24 @@ extension MushafViewerViewController {
         
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-            let fullWidthPageSize = CGSize(width:UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.width * 1.8))
-//            self.pageController?.view.frame = CGRect(origin:CGPoint.zero , size:fullWidthPageSize)
-            self.scrollViewMain.contentSize = fullWidthPageSize
+            
+//            coordinator.animate(alongsideTransition: { (ctx) in
+//                
+//            }, completion: { (ctx) in
+//                let fullWidthPageSize = CGSize(width:UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.width * 1.8))
+//                self.pageController?.view.frame = CGRect(origin:CGPoint.zero , size:fullWidthPageSize)
+//                self.scrollViewMain.contentSize = fullWidthPageSize
+//            })
+            
+            DispatchQueue.main.async {
+                let fullWidthPageSize = CGSize(width:UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.width * 1.8))
+                self.pageController?.view.frame = CGRect(origin:CGPoint.zero , size:fullWidthPageSize)
+                self.scrollViewMain.contentSize = fullWidthPageSize
+            }
+            
         } else {
             print("Portrait")
-//            self.pageController?.view.frame = UIScreen.main.bounds
+            self.pageController?.view.frame = UIScreen.main.bounds
             
             self.scrollViewMain.contentSize = UIScreen.main.bounds.size
         }

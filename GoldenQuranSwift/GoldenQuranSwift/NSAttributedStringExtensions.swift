@@ -10,12 +10,19 @@ import UIKit
 
 extension NSMutableAttributedString {
 
-    func getAttributedString(originalString:String, stringToAttribute:String , font:UIFont? , isUnderlined:Bool? , color:UIColor?)->(NSMutableAttributedString){
+    func getAttributedString(originalString:String, stringToAttribute:String , font:UIFont? , isUnderlined:Bool? , color:UIColor? , fontSizeDelta:CGFloat?)->(NSMutableAttributedString){
         
         var attributes:[String : Any] = [:]
         
+        
         if let _font = font {
-            attributes[NSFontAttributeName] = _font
+            
+            if let _ = fontSizeDelta {
+                attributes[NSFontAttributeName] = UIFont(descriptor:(font?.fontDescriptor)! , size:((font?.pointSize)! + fontSizeDelta!))
+            } else {
+                attributes[NSFontAttributeName] = _font
+            }
+            
         }
         
         if let _isUnderlined = isUnderlined, _isUnderlined == true {

@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  GoldenQuranSwift
+
+  Created by Omar Fraiwan on 3/7/17.
+  Copyright © 2017 Omar Fraiwan. All rights reserved.
+*/
+
+
+"HAFS_NOVEL" = "رواية حفص";
+"WARSH_NOVEL" = "رواية ورش";
+
+
+
+"just now"          = "الآن";
+"in a few seconds"  = "في غضون ثواني";
+"%.f seconds ago"   = "قبل %.f ثواني";
+"in %.f seconds"    = "في غضون %.f ثواني";
+"1 minute ago"      = "قبل دقيقة";
+"in 1 minute"       = "في غضون دقيقة";
+"%.f minutes ago"   = "قبل %.f دقائق";
+"in %.f minutes"    = "في غضون %.f دقائق";
+"last hour"         = "الساعة الماضية";
+"next hour"         = "الساعة القادمة";
+"%.f hours ago"     = "قبل %.f ساعات";
+"in %.f hours"      = "في غضون %.f ساعات";
+"yesterday"         = "الأمس";
+"tomorrow"          = "غدا";
+"%.f days ago"      = "قبل %.f أيام";
+"in %.f days"       = "في غضون %.f أيام";
+"last week"         = "الأسبوع الماضي";
+"%.f weeks ago"     = "قبل %.f أسابيع";
+"next week"         = "الأسبوع القادم";
+"in %.f weeks"      = "في غضون %.f أسابيع";
+"last month"        = "الشهر الماضي";
+"%.f months ago"    = "قبل %.f أشهر";
+"next month"        = "الشهر القادم";
+"in %.f months"     = "في غضون %.f أشهر";
+"last year"         = "العام الماضي";
+"%.f years ago"     = "قبل %.f سنوات";
+"next year"         = "العام القادم";
+"in %.f years"      = "في غضون %.f سنوات";
+
+"ADD_MUSHAF_SAVE_BTN" = "حفظ";
+"ADD_MUSHAF_CANCEL_BTN" = "إلغاء";
+
+"NUMBER_OF_PAGES" = "عدد الصفحات";
+"SAVE_MUSHAF_WITH_NAME" = "حفظ المصحف بإسم:";
+"MUSHAF_NAME_EXAMPLE" = "مثال: مصحف التلاوة اليومية";

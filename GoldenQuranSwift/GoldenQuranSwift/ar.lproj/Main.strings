@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "رواية حفص عن نافع\nعدد الصفحات: ٦٠٤"; ObjectID = "2Nr-3A-Lcr"; */
+"2Nr-3A-Lcr.text" = "رواية حفص عن نافع\nعدد الصفحات: ٦٠٤";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "D1P-9l-mE3"; */
+"D1P-9l-mE3.text" = "Label";
+
+/* Class = "UILabel"; text = "My Mus7afs"; ObjectID = "Qzq-ra-Vt7"; */
+"Qzq-ra-Vt7.text" = "My Mus7afs";
+
+/* Class = "UILabel"; text = "حفظ المصحف بإسم: "; ObjectID = "Sd9-VA-3mK"; */
+"Sd9-VA-3mK.text" = "حفظ المصحف بإسم: ";
+
+/* Class = "UILabel"; text = "مصحف المدينة المنورة"; ObjectID = "TPq-n1-YRH"; */
+"TPq-n1-YRH.text" = "مصحف المدينة المنورة";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Vks-Wq-WPc"; */
+"Vks-Wq-WPc.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "مثال (مصحف التلاوة اليومية)"; ObjectID = "WaK-pg-fdL"; */
+"WaK-pg-fdL.placeholder" = "مثال (مصحف التلاوة اليومية)";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ccS-8g-ggx"; */
+"ccS-8g-ggx.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iCT-sW-enN"; */
+"iCT-sW-enN.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "mS3-ku-535"; */
+"mS3-ku-535.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Mushaf Al MAdina Al Monawra"; ObjectID = "p01-hc-XCb"; */
+"p01-hc-XCb.text" = "Mushaf Al MAdina Al Monawra";
+
+/* Class = "UILabel"; text = "Number Of pages"; ObjectID = "xVI-6T-KbG"; */
+"xVI-6T-KbG.text" = "Number Of pages";

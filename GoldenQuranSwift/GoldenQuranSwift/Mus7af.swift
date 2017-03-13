@@ -32,6 +32,12 @@ class Mus7af: NSObject {
     var currentAyah:Int?
     var createdAt:Double?
     var updatedAt:Double?
+    var logo:UIImage?{
+        get {
+            let imageName = String(format:"MUSHAF_ICON_%d", self.id!)
+            return UIImage(named:imageName)
+        }
+    }
     
     
 //    var logo:String?
@@ -40,6 +46,14 @@ class Mus7af: NSObject {
     //userLocalDBLocation
     
     func getImageForPage(pageNumber:Int) -> UIImage {
+        //0002-phone.png
+        let subPath = String(format:"GoldenQuranRes/images/%@_%d",(self.type?.rawValue)!,self.id!)
+        let imageName = String(format:"%04d-phone" , pageNumber + self.startOffset! )
+        let imageURL = Bundle.main.url(forResource: imageName, withExtension:"png", subdirectory:subPath)
+        if let _ = imageURL ,  let image = UIImage(contentsOfFile: imageURL!.path) {
+            return image
+        }
+        return UIImage()
         
 //        let nsLibraryDirectory = FileManager.SearchPathDirectory.libraryDirectory
 //        let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask

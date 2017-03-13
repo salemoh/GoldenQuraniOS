@@ -46,4 +46,12 @@ extension String {
         
         return numberString
     }
+    
+    func correctLanguageNumbers() -> String {
+        if UIApplication.isAr() {
+            return self.toArabicNumbers()
+        } else {
+            return self.toEnglishNumbers()
+        }
+    }
 }

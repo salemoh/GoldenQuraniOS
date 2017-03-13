@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kR8-a0-API">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,31 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueW23-Bd.ttf">
+            <string>HelveticaNeueW23forSKY-Bd</string>
+        </array>
+        <array key="HelveticaNeueW23-Reg.ttf">
+            <string>HelveticaNeueW23forSKY-Reg</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wvR-zV-pD7">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="kR8-a0-API" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="taH-b7-ffm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3B5-fq-WoM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8D-ak-gPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="137"/>
+        </scene>
         <!--Add Mushaf View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -26,53 +50,66 @@
                                 <rect key="frame" x="0.0" y="159" width="375" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RQd-xa-cRo">
-                                    <size key="itemSize" width="372" height="192"/>
+                                    <size key="itemSize" width="372" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddMushafCollectionViewCell" id="dbH-R9-9d1" customClass="AddMus7afCollectionViewCell" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                        <rect key="frame" x="1.5" y="0.0" width="372" height="192"/>
+                                        <rect key="frame" x="2" y="0.0" width="372" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="372" height="192"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="372" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mus7af1" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-aF-Ljs">
-                                                    <rect key="frame" x="8" y="8" width="117" height="176"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-aF-Ljs">
+                                                    <rect key="frame" x="8" y="8" width="86" height="124"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="117" id="6mf-Vx-fpY"/>
+                                                        <constraint firstAttribute="width" constant="86" id="6mf-Vx-fpY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushaf Al MAdina Al Monawra" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p01-hc-XCb">
-                                                    <rect key="frame" x="135" y="19" width="229" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mushaf Al MAdina Al Monawra" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p01-hc-XCb" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="102" y="19" width="262" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeueW23forSKY-Bd" family="Helvetica Neue W23 for SKY" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of pages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVI-6T-KbG">
-                                                    <rect key="frame" x="135" y="164.5" width="229" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of pages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVI-6T-KbG" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="102" y="107" width="262" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAFS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCS-y6-CAB" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="102" y="61" width="262" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeueW23forSKY-Reg" family="Helvetica Neue W23 for SKY" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="xVI-6T-KbG" firstAttribute="bottom" secondItem="dbH-R9-9d1" secondAttribute="bottomMargin" id="2Dk-I8-TLB"/>
+                                            <constraint firstItem="xVI-6T-KbG" firstAttribute="bottom" secondItem="dbH-R9-9d1" secondAttribute="bottomMargin" constant="-8" id="2Dk-I8-TLB"/>
                                             <constraint firstItem="KoC-aF-Ljs" firstAttribute="leading" secondItem="dbH-R9-9d1" secondAttribute="leadingMargin" id="4hz-OX-H9W"/>
                                             <constraint firstItem="p01-hc-XCb" firstAttribute="trailing" secondItem="dbH-R9-9d1" secondAttribute="trailingMargin" id="4oS-Z2-2Gr"/>
-                                            <constraint firstItem="p01-hc-XCb" firstAttribute="leading" secondItem="KoC-aF-Ljs" secondAttribute="trailing" constant="10" id="MZg-dM-cjt"/>
+                                            <constraint firstItem="qCS-y6-CAB" firstAttribute="centerY" secondItem="dbH-R9-9d1" secondAttribute="centerY" id="K8m-oa-sDs"/>
+                                            <constraint firstItem="p01-hc-XCb" firstAttribute="leading" secondItem="KoC-aF-Ljs" secondAttribute="trailing" constant="8" id="MZg-dM-cjt"/>
                                             <constraint firstItem="KoC-aF-Ljs" firstAttribute="bottom" secondItem="dbH-R9-9d1" secondAttribute="bottomMargin" id="Wha-Kg-eZt"/>
+                                            <constraint firstItem="qCS-y6-CAB" firstAttribute="leading" secondItem="KoC-aF-Ljs" secondAttribute="trailing" constant="8" id="Wob-gd-mD7"/>
                                             <constraint firstItem="p01-hc-XCb" firstAttribute="top" secondItem="dbH-R9-9d1" secondAttribute="topMargin" constant="11" id="eqB-HA-oXD"/>
+                                            <constraint firstItem="qCS-y6-CAB" firstAttribute="trailing" secondItem="dbH-R9-9d1" secondAttribute="trailingMargin" id="mzQ-Ez-LND"/>
                                             <constraint firstItem="xVI-6T-KbG" firstAttribute="trailing" secondItem="dbH-R9-9d1" secondAttribute="trailingMargin" id="tEg-vk-qdm"/>
                                             <constraint firstItem="KoC-aF-Ljs" firstAttribute="top" secondItem="dbH-R9-9d1" secondAttribute="topMargin" id="uQ5-We-GMC"/>
-                                            <constraint firstItem="xVI-6T-KbG" firstAttribute="leading" secondItem="KoC-aF-Ljs" secondAttribute="trailing" constant="10" id="zfv-Lj-Xk5"/>
+                                            <constraint firstItem="xVI-6T-KbG" firstAttribute="leading" secondItem="KoC-aF-Ljs" secondAttribute="trailing" constant="8" id="zfv-Lj-Xk5"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imgMushafIcon" destination="KoC-aF-Ljs" id="F6w-Cy-eze"/>
                                             <outlet property="lblMushafName" destination="p01-hc-XCb" id="Rkr-5h-Suv"/>
+                                            <outlet property="lblMushafType" destination="qCS-y6-CAB" id="OV0-sI-46J"/>
                                             <outlet property="lblNumberOfPages" destination="xVI-6T-KbG" id="2LJ-OL-e7W"/>
                                         </connections>
                                     </collectionViewCell>
@@ -85,10 +122,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh5-5i-uqA" customClass="GradientView" customModule="GoldenQuranSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ms0-Qh-Y20">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ms0-Qh-Y20">
                                         <rect key="frame" x="142" y="39" width="90" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="Dws-P4-JRP"/>
+                                            <constraint firstAttribute="width" constant="90" id="bbV-6h-mIg"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="13"/>
@@ -104,14 +144,21 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoldenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gYZ-wW-0o2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoldenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gYZ-wW-0o2">
                                         <rect key="frame" x="142" y="34" width="90" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="U2X-GT-Sa7"/>
+                                            <constraint firstAttribute="width" constant="90" id="tz7-yj-T9p"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="gYZ-wW-0o2" firstAttribute="top" secondItem="mh5-5i-uqA" secondAttribute="top" constant="34" id="8eu-Dq-I6b"/>
+                                    <constraint firstItem="ms0-Qh-Y20" firstAttribute="top" secondItem="mh5-5i-uqA" secondAttribute="top" constant="39" id="EQ0-sp-dIg"/>
                                     <constraint firstAttribute="height" constant="128" id="F5K-gm-i1z"/>
+                                    <constraint firstItem="gYZ-wW-0o2" firstAttribute="centerX" secondItem="mh5-5i-uqA" secondAttribute="centerX" id="Kde-0S-Okr"/>
+                                    <constraint firstItem="ms0-Qh-Y20" firstAttribute="centerX" secondItem="mh5-5i-uqA" secondAttribute="centerX" id="V6D-2S-4Qn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
@@ -125,6 +172,37 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KNm-Bf-xLh" customClass="GQSegmentedControl" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                <rect key="frame" x="16" y="123" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="عربي"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.79607843137254897" green="0.60392156862745094" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="languageSegmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3s6-ZY-ycr"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -137,10 +215,16 @@
                             <constraint firstAttribute="trailing" secondItem="PVk-lg-tTc" secondAttribute="trailing" id="yTn-12-uQk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RYg-A2-fUr"/>
+                    <connections>
+                        <outlet property="segmentLanguageControl" destination="KNm-Bf-xLh" id="3Gu-jA-37S"/>
+                        <segue destination="UWd-Fx-hXT" kind="show" identifier="GoToList" id="74n-Lf-Vph"/>
+                        <segue destination="VRh-Xs-CXI" kind="presentation" identifier="AddName" id="iny-wg-D9z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="112.8" y="123.68815592203899"/>
         </scene>
         <!--Add Mushaf Name View Controller-->
         <scene sceneID="VCL-Dn-a39">
@@ -154,29 +238,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVX-88-mc6" customClass="GradientView" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                <rect key="frame" x="16" y="112" width="343" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVX-88-mc6" customClass="GradientView" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                <rect key="frame" x="16" y="150" width="343" height="320"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="مصحف المدينة المنورة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPq-n1-YRH">
-                                        <rect key="frame" x="8" y="94" width="327" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ias-ND-4kw">
+                                        <rect key="frame" x="126" y="10" width="90" height="81"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJ8-9t-bhk">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="Gqm-gs-zUz"/>
+                                            <constraint firstAttribute="width" constant="90" id="Keg-Hr-0EY"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="2" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مصحف المدينة المنورة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPq-n1-YRH" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="98" width="327" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="حفظ المصحف بإسم: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd9-VA-3mK">
-                                        <rect key="frame" x="8" y="179" width="327" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حفظ المصحف بإسم: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd9-VA-3mK" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="180" width="323" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS3-ku-535">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS3-ku-535" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
                                         <rect key="frame" x="181" y="283" width="150" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bNH-q8-1Fk"/>
+                                            <constraint firstAttribute="width" constant="150" id="dwa-FL-4Rh"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <state key="normal" title="Save">
+                                        <state key="normal" title="حفظ">
                                             <color key="titleColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -189,15 +327,19 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="savePressedWithSender:" destination="VRh-Xs-CXI" eventType="touchUpInside" id="5x8-jI-O2i"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vks-Wq-WPc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vks-Wq-WPc" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
                                         <rect key="frame" x="13" y="283" width="150" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cancel">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="BiP-Nf-3Fw"/>
+                                            <constraint firstAttribute="height" constant="30" id="fRJ-sn-8DL"/>
+                                        </constraints>
+                                        <state key="normal" title="إلغاء">
                                             <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -210,40 +352,69 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelPressedWithSender:" destination="VRh-Xs-CXI" eventType="touchUpInside" id="1fI-ma-r5j"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="مثال (مصحف التلاوة اليومية)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-pg-fdL">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="مثال (مصحف التلاوة اليومية)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-pg-fdL" customClass="GQTextField" customModule="GoldenQuranSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="199" width="343" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.0" green="0.74710512819999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="KHi-jB-Gg8"/>
+                                        </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvZ-m8-y5v">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvZ-m8-y5v">
                                         <rect key="frame" x="8" y="235" width="327" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="HyU-c0-76Z"/>
+                                        </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nx-9S-gCl">
-                                        <rect key="frame" x="0.0" y="272" width="343" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-3A-Lcr">
-                                        <rect key="frame" x="10" y="119" width="323" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-3A-Lcr" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="123" width="323" height="32"/>
                                         <string key="text">رواية حفص عن نافع
 عدد الصفحات: ٦٠٤</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Sd9-VA-3mK" secondAttribute="trailing" constant="10" id="3DD-xJ-RmM"/>
+                                    <constraint firstItem="ias-ND-4kw" firstAttribute="centerX" secondItem="dVX-88-mc6" secondAttribute="centerX" id="6Bo-yE-9Zf"/>
+                                    <constraint firstItem="WaK-pg-fdL" firstAttribute="top" secondItem="Sd9-VA-3mK" secondAttribute="bottom" constant="2" id="6Ny-K0-7vh"/>
+                                    <constraint firstItem="Sd9-VA-3mK" firstAttribute="leading" secondItem="dVX-88-mc6" secondAttribute="leading" constant="10" id="7Tk-UO-K71"/>
+                                    <constraint firstItem="mS3-ku-535" firstAttribute="centerX" secondItem="dVX-88-mc6" secondAttribute="centerX" constant="84.5" id="80L-Yv-IAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPq-n1-YRH" secondAttribute="trailing" constant="8" id="AfW-fY-6If"/>
+                                    <constraint firstItem="Vks-Wq-WPc" firstAttribute="centerX" secondItem="dVX-88-mc6" secondAttribute="centerX" constant="-83.5" id="EK3-vg-d6L"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Nr-3A-Lcr" secondAttribute="trailing" constant="10" id="Hlj-nY-dlW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WaK-pg-fdL" secondAttribute="trailing" id="KTr-JM-gwK"/>
+                                    <constraint firstAttribute="height" constant="320" id="LU8-lV-O8Z"/>
+                                    <constraint firstItem="TPq-n1-YRH" firstAttribute="leading" secondItem="dVX-88-mc6" secondAttribute="leading" constant="8" id="T5d-8b-sqa"/>
+                                    <constraint firstAttribute="bottom" secondItem="mS3-ku-535" secondAttribute="bottom" constant="7" id="VHQ-nn-T07"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vks-Wq-WPc" secondAttribute="bottom" constant="7" id="b0x-gj-0nf"/>
+                                    <constraint firstItem="ias-ND-4kw" firstAttribute="top" secondItem="dVX-88-mc6" secondAttribute="top" constant="10" id="cTM-7p-Ddp"/>
+                                    <constraint firstAttribute="trailing" secondItem="fvZ-m8-y5v" secondAttribute="trailing" constant="8" id="dAA-M1-if7"/>
+                                    <constraint firstItem="WaK-pg-fdL" firstAttribute="leading" secondItem="dVX-88-mc6" secondAttribute="leading" id="ffb-nt-Y3M"/>
+                                    <constraint firstItem="Vks-Wq-WPc" firstAttribute="top" secondItem="fvZ-m8-y5v" secondAttribute="bottom" constant="47" id="lZY-yt-9JP"/>
+                                    <constraint firstItem="Vks-Wq-WPc" firstAttribute="top" secondItem="WaK-pg-fdL" secondAttribute="bottom" constant="42" id="nFa-29-idm"/>
+                                    <constraint firstItem="2Nr-3A-Lcr" firstAttribute="top" secondItem="TPq-n1-YRH" secondAttribute="bottom" constant="4.5" id="pfB-kS-ChA"/>
+                                    <constraint firstItem="2Nr-3A-Lcr" firstAttribute="leading" secondItem="dVX-88-mc6" secondAttribute="leading" constant="10" id="qNg-J0-Uy3"/>
+                                    <constraint firstItem="fvZ-m8-y5v" firstAttribute="leading" secondItem="dVX-88-mc6" secondAttribute="leading" constant="8" id="sep-qp-xT7"/>
+                                    <constraint firstItem="TPq-n1-YRH" firstAttribute="top" secondItem="ias-ND-4kw" secondAttribute="bottom" constant="7" id="vRV-AC-oYL"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                         <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,61 +424,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ias-ND-4kw">
-                                <rect key="frame" x="143" y="122" width="90" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mus7af1" translatesAutoresizingMaskIntoConstraints="NO" id="rJ8-9t-bhk">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="0.0" height="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.59999999999999998"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="2" height="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dVX-88-mc6" firstAttribute="trailing" secondItem="wIE-Rc-YDm" secondAttribute="trailingMargin" id="gBh-TR-4po"/>
+                            <constraint firstItem="dVX-88-mc6" firstAttribute="leading" secondItem="wIE-Rc-YDm" secondAttribute="leadingMargin" id="khw-Fp-Nsb"/>
+                            <constraint firstItem="dVX-88-mc6" firstAttribute="centerY" secondItem="wIE-Rc-YDm" secondAttribute="centerY" constant="-23.5" id="mXQ-sB-OtH"/>
+                            <constraint firstItem="dVX-88-mc6" firstAttribute="centerX" secondItem="wIE-Rc-YDm" secondAttribute="centerX" id="rI4-Rt-swp"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCancel" destination="Vks-Wq-WPc" id="jyE-iw-RnC"/>
+                        <outlet property="btnSave" destination="mS3-ku-535" id="8xx-c2-yTy"/>
+                        <outlet property="imgMushafIcon" destination="rJ8-9t-bhk" id="oUU-c2-3ve"/>
+                        <outlet property="lblMushafInfo" destination="2Nr-3A-Lcr" id="6IC-ni-XXy"/>
+                        <outlet property="lblMushafName" destination="TPq-n1-YRH" id="KvJ-ds-dF6"/>
+                        <outlet property="lblSaveMushafHint" destination="Sd9-VA-3mK" id="xka-2e-6yI"/>
                         <outlet property="txtMushafName" destination="WaK-pg-fdL" id="ZMA-Co-rNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFJ-k6-ZBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.79999999999995" y="128.18590704647679"/>
+            <point key="canvasLocation" x="906" y="-536"/>
         </scene>
         <!--Mushaf List View Controller-->
         <scene sceneID="4Cs-Cs-H3e">
@@ -335,32 +473,36 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mus7af1" translatesAutoresizingMaskIntoConstraints="NO" id="IWH-C8-29R">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mus7af1" translatesAutoresizingMaskIntoConstraints="NO" id="IWH-C8-29R">
                                                             <rect key="frame" x="8" y="8" width="64" height="97"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="97" id="CLy-Ga-RhJ"/>
                                                                 <constraint firstAttribute="width" constant="64" id="Dxy-lR-Yn5"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1P-9l-mE3">
-                                                            <rect key="frame" x="80" y="16" width="279" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1P-9l-mE3" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                            <rect key="frame" x="80" y="16" width="279" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-sW-enN" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                            <rect key="frame" x="80" y="37" width="279" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-sW-enN">
-                                                            <rect key="frame" x="80" y="40" width="279" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccS-8g-ggx">
-                                                            <rect key="frame" x="80" y="69" width="279" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccS-8g-ggx" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                            <rect key="frame" x="80" y="62" width="279" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="D1P-9l-mE3" firstAttribute="top" secondItem="cap-p9-mVF" secondAttribute="topMargin" constant="8" id="2jx-Rc-FHB"/>
                                                         <constraint firstItem="ccS-8g-ggx" firstAttribute="leading" secondItem="IWH-C8-29R" secondAttribute="trailing" constant="8" id="3sE-WA-ugB"/>
@@ -376,6 +518,7 @@
                                                         <constraint firstItem="D1P-9l-mE3" firstAttribute="leading" secondItem="IWH-C8-29R" secondAttribute="trailing" constant="8" id="oDs-Y7-sEx"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <outlet property="imgMushafIcon" destination="IWH-C8-29R" id="ejO-lL-P2h"/>
                                                     <outlet property="lblName" destination="D1P-9l-mE3" id="0sS-lz-aTz"/>
@@ -390,7 +533,7 @@
                                         </connections>
                                     </tableView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoldenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VDt-P3-idx">
-                                        <rect key="frame" x="142.5" y="34" width="90" height="81"/>
+                                        <rect key="frame" x="143" y="34" width="90" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="81" id="Mn9-ue-Qre"/>
                                             <constraint firstAttribute="width" constant="90" id="wi8-vC-O13"/>

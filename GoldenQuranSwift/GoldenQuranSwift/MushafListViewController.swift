@@ -50,16 +50,21 @@ extension MushafListViewController:UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MushafListTableViewCell") as! MushafListTableViewCell
         
-        cell.lblName.text = mushafObject.name
-        cell.lblType.text = ""
+        cell.fillFromMushaf(mushaf: mushafObject)
         
-        let date = Date(timeIntervalSince1970: mushafObject.updatedAt!)
-        cell.lblUpdatedAt.text =  date.toStringWithRelativeTime()
         return cell
     }
 
 }
 
 extension MushafListViewController:UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mushafObject = userMushafs[indexPath.row]
+        Mus7afManager.shared.currentMus7af = mushafObject
+        Mus7afManager.shared.saveCurrentMushaf()
+        //FIXME:- temp
+        UIApplication.shared.windows[0].rootViewController = Constants.storyboard.mushaf.instantiateInitialViewController()
+    }
     
 }

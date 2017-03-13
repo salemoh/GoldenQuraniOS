@@ -12,11 +12,12 @@ target 'GoldenQuranSwift' do
   
   # Menu Pod
   pod 'SideMenu'
-  
+#  pod 'SideMenuController'
+
   # Keyboard Manager
   pod 'IQKeyboardManagerSwift'
   
-#  # Date Relative
+#  # Date Relative // Moved to local file
 #  pod 'AFDateHelper'
 
 end
