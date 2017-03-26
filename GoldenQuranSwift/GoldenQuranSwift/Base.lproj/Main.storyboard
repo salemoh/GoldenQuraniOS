@@ -22,7 +22,7 @@
         <scene sceneID="wvR-zV-pD7">
             <objects>
                 <navigationController navigationBarHidden="YES" id="kR8-a0-API" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="taH-b7-ffm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="taH-b7-ffm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -174,7 +174,7 @@
                             </view>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KNm-Bf-xLh" customClass="GQSegmentedControl" customModule="GoldenQuranSwift" customModuleProvider="target">
                                 <rect key="frame" x="16" y="123" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <segments>
                                     <segment title="English"/>

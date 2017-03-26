@@ -8,12 +8,24 @@
 
 import UIKit
 
-class MushafFeaturesViewController: UIViewController {
+enum MushafFeaturesViewControllerCells:String {
+    case topSummary = "TopCell"
+    case prayerTimes = "PrayerTimes"
+}
 
+class MushafFeaturesViewController: UIViewController , UITableViewDataSource , UITableViewDelegate {
+
+    @IBOutlet weak var tableView:UITableView!
+    
+    var cells = [MushafFeaturesViewControllerCells]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        cells.append(.topSummary)
+        cells.append(.prayerTimes)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,4 +47,33 @@ class MushafFeaturesViewController: UIViewController {
     }
     */
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    //MAARK:- TableView Datasource and Delegate
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return cells.count
+    }
+    
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    
+        if cells[indexPath.row] == .topSummary {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TopCell")
+            return cell!
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IconAndTitleCell")
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
+    }
 }

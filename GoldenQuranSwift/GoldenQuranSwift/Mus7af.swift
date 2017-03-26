@@ -66,7 +66,7 @@ class Mus7af: NSObject {
 //            let image    = UIImage(contentsOfFile: imageURL.path)
 //            return image!
 //        }
-        return UIImage()
+//        return UIImage()
     }
     
 }

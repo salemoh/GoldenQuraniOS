@@ -17,6 +17,9 @@ target 'GoldenQuranSwift' do
   # Keyboard Manager
   pod 'IQKeyboardManagerSwift'
   
+  #PrayerTimes
+  pod 'Adhan'
+  
 #  # Date Relative // Moved to local file
 #  pod 'AFDateHelper'
 

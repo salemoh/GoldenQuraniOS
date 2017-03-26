@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
 //        LanguageManager.changeLanguageTo(lang: .ar)
+        LocationManager.shared.startLocationUpdating()
         
         if Mus7afManager.shared.hasMushaf {
             UIApplication.shared.windows[0].rootViewController = Constants.storyboard.mushaf.instantiateInitialViewController()

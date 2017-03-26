@@ -134,7 +134,7 @@ class DBManager: NSObject {
         var mus7afList:[Mus7af] = []
         do {
             try dbQueueLibrary?.inDatabase { db in
-                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
+                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName , createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
                 
                 while let row = try rows.next() {
                     let mus7afItem = Mus7af()
@@ -161,4 +161,58 @@ class DBManager: NSObject {
     }
     
 
+    func getMus7afHighlightRects(forPage:Int , fromMushafDB:String)->[HighlightRect] {
+        
+        
+         var dbMushafQueue:DatabaseQueue?
+         
+        
+         do {
+            dbMushafQueue = try DatabaseQueue(path: Constants.db.mushafWithDBName(name: fromMushafDB))
+         } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+         }
+        
+        
+        var highlightRects:[HighlightRect] = []
+        do {
+            
+            try dbMushafQueue?.inDatabase { db in
+                
+                let query = "SELECT x , y , width , height , upper_left_x , upper_left_y , upper_right_x, upper_right_y , lower_right_x , lower_right_y, lower_left_x , lower_left_y , ayah , line , surah , page_number FROM page  WHERE page_number = " + String(forPage) + " group by surah ,  ayah , line"
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let highlightRect = HighlightRect()
+                    highlightRect.x = row.value(named:"x")
+                    highlightRect.y = row.value(named:"y")
+                    highlightRect.width = row.value(named:"width")
+                    highlightRect.height = row.value(named:"height")
+                    highlightRect.upperLeftX = row.value(named:"upper_left_x")
+                    highlightRect.upperLeftY = row.value(named:"upper_left_y")
+                    highlightRect.upperRightX = row.value(named:"upper_right_x")
+                    highlightRect.upperRightY = row.value(named:"upper_right_y")
+                    highlightRect.lowerRightX = row.value(named:"lower_right_x")
+                    highlightRect.lowerRightY = row.value(named:"lower_right_y")
+                    highlightRect.lowerLeftX = row.value(named:"lower_left_x")
+                    highlightRect.lowerLeftY = row.value(named:"lower_left_y")
+                    highlightRect.ayah = row.value(named:"ayah")
+                    highlightRect.line = row.value(named:"line")
+                    highlightRect.sora = row.value(named:"surah")
+                    highlightRect.pageNumber = row.value(named:"page_number")
+                    
+                    
+                    highlightRects.append(highlightRect)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch getUserMus7afs \(error.localizedDescription)")
+        }
+        return highlightRects
+    }
+    
+
+    
 }

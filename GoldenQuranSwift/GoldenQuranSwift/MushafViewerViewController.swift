@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MushafViewerViewController: SideMenuViewController {
+class MushafViewerViewController: SideMenuViewController  {
 
     @IBOutlet weak var scrollViewMain: UIScrollView!
     var pageController:UIPageViewController?
@@ -24,12 +24,14 @@ class MushafViewerViewController: SideMenuViewController {
         pageController?.view.semanticContentAttribute = .forceRightToLeft
         pageController?.setViewControllers([self.mushafViewControllerForPage(page: 1)!], direction: .forward, animated: true, completion: nil)
         self.addChildViewController(pageController!)
+        scrollViewMain.frame = self.view.frame
         scrollViewMain.addSubview(pageController!.view)
         pageController?.view.autoresizingMask = [.flexibleBottomMargin, .flexibleWidth,.flexibleHeight , .flexibleLeftMargin , .flexibleRightMargin , .flexibleTopMargin]
         pageController?.view.translatesAutoresizingMaskIntoConstraints = true
+        pageController?.view.frame = scrollViewMain.frame
         
+        //self.pageController?.view.backgroundColor = UIColor.red
         
-        self.pageController?.view.backgroundColor = UIColor.red
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,5 +129,11 @@ extension MushafViewerViewController:UIPageViewControllerDelegate {
 
 }
 
+
+extension MushafViewerViewController:UIScrollViewDelegate {
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.pageController?.view
+    }
+}
 
 

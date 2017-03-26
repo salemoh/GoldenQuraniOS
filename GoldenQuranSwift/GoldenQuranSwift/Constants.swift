@@ -28,6 +28,18 @@ struct Constants {
         static var userMus7afListDBPath:String{
             get{ return  Constants.path.library.appending("/\(Constants.db.defaultMus7afList).db")}
         }
+        
+        static func mushafWithDBName(name:String) -> String{
+            var verifiedName:String = name
+            var dbExtenstion:String = "db"
+            if name.lowercased().hasSuffix(".db") {
+                let range = name.lowercased().range(of: ".db")
+                verifiedName = name.replacingCharacters(in: range!, with: "")
+                dbExtenstion = name.components(separatedBy: ".").last!
+            }
+            return Bundle.main.path(forResource: verifiedName, ofType: dbExtenstion, inDirectory: "GoldenQuranRes/db")!
+//            return Bundle.main.path(forResource: verifiedName, ofType: dbExtenstion)!
+        }
     }
     
     struct storyboard {

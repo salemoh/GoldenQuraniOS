@@ -13,17 +13,29 @@ class Mus7afManager: NSObject {
     
     static let shared:Mus7afManager = Mus7afManager()
     
-    var currentMus7af:Mus7af = Mus7af() //{
-
-    
-    var hasMushaf:Bool {
+    private var _currentMus7af:Mus7af = Mus7af()
+    var currentMus7af:Mus7af {
         get{
-            if let _ = self.currentMus7af.id {
-                return true
+            if let _ = _currentMus7af.id {
+                return _currentMus7af
             }
             
             loadCurrentMushaf()
             
+            if let _ = _currentMus7af.id {
+                return _currentMus7af
+            }
+            return _currentMus7af
+        }
+        set {
+            _currentMus7af = newValue
+        }
+    }
+    
+
+    
+    var hasMushaf:Bool {
+        get{
             if let _ = self.currentMus7af.id {
                 return true
             }
@@ -65,11 +77,11 @@ class Mus7afManager: NSObject {
             let mushafList = userMushafs()
             for mushafObject in  mushafList {
                 if mushafObject.guid == (currentMushafGUID as! String) {
-                    self.currentMus7af = mushafObject
+                    self._currentMus7af = mushafObject
                     return
                 }
             }
         }
-        self.currentMus7af = Mus7af()
+        self._currentMus7af = Mus7af()
     }
 }
