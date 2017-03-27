@@ -49,6 +49,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>use location</string>
+	<string>Prayer times | أوقات الصلاة</string>
 </dict>
 </plist>

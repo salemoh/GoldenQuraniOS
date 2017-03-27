@@ -47,3 +47,42 @@
 "NUMBER_OF_PAGES" = "عدد الصفحات";
 "SAVE_MUSHAF_WITH_NAME" = "حفظ المصحف بإسم:";
 "MUSHAF_NAME_EXAMPLE" = "مثال: مصحف التلاوة اليومية";
+
+"FAJR_PRAY_TIME" = "الفجر";
+"SUNRISE_PRAY_TIME" = "الشروق";
+"DOHOR_PRAY_TIME" = "الظهر";
+"ASR_PRAY_TIME" = "العصر";
+"MAGHRIB_PRAY_TIME" = "المغرب";
+"ISHA_PRAY_TIME" = "العشاء";
+
+"PRAYER_TIMES_ENABLE_ATHAN_NOTIFICATION" = "تفعيل إشعارات الآذان";
+"PRAYER_TIMES_CALCULATION_METHOD" = "طريقة الحساب";
+
+"PRAYER_TIMES_CALCULATION_METHOD_muslimWorldLeague" = "رابطة العالم الإسلامي";
+"PRAYER_TIMES_CALCULATION_METHOD_egyptian" = "الهيئة المصرية العامة";
+"PRAYER_TIMES_CALCULATION_METHOD_karachi" = "كراتشي";
+"PRAYER_TIMES_CALCULATION_METHOD_ummAlQura" = "جامعة أم القرى، مكة";
+"PRAYER_TIMES_CALCULATION_METHOD_gulf" = "الخليج العربي";
+"PRAYER_TIMES_CALCULATION_METHOD_moonsightingCommittee" = "لجنة موقع رؤية";
+"PRAYER_TIMES_CALCULATION_METHOD_northAmerica" = "شمال أمريكا";
+"PRAYER_TIMES_CALCULATION_METHOD_kuwait" = "الكويت";
+"PRAYER_TIMES_CALCULATION_METHOD_qatar" = "قطر";
+
+"PRAYER_TIMES_CALCULATION_MADHAB" = "المذهب";
+"PRAYER_TIMES_CALCULATION_MADHAB_HANFI" = "حنفي";
+"PRAYER_TIMES_CALCULATION_MADHAB_SHAFI" = "شافعي";
+
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND" = "صوت تنبيه الآذان";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND1" = "صوت ١";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND2" = "صوت ٢";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND3" = "صوت ٣";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND4" = "صوت ٤";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND5" = "صوت ٥";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND6" = "صوت ٦";
+
+"PRAYER_TIMES" = "أوقات الصلاة";
+"PRAYER_SETTINGS" = "إعدادات";
+"PRAYER_ADJUSTMENT" = "تصحيح";
+
+
+

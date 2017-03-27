@@ -24,6 +24,18 @@ class LocationManager: NSObject , CLLocationManagerDelegate {
     
     var delegate:LocationManagerDelegate?
     
+    
+    func getLocation()->CLLocation?{
+        
+        let lastLocationLat = UserDefaults.standard.double(forKey: Constants.userDefaultsKeys.lastKnownLocationLat)
+        if  lastLocationLat > 0.0 {
+            let lastLocationLng = UserDefaults.standard.double(forKey: Constants.userDefaultsKeys.lastKnownLocationLon)
+            
+            return CLLocation(latitude: lastLocationLat, longitude: lastLocationLng)
+        }
+        return nil
+    }
+    
     func stopUpdating() {
         self.locationManager.stopUpdatingHeading()
         self.locationManager.stopUpdatingLocation()
@@ -104,10 +116,12 @@ class LocationManager: NSObject , CLLocationManagerDelegate {
         
         let needleTransform = CGAffineTransform(rotationAngle: CGFloat(((Double(needleDirection) * M_PI) / 180.0) + needleAngle))
         
-        print("Needle \(CGAffineTransform(rotationAngle: CGFloat(((Double(needleDirection) * M_PI) / 180.0) + needleAngle)))")
         let compossTransform = CGAffineTransform(rotationAngle: CGFloat((Double(compassDirection) * M_PI) / 180.0))
-        print("composs \(CGAffineTransform(rotationAngle: CGFloat((Double(compassDirection) * M_PI) / 180.0)))")
         
+        /*
+        print("Needle \(CGAffineTransform(rotationAngle: CGFloat(((Double(needleDirection) * M_PI) / 180.0) + needleAngle)))")
+        print("composs \(CGAffineTransform(rotationAngle: CGFloat((Double(compassDirection) * M_PI) / 180.0)))")
+        */
         
         
         self.delegate?.locationManagerDidUpdateHeading(compassTransform: compossTransform , needleTransform: needleTransform)
@@ -146,10 +160,15 @@ class LocationManager: NSObject , CLLocationManagerDelegate {
         }
         
         
-        print("new location %@" , locations.last ?? "")
+        //print("new location %@" , locations.last ?? "")
         //locationManager.stopUpdatingLocation()
+        
         self.lastLocation = lastLocation
-        PrayerTimesManager().getPrayerTimes(forLocation: lastLocation)
+        //PrayerTimesManager().getPrayerTimes(forLocation: lastLocation)
+        
+        UserDefaults.standard.set(lastLocation.coordinate.latitude, forKey: Constants.userDefaultsKeys.lastKnownLocationLat)
+        UserDefaults.standard.set(lastLocation.coordinate.longitude, forKey: Constants.userDefaultsKeys.lastKnownLocationLon)
+        UserDefaults.standard.synchronize()
         
     }
     

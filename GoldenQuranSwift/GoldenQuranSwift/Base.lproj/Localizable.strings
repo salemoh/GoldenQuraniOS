@@ -14,3 +14,39 @@
 "NUMBER_OF_PAGES" = "Number of pages";
 "SAVE_MUSHAF_WITH_NAME" = "Add name to your Quran:";
 "MUSHAF_NAME_EXAMPLE" = "ex: Daily reading Quran";
+
+
+"FAJR_PRAY_TIME" = "Fajr";
+"SUNRISE_PRAY_TIME" = "Sunrise";
+"DOHOR_PRAY_TIME" = "Dohor";
+"ASR_PRAY_TIME" = "Asr";
+"MAGHRIB_PRAY_TIME" = "Magrib";
+"ISHA_PRAY_TIME" = "Isha";
+"PRAYER_TIMES_ENABLE_ATHAN_NOTIFICATION" = "Enable Athan notifications";
+"PRAYER_TIMES_CALCULATION_METHOD" = "Calculation method";
+
+"PRAYER_TIMES_CALCULATION_METHOD_muslimWorldLeague" = "Muslim World League";
+"PRAYER_TIMES_CALCULATION_METHOD_egyptian" = "Egyptian General Authority of Survey";
+"PRAYER_TIMES_CALCULATION_METHOD_karachi" = "University of Islamic Sciences, Karachi";
+"PRAYER_TIMES_CALCULATION_METHOD_ummAlQura" = "Umm al-Qura University, Makkah";
+"PRAYER_TIMES_CALCULATION_METHOD_gulf" = "The Gulf Region";
+"PRAYER_TIMES_CALCULATION_METHOD_moonsightingCommittee" = "Moonsighting Committee";
+"PRAYER_TIMES_CALCULATION_METHOD_northAmerica" = "North America";
+"PRAYER_TIMES_CALCULATION_METHOD_kuwait" = "Kuwait";
+"PRAYER_TIMES_CALCULATION_METHOD_qatar" = "Qatar";
+
+"PRAYER_TIMES_CALCULATION_MADHAB" = "Madhab";
+"PRAYER_TIMES_CALCULATION_MADHAB_HANFI" = "Hanafi";
+"PRAYER_TIMES_CALCULATION_MADHAB_SHAFI" = "Shaf'i";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND" = "Athan notifications sound";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND1" = "Sound 1";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND2" = "Sound 2";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND3" = "Sound 3";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND4" = "Sound 4";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND5" = "Sound 5";
+"PRAYER_TIMES_SETTINGS_ATHAN_SOUND6" = "Sound 6";
+
+"PRAYER_TIMES" = "Prayer times";
+"PRAYER_SETTINGS" = "Settings";
+"PRAYER_ADJUSTMENT" = "Adjustment";
+

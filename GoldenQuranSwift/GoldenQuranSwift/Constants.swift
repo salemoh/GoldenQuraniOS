@@ -47,4 +47,30 @@ struct Constants {
         static let mushaf = UIStoryboard(name:"Mushaf" , bundle:nil)
     }
     
+    struct userDefaultsKeys {
+        //Notifications
+        static let notificationsAthanDisabled = "NOTIFICATIONS_ATHAN_DISABLED"
+        static let notificationsAthanFajrDisabled = "NOTIFICATIONS_ATHAN_DISABLED_FAJR"
+        static let notificationsAthanDouhrDisabled = "NOTIFICATIONS_ATHAN_DISABLED_DUHOR"
+        static let notificationsAthanAsrDisabled = "NOTIFICATIONS_ATHAN_DISABLED_ASR"
+        static let notificationsAthanMaghribDisabled = "NOTIFICATIONS_ATHAN_DISABLED_MAGHRIB"
+        static let notificationsAthanIshaDisabled = "NOTIFICATIONS_ATHAN_DISABLED_ISHA"
+        
+        
+        ///Location Manager
+        static let lastKnownLocationLat = "LOCATION_LAST_KNOWN_LAT"
+        static let lastKnownLocationLon = "LOCATION_LAST_KNOWN_LON"
+        
+        //Prayer Times
+        static let prayerTimesAdjustmentFajr = "PrayerTimesAdjustments_fajr"
+        static let prayerTimesAdjustmentSunrise =  "PrayerTimesAdjustments_sunrise"
+        static let prayerTimesAdjustmentDhuhr = "PrayerTimesAdjustments_dhuhr"
+        static let prayerTimesAdjustmentAsr = "PrayerTimesAdjustments_asr"
+        static let prayerTimesAdjustmentMagrib = "PrayerTimesAdjustments_maghrib"
+        static let prayerTimesAdjustmentIsha = "PrayerTimesAdjustments_isha"
+        static let prayerTimesSettingsCalculationMethod = "PrayerTimesSettingsCalcultionMethod"
+        static let prayerTimesSettingsCalculationMadhab = "PrayerTimesSettingsCalcultionMadhab"
+        static let prayerTimesSettingsNotificationSound = "PrayerTimesSettingsNotificationSound"
+    }
+    
 }

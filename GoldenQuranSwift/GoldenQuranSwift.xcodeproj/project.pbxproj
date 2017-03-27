@@ -14,6 +14,13 @@
 		17210B181E87F8570055BEF3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B171E87F8570055BEF3 /* LocationManager.swift */; };
 		17210B1A1E8812C20055BEF3 /* PrayerTimesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */; };
 		17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */; };
+		17210B201E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B1F1E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift */; };
+		17210B221E8907700055BEF3 /* PrayerTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B211E8907700055BEF3 /* PrayerTimeTableViewCell.swift */; };
+		17210B241E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B231E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift */; };
+		17210B261E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B251E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift */; };
+		17210B281E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */; };
+		17210B2A1E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */; };
+		17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */; };
 		1744B2591E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */; };
 		1744B25A1E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */; };
 		1744B25B1E70512E00641FA0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */; };
@@ -64,6 +71,13 @@
 		17210B171E87F8570055BEF3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesManager.swift; sourceTree = "<group>"; };
 		17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
+		17210B1F1E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSwitchEnableTableViewCell.swift; sourceTree = "<group>"; };
+		17210B211E8907700055BEF3 /* PrayerTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimeTableViewCell.swift; sourceTree = "<group>"; };
+		17210B231E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsFullTimesTableViewCell.swift; sourceTree = "<group>"; };
+		17210B251E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsTitleTableViewCell.swift; sourceTree = "<group>"; };
+		17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsLabelTableViewCell.swift; sourceTree = "<group>"; };
+		17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsSoundTableViewCell.swift; sourceTree = "<group>"; };
+		17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerAdjustmentTableViewCell.swift; sourceTree = "<group>"; };
 		1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Bd.ttf"; sourceTree = "<group>"; };
 		1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Reg.ttf"; sourceTree = "<group>"; };
 		1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -138,6 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */,
+				17210B1F1E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift */,
+				17210B211E8907700055BEF3 /* PrayerTimeTableViewCell.swift */,
+				17210B231E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift */,
+				17210B251E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift */,
+				17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */,
+				17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */,
+				17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */,
 			);
 			name = PrayerTimesViewController;
 			sourceTree = "<group>";
@@ -457,6 +478,7 @@
 				1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */,
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
+				17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */,
 				17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */,
 				17EA2E2B1E6DFFF10087FFF5 /* MushafListViewController.swift in Sources */,
 				1744B2681E74276200641FA0 /* SideMenuViewController.swift in Sources */,
@@ -471,19 +493,25 @@
 				976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */,
 				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
 				17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */,
+				17210B2A1E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift in Sources */,
+				17210B241E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift in Sources */,
 				17EB649B1E6F4C1300D518C2 /* UIApplicationExtension.swift in Sources */,
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
+				17210B201E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift in Sources */,
 				1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */,
 				1744B25F1E70567600641FA0 /* FontManager.swift in Sources */,
 				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
 				1712FA0E1E815B67004810A1 /* HighlightRect.swift in Sources */,
 				177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */,
 				1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */,
+				17210B261E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift in Sources */,
+				17210B281E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift in Sources */,
 				17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */,
 				17F30EB11E8403D2005EFEE3 /* GQHighlightView.swift in Sources */,
 				1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */,
 				170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */,
 				17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */,
+				17210B221E8907700055BEF3 /* PrayerTimeTableViewCell.swift in Sources */,
 				1744B26A1E74279100641FA0 /* MushafFeaturesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
