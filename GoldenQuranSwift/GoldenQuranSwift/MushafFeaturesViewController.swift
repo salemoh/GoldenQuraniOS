@@ -11,9 +11,10 @@ import UIKit
 enum MushafFeaturesViewControllerCells:String {
     case topSummary = "TopCell"
     case prayerTimes = "PrayerTimes"
+    case highlightMushafTopics = "highlightMushafTopics"
 }
 
-class MushafFeaturesViewController: UIViewController , UITableViewDataSource , UITableViewDelegate {
+class MushafFeaturesViewController: UIViewController  {
 
     @IBOutlet weak var tableView:UITableView!
     
@@ -25,6 +26,8 @@ class MushafFeaturesViewController: UIViewController , UITableViewDataSource , U
         // Do any additional setup after loading the view.
         cells.append(.topSummary)
         cells.append(.prayerTimes)
+        cells.append(.highlightMushafTopics)
+        
         self.tableView.reloadData()
     }
 
@@ -52,28 +55,79 @@ class MushafFeaturesViewController: UIViewController , UITableViewDataSource , U
         
     }
     
-    //MAARK:- TableView Datasource and Delegate
+    
+    
+    
+    
+}
+
+//MARK:- TableView Datasource and Delegate
+
+extension MushafFeaturesViewController:UITableViewDelegate{
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch cells[indexPath.row] {
+        case .prayerTimes:
+            self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
+        default:
+            break
+        }
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch cells[indexPath.row] {
+        case .topSummary:
+            return 70
+        default:
+            return 50
+        }
+    }
+}
+
+extension MushafFeaturesViewController:UITableViewDataSource{
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return cells.count
     }
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-    
+        
         if cells[indexPath.row] == .topSummary {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TopCell")
-            return cell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MushafFeaturesTopSummeryTableViewCell") as! MushafFeaturesTopSummeryTableViewCell
+            return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IconAndTitleCell")
-        return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MushafFeaturesIconLabelTableViewCell") as! MushafFeaturesIconLabelTableViewCell
+        cell.switchControl.isHidden = true
+        
+        switch cells[indexPath.row] {
+            
+        case .prayerTimes:
+            cell.imgIcon.image = UIImage(named:"prayerIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_PRAYER_TIMES", comment: "")
+            
+        case .highlightMushafTopics:
+            cell.switchControl.isHidden = false
+            cell.imgIcon.image = UIImage(named:"mushafByTopicIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_ENABLE_HIGHLIGHT_BY_TOPIC", comment: "")
+            cell.actionsHandler = { (isOn: Bool) -> Void in
+                UserDefaults.standard.set(isOn, forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled)
+                UserDefaults.standard.synchronize()
+            }
+            cell.switchControl.isOn = UserDefaults.standard.bool(forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled)
+            
+            
+        default:
+            break
+        }
+        return cell
     }
 }

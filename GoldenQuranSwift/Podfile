@@ -8,7 +8,9 @@ target 'GoldenQuranSwift' do
   # Pods for GoldenQuranSwift
   
   # Database Pod
-  pod 'GRDB.swift'
+  #pod 'GRDB.swift'
+  use_frameworks!
+  pod 'GRDB.swift' #, :git => 'https://github.com/groue/GRDB.swift.git', :branch => 'Swift3'
   
   # Menu Pod
   pod 'SideMenu'

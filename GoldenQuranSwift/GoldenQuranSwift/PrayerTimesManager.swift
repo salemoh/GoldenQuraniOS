@@ -76,7 +76,7 @@ class PrayerTimesManager: NSObject {
         return params
     }
     
-    func getPrayerTimes(forLocation:CLLocation) -> PrayerTimes? {
+    func getPrayerTimes(forLocation:CLLocation , forDate:Date = Date()) -> PrayerTimes? {
     
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = cal.dateComponents([.year, .month, .day], from: Date())

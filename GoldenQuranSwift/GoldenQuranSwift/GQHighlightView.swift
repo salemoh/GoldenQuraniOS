@@ -12,9 +12,10 @@ enum HighlightType:Int {
     case highlight
     case bookmark
     case note
+    case topic
     case share
     
-    func getColorForHighlight() -> UIColor {
+    func getColorForHighlight() -> UIColor? {
         switch self {
         case .highlight:
             return UIColor.blue.withAlphaComponent(0.3)
@@ -22,6 +23,8 @@ enum HighlightType:Int {
             return UIColor.yellow.withAlphaComponent(0.3)
         case .note:
             return UIColor.green.withAlphaComponent(0.3)
+        case .topic:
+            return nil
         default:
             return UIColor.clear
         }
@@ -37,7 +40,9 @@ class GQHighlightView: UIView {
         }
         set{
             _highlightType = newValue
-            self.backgroundColor = _highlightType.getColorForHighlight()
+            if let color = _highlightType.getColorForHighlight(){
+                self.backgroundColor = color
+            }
         }
     }
 }

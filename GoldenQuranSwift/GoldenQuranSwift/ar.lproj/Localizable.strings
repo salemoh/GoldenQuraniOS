@@ -84,5 +84,8 @@
 "PRAYER_SETTINGS" = "إعدادات";
 "PRAYER_ADJUSTMENT" = "تصحيح";
 
+"MUSHAF_FEATURES_PRAYER_TIMES" = "أوقات الصلاة";
+"MUSHAF_FEATURES_ENABLE_HIGHLIGHT_BY_TOPIC" = "تظليل الآيات حسب موضوعاتها";
+
 
 

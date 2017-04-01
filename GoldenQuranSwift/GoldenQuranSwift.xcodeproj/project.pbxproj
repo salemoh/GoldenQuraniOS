@@ -21,6 +21,9 @@
 		17210B281E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */; };
 		17210B2A1E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */; };
 		17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */; };
+		172329BC1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */; };
+		172329BE1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */; };
+		172329C01E8C78F90083D4AC /* MushafTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BF1E8C78F90083D4AC /* MushafTopic.swift */; };
 		1744B2591E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */; };
 		1744B25A1E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */; };
 		1744B25B1E70512E00641FA0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */; };
@@ -78,6 +81,9 @@
 		17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsLabelTableViewCell.swift; sourceTree = "<group>"; };
 		17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsSoundTableViewCell.swift; sourceTree = "<group>"; };
 		17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerAdjustmentTableViewCell.swift; sourceTree = "<group>"; };
+		172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesTopSummeryTableViewCell.swift; sourceTree = "<group>"; };
+		172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesIconLabelTableViewCell.swift; sourceTree = "<group>"; };
+		172329BF1E8C78F90083D4AC /* MushafTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafTopic.swift; sourceTree = "<group>"; };
 		1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Bd.ttf"; sourceTree = "<group>"; };
 		1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Reg.ttf"; sourceTree = "<group>"; };
 		1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */,
+				172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */,
+				172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */,
 				17210B1C1E884CFB0055BEF3 /* PrayerTimesViewController */,
 			);
 			name = MushafFeaturesMainContainer;
@@ -305,6 +313,7 @@
 			children = (
 				976A89591E510B0E00697DD2 /* Mus7af.swift */,
 				1712FA0D1E815B67004810A1 /* HighlightRect.swift */,
+				172329BF1E8C78F90083D4AC /* MushafTopic.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -476,6 +485,7 @@
 				17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */,
 				17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */,
 				1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */,
+				172329BC1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift in Sources */,
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
 				17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */,
@@ -494,6 +504,7 @@
 				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
 				17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */,
 				17210B2A1E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift in Sources */,
+				172329C01E8C78F90083D4AC /* MushafTopic.swift in Sources */,
 				17210B241E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift in Sources */,
 				17EB649B1E6F4C1300D518C2 /* UIApplicationExtension.swift in Sources */,
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
@@ -506,6 +517,7 @@
 				1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */,
 				17210B261E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift in Sources */,
 				17210B281E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift in Sources */,
+				172329BE1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift in Sources */,
 				17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */,
 				17F30EB11E8403D2005EFEE3 /* GQHighlightView.swift in Sources */,
 				1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */,

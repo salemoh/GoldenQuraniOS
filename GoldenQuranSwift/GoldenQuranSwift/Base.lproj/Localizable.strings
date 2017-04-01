@@ -50,3 +50,5 @@
 "PRAYER_SETTINGS" = "Settings";
 "PRAYER_ADJUSTMENT" = "Adjustment";
 
+"MUSHAF_FEATURES_PRAYER_TIMES" = "Prayer times";
+"MUSHAF_FEATURES_ENABLE_HIGHLIGHT_BY_TOPIC" = "Highlight verses by topics";

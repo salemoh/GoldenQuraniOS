@@ -38,8 +38,13 @@ struct Constants {
                 dbExtenstion = name.components(separatedBy: ".").last!
             }
             return Bundle.main.path(forResource: verifiedName, ofType: dbExtenstion, inDirectory: "GoldenQuranRes/db")!
-//            return Bundle.main.path(forResource: verifiedName, ofType: dbExtenstion)!
         }
+        
+        static var mushafByTopicDBPath:String{
+            get{ return Bundle.main.path(forResource: "QuranMawdoo3", ofType: "db", inDirectory: "GoldenQuranRes/db/Additions")!}
+        }
+
+        
     }
     
     struct storyboard {
@@ -71,6 +76,9 @@ struct Constants {
         static let prayerTimesSettingsCalculationMethod = "PrayerTimesSettingsCalcultionMethod"
         static let prayerTimesSettingsCalculationMadhab = "PrayerTimesSettingsCalcultionMadhab"
         static let prayerTimesSettingsNotificationSound = "PrayerTimesSettingsNotificationSound"
+        
+        //// Features menu
+        static let highlightMushafByTopicsEnabled = "highlightMushafByTopicsEnabled"
     }
     
 }

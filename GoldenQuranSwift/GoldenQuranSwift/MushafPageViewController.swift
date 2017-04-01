@@ -28,7 +28,8 @@ class MushafPageViewController: UIViewController {
         super.viewDidLoad()
         
         pageManager.mushafPage = self
-
+        pageManager.pageNumber = self.pageNumber
+        
         // Do any additional setup after loading the view.
         
         if pageNumber%2 == 0 {
@@ -43,11 +44,19 @@ class MushafPageViewController: UIViewController {
         self.imgMushafPage.addGestureRecognizer(tapGesture!)
     }
 
+    func preparNotifiersObservers(){
+    
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         self.refreshPageImageSize()
         self.refreshTopIcons()
+        self.removeHighlights(forType: nil)
+        if UserDefaults.standard.bool(forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled) {
+            pageManager.drawMushafTopics()
+        }
         
     }
     override func didReceiveMemoryWarning() {
@@ -127,7 +136,7 @@ class MushafPageViewController: UIViewController {
 /// Page manager function
 extension MushafPageViewController{
 
-    func drawHighlightRects(highlightRects: [HighlightRect]) {
+    func drawHighlightRects(highlightRects: [HighlightRect] ,  highlightType:HighlightType , highlightColor:UIColor?) {
         
         for highlightRect in highlightRects {
             let x = CGFloat(highlightRect.x!) * pageScaleFactor
@@ -136,18 +145,28 @@ extension MushafPageViewController{
             let height = CGFloat(highlightRect.height!) * pageScaleFactor
             
             let highlightView = GQHighlightView(frame:CGRect(x:x, y: y, width: width, height:height ))
-            highlightView.highlightType = .highlight
+            highlightView.highlightType = highlightType
+            
+            if let _ = highlightColor {
+                highlightView.backgroundColor = highlightColor!
+            }
             self.imgMushafPage.addSubview(highlightView)
         }
         
     }
     
-    func removeAllHighlights(){
+    func removeHighlights(forType:HighlightType?){
         for viw in self.imgMushafPage.subviews {
             if let highlightView = viw as? GQHighlightView {
-                if highlightView.highlightType == .highlight {
+                if let type = forType {
+                    if highlightView.highlightType == type {
+                        viw.removeFromSuperview()
+                    }
+                } else {
+                    //remove all if type not presented
                     viw.removeFromSuperview()
                 }
+                
             }
         }
     }

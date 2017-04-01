@@ -215,4 +215,46 @@ class DBManager: NSObject {
     
 
     
+    func getMushafByTopic(formAyah:Int , toAyah:Int, soraNo: Int)->[MushafTopic] {
+        
+        
+        var dbMushafByTopicQueue:DatabaseQueue?
+        
+        
+        do {
+            dbMushafByTopicQueue = try DatabaseQueue(path: Constants.db.mushafByTopicDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        
+        var topics:[MushafTopic] = []
+        do {
+            
+            try dbMushafByTopicQueue?.inDatabase { db in
+                
+                let query = "SELECT SoraNo,FromAyah,ToAyah,Description ,ColorIndex  FROM data where FromAyah >= " + String(formAyah) + "  AND ToAyah <= " + String(toAyah) + "   AND SoraNo = " + String(soraNo) + "  OR FromAyah <= " + String(formAyah) + "  AND ToAyah >= " + String(formAyah) + "   AND SoraNo = " + String(soraNo) + "  OR FromAyah <= " + String(toAyah) + "  AND ToAyah >= " + String(toAyah) + "   AND SoraNo = " + String(soraNo) + "  group by SoraNo , FromAyah , ToAyah"
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    var topic = MushafTopic()
+                    topic.soraNo = row.value(named:"SoraNo")
+                    topic.fromAyah = row.value(named:"FromAyah")
+                    topic.toAyah = row.value(named:"ToAyah")
+                    topic.description = row.value(named:"Description")
+                    topic.colorIndex = row.value(named:"ColorIndex")
+                    
+                    
+                    topics.append(topic)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch getMushafByTopic \(error.localizedDescription)")
+        }
+        return topics
+    }
+    
+    
 }
