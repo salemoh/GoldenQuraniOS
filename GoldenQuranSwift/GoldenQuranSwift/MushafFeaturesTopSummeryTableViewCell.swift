@@ -11,10 +11,11 @@ import UIKit
 class MushafFeaturesTopSummeryTableViewCell: UITableViewCell {
 
     
+    var actionsHandler: ((Void)->Void)?
     
     @IBOutlet weak var lblHijriDate: GQLabel!
     @IBOutlet weak var btnEditHijri: GQButton!
-    @IBOutlet weak var lblNextPrayTime: GQButton!
+    @IBOutlet weak var btnNextPrayTime: GQButton!
     @IBOutlet weak var lblDate: GQLabel!
     
     override func awakeFromNib() {
@@ -28,4 +29,10 @@ class MushafFeaturesTopSummeryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func prayerPressed(_ sender: UIButton) {
+        if let _ = actionsHandler {
+            actionsHandler!()
+        }
+    }
+    
 }

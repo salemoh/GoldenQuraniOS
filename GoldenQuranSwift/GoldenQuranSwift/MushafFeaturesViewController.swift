@@ -12,6 +12,7 @@ enum MushafFeaturesViewControllerCells:String {
     case topSummary = "TopCell"
     case prayerTimes = "PrayerTimes"
     case highlightMushafTopics = "highlightMushafTopics"
+    case settings = "SettingsCell"
 }
 
 class MushafFeaturesViewController: UIViewController  {
@@ -26,6 +27,7 @@ class MushafFeaturesViewController: UIViewController  {
         // Do any additional setup after loading the view.
         cells.append(.topSummary)
         cells.append(.prayerTimes)
+        cells.append(.settings)
         cells.append(.highlightMushafTopics)
         
         self.tableView.reloadData()
@@ -57,7 +59,30 @@ class MushafFeaturesViewController: UIViewController  {
     
     
     
+    func getHijriDate() -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier:LanguageManager.deviceLanguage())
+        let islamic = Calendar(identifier:.islamic) // Changed the variable name
+        let components = islamic.dateComponents([.day , .month ,.year], from: Date())
+        // *** Note also NSCalendar(identifier:) now returns now returns an optional ***
+        let date = islamic.date(from: components)
+        dateFormatter.calendar = islamic
+        dateFormatter.dateFormat = "yyyy MMMM dd "
+        if UIApplication.isAr() {
+            dateFormatter.dateFormat = "d MMMM yyyy"
+        }
+        
+        return dateFormatter.string(from: date!)
+        
+    }
     
+    func getCurrentTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier:LanguageManager.deviceLanguage())
+        dateFormatter.dateFormat = "hh:mm a"
+        return dateFormatter.string(from: Date())
+    }
     
 }
 
@@ -75,6 +100,8 @@ extension MushafFeaturesViewController:UITableViewDelegate{
         switch cells[indexPath.row] {
         case .prayerTimes:
             self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
+        case .settings:
+            self.performSegue(withIdentifier: "toSettings", sender: nil)
         default:
             break
         }
@@ -102,6 +129,13 @@ extension MushafFeaturesViewController:UITableViewDataSource{
         
         if cells[indexPath.row] == .topSummary {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MushafFeaturesTopSummeryTableViewCell") as! MushafFeaturesTopSummeryTableViewCell
+            cell.btnNextPrayTime.setTitle(PrayerTimesManager().getNextPrayerRemining(), for: .normal)
+            cell.lblDate.text = self.getCurrentTime()
+            cell.lblHijriDate.text = self.getHijriDate()
+            
+            cell.actionsHandler = { () -> Void  in
+                self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
+            }
             return cell
         }
         
@@ -113,6 +147,10 @@ extension MushafFeaturesViewController:UITableViewDataSource{
         case .prayerTimes:
             cell.imgIcon.image = UIImage(named:"prayerIcon")
             cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_PRAYER_TIMES", comment: "")
+        
+        case .settings:
+            cell.imgIcon.image = UIImage(named:"settings")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_SETTINGS", comment: "")
             
         case .highlightMushafTopics:
             cell.switchControl.isHidden = false

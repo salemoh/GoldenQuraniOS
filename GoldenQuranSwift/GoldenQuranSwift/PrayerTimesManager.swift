@@ -79,7 +79,7 @@ class PrayerTimesManager: NSObject {
     func getPrayerTimes(forLocation:CLLocation , forDate:Date = Date()) -> PrayerTimes? {
     
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
-        let date = cal.dateComponents([.year, .month, .day], from: Date())
+        let date = cal.dateComponents([.year, .month, .day], from: forDate)
         
         let coordinates = Coordinates(latitude: forLocation.coordinate.latitude, longitude: forLocation.coordinate.longitude)
         
@@ -106,13 +106,58 @@ class PrayerTimesManager: NSObject {
         return nil
     }
     
-    func getPrayerTimes()->PrayerTimes?{
+    func getPrayerTimes(forDate:Date = Date())->PrayerTimes?{
         if let location = LocationManager.shared.getLocation() {
-            if let prayer = self.getPrayerTimes(forLocation: location) {
+            if let prayer = self.getPrayerTimes(forLocation: location , forDate:forDate) {
                 return prayer
             }
         }
         
         return nil
+    }
+    
+    func getNextPrayerRemining() -> String {
+        
+        var nextPrayer:Date? = nil
+        guard let todayPrayerTimes = self.getPrayerTimes() else {
+            return "--:--"
+        }
+        
+        for prayTime in [todayPrayerTimes.fajr,todayPrayerTimes.sunrise , todayPrayerTimes.dhuhr , todayPrayerTimes.asr , todayPrayerTimes.maghrib , todayPrayerTimes.isha] {
+            
+            if prayTime > Date() {
+                nextPrayer = prayTime
+                break
+            }
+        }
+        if nextPrayer == nil {
+            let oneDayfromNow: Date = Calendar.current.date(byAdding: .day,value:1 , to: Date())!
+            
+            guard let tomorrowPrayerTimes = self.getPrayerTimes(forDate: oneDayfromNow) else {
+                return "--:--"
+            }
+            nextPrayer = tomorrowPrayerTimes.fajr
+        }
+        
+        let timeDiff = (nextPrayer?.timeIntervalSince1970)! - Date().timeIntervalSince1970
+        let hours = Int(timeDiff / 3600)
+        let min = (Int(timeDiff) - hours * 3600) / 60
+        
+        switch nextPrayer! {
+        
+        case todayPrayerTimes.sunrise:
+            return String(format:"%@ %@ %02d:%02d" , NSLocalizedString("SUNRISE_PRAY_TIME", comment: "") ,NSLocalizedString("NEXT_PRAYER_TIME_AFTER", comment: "") , hours , min ).correctLanguageNumbers()
+        case todayPrayerTimes.dhuhr:
+            return String(format:"%@ %@ %02d:%02d" , NSLocalizedString("DOHOR_PRAY_TIME", comment: "") ,NSLocalizedString("NEXT_PRAYER_TIME_AFTER", comment: "") , hours , min ).correctLanguageNumbers()
+        case todayPrayerTimes.asr:
+            return String(format:"%@ %@ %02d:%02d" , NSLocalizedString("ASR_PRAY_TIME", comment: "") ,NSLocalizedString("NEXT_PRAYER_TIME_AFTER", comment: "") , hours , min ).correctLanguageNumbers()
+        case todayPrayerTimes.maghrib:
+            return String(format:"%@ %@ %02d:%02d" , NSLocalizedString("MAGHRIB_PRAY_TIME", comment: "") ,NSLocalizedString("NEXT_PRAYER_TIME_AFTER", comment: "") , hours , min ).correctLanguageNumbers()
+        case todayPrayerTimes.isha:
+            return String(format:"%@ %@ %02d:%02d" , NSLocalizedString("ISHA_PRAY_TIME", comment: "") ,NSLocalizedString("NEXT_PRAYER_TIME_AFTER", comment: "") , hours , min ).correctLanguageNumbers()
+        default:
+            return String(format:"%@ %@ %02d:%02d" , NSLocalizedString("FAJR_PRAY_TIME", comment: "") ,NSLocalizedString("NEXT_PRAYER_TIME_AFTER", comment: "") , hours , min ).correctLanguageNumbers()
+        }
+        
     }
 }

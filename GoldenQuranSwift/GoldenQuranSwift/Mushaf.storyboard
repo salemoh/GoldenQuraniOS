@@ -115,39 +115,46 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rajab 1, 1438 AH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN4-Un-GJo" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="3" width="116.5" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="0.59556876789722224" green="0.4356665518083333" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <rect key="frame" x="8" y="3" width="97" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEX-qt-3XW" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="132.5" y="0.0" width="31" height="31"/>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEX-qt-3XW" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                            <rect key="frame" x="113" y="0.0" width="31" height="31"/>
                                                             <state key="normal" image="editIcon"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwT-2L-guz" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="284" y="37" width="79" height="27"/>
+                                                            <rect key="frame" x="8" y="27" width="93" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <state key="normal" title=" الظهر بعد 02:18">
-                                                                <color key="titleColor" red="0.98823529409999999" green="0.25882352939999997" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <state key="normal" title=" Fajr after  02:18">
+                                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="prayerPressed:" destination="iqX-EU-Yhb" eventType="touchUpInside" id="3Jr-uH-WkZ"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017 Mar 29 01:49 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOe-E4-xfc" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="42" width="146.5" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" red="0.59556876790000002" green="0.43566655180000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <rect key="frame" x="237.5" y="4" width="125" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="BEX-qt-3XW" firstAttribute="leading" secondItem="MN4-Un-GJo" secondAttribute="trailing" constant="8" id="65O-2c-hee"/>
                                                         <constraint firstItem="MN4-Un-GJo" firstAttribute="top" secondItem="hyB-rX-s91" secondAttribute="top" constant="3" id="HMP-yT-3Do"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hwT-2L-guz" secondAttribute="bottom" constant="7" id="HSt-7A-4Wi"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hwT-2L-guz" secondAttribute="bottom" constant="17" id="HSt-7A-4Wi"/>
+                                                        <constraint firstItem="jOe-E4-xfc" firstAttribute="top" secondItem="hyB-rX-s91" secondAttribute="top" constant="4" id="YNU-M8-Uc3"/>
                                                         <constraint firstItem="BEX-qt-3XW" firstAttribute="top" secondItem="hyB-rX-s91" secondAttribute="top" id="au1-tV-U3a"/>
-                                                        <constraint firstItem="jOe-E4-xfc" firstAttribute="leading" secondItem="hyB-rX-s91" secondAttribute="leading" constant="8" id="bP5-HK-kGj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hwT-2L-guz" secondAttribute="trailing" constant="12" id="lOs-wb-lKb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jOe-E4-xfc" secondAttribute="trailing" constant="12" id="fIg-tL-a6e"/>
+                                                        <constraint firstItem="hwT-2L-guz" firstAttribute="leading" secondItem="hyB-rX-s91" secondAttribute="leading" constant="8" id="pcP-St-dFg"/>
                                                         <constraint firstItem="MN4-Un-GJo" firstAttribute="leading" secondItem="hyB-rX-s91" secondAttribute="leading" constant="8" id="vJf-A6-Q1G"/>
-                                                        <constraint firstAttribute="bottom" secondItem="jOe-E4-xfc" secondAttribute="bottom" constant="12" id="ztl-Ht-w2Q"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -168,9 +175,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="btnEditHijri" destination="BEX-qt-3XW" id="w4d-OE-p3a"/>
+                                            <outlet property="btnNextPrayTime" destination="hwT-2L-guz" id="5AX-D4-xUN"/>
                                             <outlet property="lblDate" destination="jOe-E4-xfc" id="966-4O-DiT"/>
                                             <outlet property="lblHijriDate" destination="MN4-Un-GJo" id="JEH-LF-nCb"/>
-                                            <outlet property="lblNextPrayTime" destination="hwT-2L-guz" id="yeh-pJ-5ZB"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MushafFeaturesIconLabelTableViewCell" rowHeight="50" id="C2Z-AZ-htk" customClass="MushafFeaturesIconLabelTableViewCell" customModule="GoldenQuranSwift" customModuleProvider="target">
@@ -182,6 +189,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-Md-DVP">
                                                     <rect key="frame" x="8" y="8" width="30" height="34"/>
+                                                    <color key="tintColor" red="0.59556876790000002" green="0.43566655180000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="UE9-59-vMu"/>
                                                     </constraints>
@@ -241,11 +249,167 @@
                     <connections>
                         <outlet property="tableView" destination="8fg-hj-14v" id="Klp-bp-jdD"/>
                         <segue destination="vDx-EF-Pny" kind="presentation" identifier="toPrayerTimes" id="Cg1-n9-OoS"/>
+                        <segue destination="ban-P0-Sy9" kind="showDetail" identifier="toSettings" id="xqa-I0-IMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ3-23-htl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="-1155.472263868066"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="76L-dN-zGn">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ban-P0-Sy9" customClass="SettingsViewController" customModule="GoldenQuranSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="caw-ld-1KR"/>
+                        <viewControllerLayoutGuide type="bottom" id="UT4-fx-wU2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RUn-9l-6m4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TCc-Tq-slb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="fUN-Uq-SZr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUN-Uq-SZr" id="xm4-9s-RwT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCF-zU-o4h">
+                                                    <rect key="frame" x="15" y="21" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doy-YL-ma0">
+                                                    <rect key="frame" x="79" y="21" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brs-UP-nUi">
+                                                    <rect key="frame" x="149" y="21" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-US-wWO">
+                                                    <rect key="frame" x="209" y="21" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-TD-an5">
+                                                    <rect key="frame" x="269" y="21" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZE-G1-Sv5">
+                                                    <rect key="frame" x="323" y="21" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63184362650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rww-jI-D7p">
+                                        <rect key="frame" x="0.0" y="101" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rww-jI-D7p" id="vmf-eD-YqH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pSs-tP-GRA">
+                                        <rect key="frame" x="0.0" y="145" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pSs-tP-GRA" id="cw5-yI-WIw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UT4-fx-wU2" firstAttribute="top" secondItem="TCc-Tq-slb" secondAttribute="bottom" id="Cpi-83-Ooh"/>
+                            <constraint firstItem="TCc-Tq-slb" firstAttribute="leading" secondItem="RUn-9l-6m4" secondAttribute="leading" id="exb-Yh-kfG"/>
+                            <constraint firstItem="TCc-Tq-slb" firstAttribute="top" secondItem="RUn-9l-6m4" secondAttribute="top" id="fOp-Cu-kYU"/>
+                            <constraint firstAttribute="trailing" secondItem="TCc-Tq-slb" secondAttribute="trailing" id="l1P-4t-l82"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ou-Sq-qDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808.8000000000002" y="-1160.8695652173915"/>
         </scene>
         <!--Prayer Times View Controller-->
         <scene sceneID="8ku-NW-Lx7">
@@ -878,7 +1042,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOp-3Z-F1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2765.5999999999999" y="-1155.472263868066"/>
+            <point key="canvasLocation" x="2815" y="-1816"/>
         </scene>
         <!--Mushaf Page View Controller-->
         <scene sceneID="T4y-V3-rsP">

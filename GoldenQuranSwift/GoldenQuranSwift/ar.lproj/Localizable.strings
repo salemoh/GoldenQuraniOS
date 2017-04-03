@@ -86,6 +86,7 @@
 
 "MUSHAF_FEATURES_PRAYER_TIMES" = "أوقات الصلاة";
 "MUSHAF_FEATURES_ENABLE_HIGHLIGHT_BY_TOPIC" = "تظليل الآيات حسب موضوعاتها";
-
+"NEXT_PRAYER_TIME_AFTER" = "بعد";
+"MUSHAF_FEATURES_SETTINGS" = "الإعدادات";
 
 
