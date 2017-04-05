@@ -54,3 +54,5 @@
 "MUSHAF_FEATURES_ENABLE_HIGHLIGHT_BY_TOPIC" = "Highlight verses by topics";
 "NEXT_PRAYER_TIME_AFTER" = "after";
 "MUSHAF_FEATURES_SETTINGS" = "Settings";
+"SETTINGS_SELECT_PAGE_COLOR" = "Choose page color";
+

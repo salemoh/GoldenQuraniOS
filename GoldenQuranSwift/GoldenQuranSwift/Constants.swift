@@ -79,6 +79,9 @@ struct Constants {
         
         //// Features menu
         static let highlightMushafByTopicsEnabled = "highlightMushafByTopicsEnabled"
+        
+        /////Page color
+        static let preferedPageBackgroundColor = "PreferedPageBackgroundColor"
     }
     
 }

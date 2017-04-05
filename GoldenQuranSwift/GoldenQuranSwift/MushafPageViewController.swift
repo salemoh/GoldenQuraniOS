@@ -33,9 +33,9 @@ class MushafPageViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         if pageNumber%2 == 0 {
-            imgPageBackground.image = UIImage(named:"pageLeftBlue")
+            imgPageBackground.image = MushafPageColorManager().getBackgroundImage(isLeft: true)
         } else {
-            imgPageBackground.image = UIImage(named:"pageRightBlue")
+            imgPageBackground.image = MushafPageColorManager().getBackgroundImage(isLeft: false)
         }
         
         self.imgMushafPage.isUserInteractionEnabled = true

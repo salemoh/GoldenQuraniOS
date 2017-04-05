@@ -58,7 +58,7 @@ class SideMenuViewController: UIViewController {
         SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
-//        setMenuDefaults()
+        setMenuDefaults()
         
         // Set up a cool background image for demo purposes
 //        SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "GoldenIcon")!)
@@ -70,8 +70,9 @@ class SideMenuViewController: UIViewController {
     fileprivate func setMenuDefaults(){
         SideMenuManager.menuPresentMode = .menuSlideIn
         SideMenuManager.menuAnimationFadeStrength = 0.4
-        SideMenuManager.menuWidth = UIScreen.main.bounds.width * 0.7
+        SideMenuManager.menuWidth = 300//min(UIScreen.main.bounds.width * 0.7, 520.0)
         SideMenuManager.menuAnimationTransformScaleFactor = 0.95
+        SideMenuManager.menuPushStyle = .subMenu
     }
     
 //    fileprivate func setDefaults() {

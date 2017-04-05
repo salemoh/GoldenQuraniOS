@@ -25,4 +25,7 @@ target 'GoldenQuranSwift' do
 #  # Date Relative // Moved to local file
 #  pod 'AFDateHelper'
 
+  # MoviePlayer
+  pod 'MobilePlayer'
+
 end
