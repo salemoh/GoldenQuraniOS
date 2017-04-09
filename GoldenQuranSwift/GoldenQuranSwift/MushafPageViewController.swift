@@ -93,7 +93,7 @@ class MushafPageViewController: UIViewController {
         
         let pageImgSize = pageImg.size
         let viewSize = self.view.frame.size
-        let horizontalPadding = CGFloat(0.08 * viewSize.width)  /// Left + Right
+        let horizontalPadding = CGFloat(0.05 * viewSize.width)  /// Left + Right
         let topPadding = 50.0
         let bottomPadding = 25.0
         let verticalPadding = CGFloat(topPadding + bottomPadding )

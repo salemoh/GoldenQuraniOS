@@ -159,6 +159,7 @@ extension MushafFeaturesViewController:UITableViewDataSource{
             cell.actionsHandler = { (isOn: Bool) -> Void in
                 UserDefaults.standard.set(isOn, forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled)
                 UserDefaults.standard.synchronize()
+                NotificationCenter.default.post(name: Notification.Name(rawValue:Constants.notifiers.pageHighlightTopicsChanged), object: nil)
             }
             cell.switchControl.isOn = UserDefaults.standard.bool(forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled)
             

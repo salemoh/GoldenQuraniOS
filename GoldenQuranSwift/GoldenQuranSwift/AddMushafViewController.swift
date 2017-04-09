@@ -46,16 +46,10 @@ class AddMushafViewController: UIViewController  {
         }
         
         
-        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+        let mainWindow: UIWindow = (UIApplication.shared.delegate?.window!)!
+        mainWindow.rootViewController = self.storyboard?.instantiateInitialViewController()
         
-        
-        rootviewcontroller.rootViewController = self.storyboard?.instantiateInitialViewController()
-        
-        let mainwindow = (UIApplication.shared.delegate?.window!)!
-//        mainwindow.backgroundColor = UIColor(hue: 0.6477, saturation: 0.6314, brightness: 0.6077, alpha: 0.8)
-        UIView.transition(with: mainwindow, duration: 0.55001, options: .transitionFlipFromLeft, animations: { () -> Void in
-        }) { _ -> Void in
-        }
+        UIView.transition(with: mainWindow, duration: 0.5, options: .transitionFlipFromLeft, animations: { () -> Void in }) { _ -> Void in }
         
     }
     

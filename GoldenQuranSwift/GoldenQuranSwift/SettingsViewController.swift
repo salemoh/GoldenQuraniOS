@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import SideMenu
+
 enum SettingsViewControllerCells:String {
     case pageColor = "pageColor"
+    case fontSize = "fontSize"
+    case manageNotifications = "manageNotifications"
+    case changeReader = "changeReader"
+    case changeTafseer = "changeTafseer"
+    case manageDownloads = "manageDownloads"
+    case versesDownload = "versesDownload"
+    case contactUs = "contactUs"
+    case changeLanguage = "changeLanguage"
 }
 class SettingsViewController: UIViewController {
 
@@ -21,6 +31,16 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         cells.append(.pageColor)
+        
+        cells.append(.manageNotifications)
+        cells.append(.changeReader)
+        cells.append(.changeTafseer)
+        cells.append(.manageDownloads)
+        cells.append(.versesDownload)
+        cells.append(.contactUs)
+        cells.append(.changeLanguage)
+        cells.append(.fontSize)
+        
         tableView.reloadData()
     }
 
@@ -68,15 +88,18 @@ extension SettingsViewController:UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        /*
+        
         switch cells[indexPath.row] {
-        case .topSummary:
-            return 70
+        case .pageColor:
+            return 92
+        case .fontSize:
+            return 55
+        case .changeLanguage:
+            return 80
         default:
-            return 50
+            return 44
         }
- */
-        return 92.0
+ 
     }
 }
 
@@ -109,10 +132,86 @@ extension  SettingsViewController:UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsPageColorTableViewCell") as! SettingsPageColorTableViewCell
             cell.lblTitle.text = NSLocalizedString("SETTINGS_SELECT_PAGE_COLOR", comment: "")
             return cell
-//        case .settings:
-//            cell.imgIcon.image = UIImage(named:"settings")
-//            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_SETTINGS", comment: "")
-//            
+        case .fontSize:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsFontSizeTableViewCell") as! SettingsFontSizeTableViewCell
+            cell.lblPreview.text = NSLocalizedString("SETTINGS_FONT_SIZE_PRIEVIEW", comment: "")
+            return cell
+        case .manageNotifications:
+            //SettingsLabelWithIconTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLabelWithIconTableViewCell") as! SettingsLabelWithIconTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_MANAGE_NOTIFICATION", comment: "")
+            cell.imgIcon.image = UIImage(named:"notificationManagementIcon")
+            
+            return cell
+        case .changeReader:
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLabelWithIconTableViewCell") as! SettingsLabelWithIconTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_MANAGE_READER", comment: "")
+            cell.imgIcon.image = UIImage(named:"speakerIcon")
+            
+            return cell
+        
+        case .changeTafseer:
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLabelWithIconTableViewCell") as! SettingsLabelWithIconTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_MANAGE_TAFSEER", comment: "")
+            cell.imgIcon.image = UIImage(named:"tafseerManagmentIcon")
+            
+            return cell
+            
+        case .manageDownloads:
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLabelWithIconTableViewCell") as! SettingsLabelWithIconTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_MANAGE_DOWNLOADS", comment: "")
+            cell.imgIcon.image = UIImage(named:"downloadManagmentIcon")
+            
+            return cell
+        
+        case .versesDownload:
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLabelWithIconTableViewCell") as! SettingsLabelWithIconTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_DOWNLOADS_VERSES", comment: "")
+            cell.imgIcon.image = UIImage(named:"downloadVersesIcon")
+            
+            return cell
+        
+        case .contactUs:
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLabelWithIconTableViewCell") as! SettingsLabelWithIconTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_CONTACT_US", comment: "")
+            cell.imgIcon.image = UIImage(named:"contactUsIcon")
+            //cell.imgSepratore.isHidden = true
+            //cell.accessoryType = .none
+            return cell
+            
+            
+        case .changeLanguage:
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsLanguageTableViewCell") as! SettingsLanguageTableViewCell
+            cell.lblTitle.text = NSLocalizedString("SETTINGS_APPLICATION_LANGUAGE", comment: "")
+            cell.accessoryType = .none
+            cell.actionsHandler = { (index) -> Void  in
+                self.dismiss(animated: true, completion: { 
+                    if index == 0 {
+                        // English
+                        LanguageManager.changeLanguageTo(lang: .en)
+                    } else {
+                        // Arabic
+                        LanguageManager.changeLanguageTo(lang: .ar)
+                    }
+                    
+                    let mainWindow: UIWindow = (UIApplication.shared.delegate?.window!)!
+                    mainWindow.rootViewController = self.storyboard?.instantiateInitialViewController()
+                    
+                    UIView.transition(with: mainWindow, duration: 0.5, options: .transitionFlipFromLeft, animations: { () -> Void in }) { _ -> Void in }
+                })
+                
+            }
+            return cell
+            
+            //SettingsLanguageTableViewCell
+            
+//
 //        case .highlightMushafTopics:
 //            cell.switchControl.isHidden = false
 //            cell.imgIcon.image = UIImage(named:"mushafByTopicIcon")

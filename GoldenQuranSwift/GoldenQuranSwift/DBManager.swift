@@ -44,7 +44,7 @@ class DBManager: NSObject {
         var mus7afList:[Mus7af] = []
         do {
             try dbQueue?.inDatabase { db in
-                let rows = try Row.fetchCursor(db, "SELECT id, numberOfPages,type,baseDownloadURL,name,startOffset, dbName FROM Mus7af")
+                let rows = try Row.fetchCursor(db, "SELECT id, numberOfPages,type,baseDownloadURL,name,startOffset, dbName, imagesNameFormat FROM Mus7af")
                 
                 while let row = try rows.next() {
                     let mus7afItem = Mus7af()
@@ -55,6 +55,7 @@ class DBManager: NSObject {
                     mus7afItem.name = row.value(named: "name")
                     mus7afItem.startOffset = row.value(named: "startOffset")
                     mus7afItem.dbName = row.value(named: "dbName")
+                    mus7afItem.imagesNameFormat = row.value(named:"imagesNameFormat")
                     
                     mus7afList.append(mus7afItem)
                 }
@@ -72,8 +73,8 @@ class DBManager: NSObject {
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
-                    "INSERT INTO Mushaf (id, guid, numberOfPages, type, baseDownloadURL, name, startOffset, dbName , createdAt , updatedAt) " +
-                    "VALUES (?, ?, ?, ? , ? , ? , ? , ? , ? , ?)",
+                    "INSERT INTO Mushaf (id, guid, numberOfPages, type, baseDownloadURL, name, startOffset, dbName , imagesNameFormat , createdAt , updatedAt ) " +
+                    "VALUES (?, ?, ?, ? , ? , ? , ? , ? , ? , ? ,?)",
                     arguments: [mushafObject.id,
                                 mushafObject.guid,
                                 mushafObject.numberOfPages,
@@ -82,6 +83,7 @@ class DBManager: NSObject {
                                 mushafObject.name ,
                                 mushafObject.startOffset ,
                                 mushafObject.dbName,
+                                mushafObject.imagesNameFormat,
                                 mushafObject.createdAt,
                                 mushafObject.updatedAt])
                 
@@ -104,6 +106,7 @@ class DBManager: NSObject {
                     t.column("name", .text)
                     t.column("startOffset", .integer)
                     t.column("dbName", .text)
+                    t.column("imagesNameFormat", .text)
                     t.column("createdAt", .double)
                     t.column("updatedAt", .double)
                 })
@@ -134,7 +137,7 @@ class DBManager: NSObject {
         var mus7afList:[Mus7af] = []
         do {
             try dbQueueLibrary?.inDatabase { db in
-                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName , createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
+                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName, imagesNameFormat , createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
                 
                 while let row = try rows.next() {
                     let mus7afItem = Mus7af()
@@ -148,6 +151,7 @@ class DBManager: NSObject {
                     mus7afItem.dbName = row.value(named: "dbName")
                     mus7afItem.createdAt = row.value(named: "createdAt")
                     mus7afItem.updatedAt = row.value(named: "updatedAt")
+                    mus7afItem.imagesNameFormat = row.value(named:"imagesNameFormat")
                     
                     
                     mus7afList.append(mus7afItem)

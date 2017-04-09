@@ -54,5 +54,21 @@ struct FontManager {
         
     }
     
+    static func preferredFontSize() -> Int{
+        let size = UserDefaults.standard.integer(forKey: Constants.userDefaultsKeys.preferedFontSize)
+        if  size > 0 {
+            return size
+        }
+        return 14
+    }
+    
+    static func setPreferredFontSize(size:Int) {
+        if size > 16 && size < 30 {
+            UserDefaults.standard.set(size, forKey: Constants.userDefaultsKeys.preferedFontSize)
+            UserDefaults.standard.synchronize()
+        }
+        
+    }
+    
 }
 

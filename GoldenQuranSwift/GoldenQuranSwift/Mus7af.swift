@@ -32,6 +32,8 @@ class Mus7af: NSObject {
     var currentAyah:Int?
     var createdAt:Double?
     var updatedAt:Double?
+    var imagesNameFormat:String?
+    
     var logo:UIImage?{
         get {
             let imageName = String(format:"MUSHAF_ICON_%d", self.id!)
@@ -47,8 +49,19 @@ class Mus7af: NSObject {
     
     func getImageForPage(pageNumber:Int) -> UIImage {
         //0002-phone.png
-        let subPath = String(format:"GoldenQuranRes/images/%@_%d",(self.type?.rawValue)!,self.id!)
-        let imageName = String(format:"%04d-phone" , pageNumber + self.startOffset! )
+        let sub:String?
+        switch self.id! {
+        case 1:
+            sub = "medina1"
+        case 2:
+            sub = "warsh"
+        case 3:
+            sub = "kingFahad"
+        default:
+            sub = "kingFahad"
+        }
+        let subPath = String(format:"GoldenQuranRes/images/%@",sub!)
+        let imageName = String(format:self.imagesNameFormat! , pageNumber + self.startOffset! )
         let imageURL = Bundle.main.url(forResource: imageName, withExtension:"png", subdirectory:subPath)
         if let _ = imageURL ,  let image = UIImage(contentsOfFile: imageURL!.path) {
             return image

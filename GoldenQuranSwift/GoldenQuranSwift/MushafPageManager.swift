@@ -26,11 +26,10 @@ class MushafPageManager: NSObject {
                     
                     self.mushafPage?.drawHighlightRects(highlightRects: [highlightRect] , highlightType: .topic , highlightColor:pageTopic.color )
                 }
-                
             }
         }
-        
     }
+    
     func getMushafTopics(){
         loadHighlightRects(forPage: self.pageNumber)
         

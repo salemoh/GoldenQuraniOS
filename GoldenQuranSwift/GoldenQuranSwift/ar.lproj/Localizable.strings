@@ -89,5 +89,14 @@
 "NEXT_PRAYER_TIME_AFTER" = "بعد";
 "MUSHAF_FEATURES_SETTINGS" = "الإعدادات";
 "SETTINGS_SELECT_PAGE_COLOR" = "إختيار لون الصفحة";
+"SETTINGS_FONT_SIZE_PRIEVIEW" = "حجم الخط";
+"SETTINGS_MANAGE_NOTIFICATION" = "إدارة تنبيهات التطبيق";
+"SETTINGS_MANAGE_TAFSEER" = "إختيار كتاب التفسير";
+"SETTINGS_MANAGE_READER" = "إختيار القارئ";
+"SETTINGS_MANAGE_DOWNLOADS" = "إدارة السور المحملة";
+"SETTINGS_DOWNLOADS_VERSES" = "تحميل الملفات الصوتية للسور";
+"SETTINGS_CONTACT_US" = "تواصل معنا";
+"SETTINGS_APPLICATION_LANGUAGE" = "لغة التطبيق";
+
 
 

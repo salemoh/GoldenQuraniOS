@@ -13,6 +13,9 @@
 		1712FA101E81EAE4004810A1 /* MushafPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1712FA0F1E81EAE4004810A1 /* MushafPageManager.swift */; };
 		1719D0661E93A1E900CECAD7 /* SettingsPageColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D0651E93A1E900CECAD7 /* SettingsPageColorTableViewCell.swift */; };
 		1719D0681E94858D00CECAD7 /* MushafPageColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D0671E94858D00CECAD7 /* MushafPageColorManager.swift */; };
+		1719D06A1E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D0691E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift */; };
+		1719D06E1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D06D1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift */; };
+		1719D0701E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D06F1E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift */; };
 		17210B181E87F8570055BEF3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B171E87F8570055BEF3 /* LocationManager.swift */; };
 		17210B1A1E8812C20055BEF3 /* PrayerTimesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */; };
 		17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */; };
@@ -76,6 +79,9 @@
 		1712FA0F1E81EAE4004810A1 /* MushafPageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafPageManager.swift; sourceTree = "<group>"; };
 		1719D0651E93A1E900CECAD7 /* SettingsPageColorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageColorTableViewCell.swift; sourceTree = "<group>"; };
 		1719D0671E94858D00CECAD7 /* MushafPageColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafPageColorManager.swift; sourceTree = "<group>"; };
+		1719D0691E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFontSizeTableViewCell.swift; sourceTree = "<group>"; };
+		1719D06D1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLabelWithIconTableViewCell.swift; sourceTree = "<group>"; };
+		1719D06F1E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLanguageTableViewCell.swift; sourceTree = "<group>"; };
 		17210B171E87F8570055BEF3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesManager.swift; sourceTree = "<group>"; };
 		17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				172329C21E9236170083D4AC /* SettingsViewController.swift */,
+				1719D06F1E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift */,
+				1719D0691E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift */,
+				1719D06D1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift */,
 				1719D0651E93A1E900CECAD7 /* SettingsPageColorTableViewCell.swift */,
 			);
 			name = SettingsViewController;
@@ -507,8 +516,10 @@
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
 				17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */,
+				1719D0701E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift in Sources */,
 				17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */,
 				17EA2E2B1E6DFFF10087FFF5 /* MushafListViewController.swift in Sources */,
+				1719D06A1E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift in Sources */,
 				1744B2681E74276200641FA0 /* SideMenuViewController.swift in Sources */,
 				17EB649D1E6F4D1C00D518C2 /* LanguageManager.swift in Sources */,
 				1719D0661E93A1E900CECAD7 /* SettingsPageColorTableViewCell.swift in Sources */,
@@ -530,6 +541,7 @@
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
 				17210B201E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift in Sources */,
 				1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */,
+				1719D06E1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift in Sources */,
 				1744B25F1E70567600641FA0 /* FontManager.swift in Sources */,
 				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
 				1712FA0E1E815B67004810A1 /* HighlightRect.swift in Sources */,

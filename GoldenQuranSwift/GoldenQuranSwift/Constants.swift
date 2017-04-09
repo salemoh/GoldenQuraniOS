@@ -52,6 +52,13 @@ struct Constants {
         static let mushaf = UIStoryboard(name:"Mushaf" , bundle:nil)
     }
     
+    struct notifiers {
+        static let pageColorChanged = "PAGE_COLOR_CHANGED"
+        static let pageHighlightTopicsChanged = "PAGE_HIGHLIGHT_TOPICS_CHANGED"
+        
+    }
+    
+    
     struct userDefaultsKeys {
         //Notifications
         static let notificationsAthanDisabled = "NOTIFICATIONS_ATHAN_DISABLED"
@@ -82,6 +89,11 @@ struct Constants {
         
         /////Page color
         static let preferedPageBackgroundColor = "PreferedPageBackgroundColor"
+        
+        
+        /////Font size
+        static let preferedFontSize = "PreferedFontSize"
+        
     }
     
 }

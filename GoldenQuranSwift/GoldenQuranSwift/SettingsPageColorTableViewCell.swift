@@ -36,35 +36,45 @@ class SettingsPageColorTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func sendChangeColorNotifier(){
+        NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.notifiers.pageColorChanged), object: nil)
+    }
+    
     @IBAction func nighPressed(_ sender: UIButton) {
         UserDefaults.standard.set(MushafPageColor.night.rawValue, forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor)
         UserDefaults.standard.synchronize()
         refreshSelectedColor()
+        sendChangeColorNotifier()
     }
     @IBAction func redPressed(_ sender: UIButton) {
         UserDefaults.standard.set(MushafPageColor.red.rawValue, forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor)
         UserDefaults.standard.synchronize()
         refreshSelectedColor()
+        sendChangeColorNotifier()
     }
     @IBAction func whitePressed(_ sender: UIButton) {
         UserDefaults.standard.set(MushafPageColor.white.rawValue, forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor)
         UserDefaults.standard.synchronize()
         refreshSelectedColor()
+        sendChangeColorNotifier()
     }
     @IBAction func bluePressed(_ sender: UIButton) {
         UserDefaults.standard.set(MushafPageColor.blue.rawValue, forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor)
         UserDefaults.standard.synchronize()
         refreshSelectedColor()
+        sendChangeColorNotifier()
     }
     @IBAction func greenPressed(_ sender: UIButton) {
         UserDefaults.standard.set(MushafPageColor.green.rawValue, forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor)
         UserDefaults.standard.synchronize()
         refreshSelectedColor()
+        sendChangeColorNotifier()
     }
     @IBAction func yellowPressed(_ sender: UIButton) {
         UserDefaults.standard.set(MushafPageColor.yellow.rawValue, forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor)
         UserDefaults.standard.synchronize()
         refreshSelectedColor()
+        sendChangeColorNotifier()
     }
     
     func refreshSelectedColor()  {
