@@ -63,4 +63,20 @@
 "SETTINGS_DOWNLOADS_VERSES" = "Download verses sound files";
 "SETTINGS_CONTACT_US" = "Contact us";
 "SETTINGS_APPLICATION_LANGUAGE" = "Application language";
+"MUSHAF_FEATURES_TITLE" = "Menu";
+
+"SELECT_READER_TITLE" = "Select reader";
+"SELECT_TAFSEER_TITLE" = "Select tafseer book";
+
+"MANAGE_NOTIFICATION_FRIDAY_READING_TITLE" = "Friday reading Al-Kahef";
+"MANAGE_NOTIFICATION_FRIDAY_READING_SUBTITLE" = "This reminds you on friday to read Al-Kahef";
+"MANAGE_NOTIFICATION_DAILY_TITLE" = "Daily notifications";
+"MANAGE_NOTIFICATION_DAILY_SUBTITLE" = "Daily notifications contains virtues and religious sayings";
+"MANAGE_NOTIFICATION_LONG_TIME_TITLE" = "Long time last reading";
+"MANAGE_NOTIFICATION_LONG_TIME_SUBTITLE" = "This notification appears if the last reading time exceeds three days";
+"MANAGE_NOTIFICATION_ATHAN_TITLE" = "Prayer times notifications";
+"MANAGE_NOTIFICATION_ATHAN_SUBTITLE" = "These notifications appears on the pray time depending on it's setting from Prayer Times";
+
+"MANAGE_NOTIFICATIONS_TITLE" = "Manage notification";
+
 

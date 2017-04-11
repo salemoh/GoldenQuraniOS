@@ -44,6 +44,9 @@ struct Constants {
             get{ return Bundle.main.path(forResource: "QuranMawdoo3", ofType: "db", inDirectory: "GoldenQuranRes/db/Additions")!}
         }
 
+        static var mushafRecitationAndTafseerDBPath:String{
+            get{return Bundle.main.path(forResource: "TafseerAndRecitation", ofType: "db")!}
+        }
         
     }
     
@@ -61,7 +64,12 @@ struct Constants {
     
     struct userDefaultsKeys {
         //Notifications
+        static let notificationsFridayDisabled = "NOTIFICATIONS_FRIDAY_DISABLED"
+        static let notificationsLongTimeReadingDisabled = "NOTIFICATIONS_LONG_TIME_READING_DISABLED"
+        static let notificationsDailyDisabled = "NOTIFICATIONS_DAILY_DISABLED"
         static let notificationsAthanDisabled = "NOTIFICATIONS_ATHAN_DISABLED"
+        
+        //Notifications Athan (notification by time)
         static let notificationsAthanFajrDisabled = "NOTIFICATIONS_ATHAN_DISABLED_FAJR"
         static let notificationsAthanDouhrDisabled = "NOTIFICATIONS_ATHAN_DISABLED_DUHOR"
         static let notificationsAthanAsrDisabled = "NOTIFICATIONS_ATHAN_DISABLED_ASR"
@@ -94,6 +102,12 @@ struct Constants {
         /////Font size
         static let preferedFontSize = "PreferedFontSize"
         
+        //Recitations
+        static let favouriteRecitations = "FavoriteRecitations"
+        
+        //Tafseers
+        static let favouriteTafseers = "FavoriteTafseers"
+        static let activeTafseer = "ActiveTafseer"
     }
     
 }

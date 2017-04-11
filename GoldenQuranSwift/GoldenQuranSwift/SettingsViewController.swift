@@ -28,6 +28,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+
+        self.title = NSLocalizedString("MUSHAF_FEATURES_SETTINGS", comment: "")
+        
         // Do any additional setup after loading the view.
         
         cells.append(.pageColor)
@@ -72,18 +76,23 @@ extension SettingsViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        /*
+        
         switch cells[indexPath.row] {
-        case .prayerTimes:
-            self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
-        case .settings:
-            //            self.performSegue(withIdentifier: "toSettings", sender: nil)
-            let settingsVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController")
-            self.navigationController?.pushViewController(settingsVC!, animated: true)
+        case .manageNotifications:
+            self.performSegue(withIdentifier: "toManageNotifications", sender: nil)
+        case .changeReader:
+            self.performSegue(withIdentifier: "toSelectRecitation", sender: nil)
+            
+        case .changeTafseer:
+            self.performSegue(withIdentifier: "toTafseer", sender: nil)
+//        case .settings:
+//            //            self.performSegue(withIdentifier: "toSettings", sender: nil)
+//            let settingsVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController")
+//            self.navigationController?.pushViewController(settingsVC!, animated: true)
         default:
             break
         }
-        */
+        
         
     }
     
@@ -110,22 +119,7 @@ extension  SettingsViewController:UITableViewDataSource{
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-//        
-//        if cells[indexPath.row] == .topSummary {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "MushafFeaturesTopSummeryTableViewCell") as! MushafFeaturesTopSummeryTableViewCell
-//            cell.btnNextPrayTime.setTitle(PrayerTimesManager().getNextPrayerRemining(), for: .normal)
-//            cell.lblDate.text = self.getCurrentTime()
-//            cell.lblHijriDate.text = self.getHijriDate()
-//            
-//            cell.actionsHandler = { () -> Void  in
-//                self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
-//            }
-//            return cell
-//        }
-//        
-        
-//        cell.switchControl.isHidden = true
-//        
+
         switch cells[indexPath.row] {
             
         case .pageColor:
@@ -208,23 +202,7 @@ extension  SettingsViewController:UITableViewDataSource{
                 
             }
             return cell
-            
-            //SettingsLanguageTableViewCell
-            
-//
-//        case .highlightMushafTopics:
-//            cell.switchControl.isHidden = false
-//            cell.imgIcon.image = UIImage(named:"mushafByTopicIcon")
-//            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_ENABLE_HIGHLIGHT_BY_TOPIC", comment: "")
-//            cell.actionsHandler = { (isOn: Bool) -> Void in
-//                UserDefaults.standard.set(isOn, forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled)
-//                UserDefaults.standard.synchronize()
-//            }
-//            cell.switchControl.isOn = UserDefaults.standard.bool(forKey: Constants.userDefaultsKeys.highlightMushafByTopicsEnabled)
-//            
-            
-        default:
-            return UITableViewCell()
+        
             
         }
         

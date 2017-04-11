@@ -24,6 +24,8 @@ class MushafFeaturesViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = NSLocalizedString("MUSHAF_FEATURES_TITLE", comment: "")
+        
         // Do any additional setup after loading the view.
         cells.append(.topSummary)
         cells.append(.prayerTimes)
@@ -102,6 +104,7 @@ extension MushafFeaturesViewController:UITableViewDelegate{
             self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
         case .settings:
             self.performSegue(withIdentifier: "toSettings", sender: nil)
+            
         default:
             break
         }

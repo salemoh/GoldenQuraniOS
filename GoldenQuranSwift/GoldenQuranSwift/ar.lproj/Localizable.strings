@@ -97,6 +97,66 @@
 "SETTINGS_DOWNLOADS_VERSES" = "تحميل الملفات الصوتية للسور";
 "SETTINGS_CONTACT_US" = "تواصل معنا";
 "SETTINGS_APPLICATION_LANGUAGE" = "لغة التطبيق";
+"MUSHAF_FEATURES_TITLE" = "القائمة";
+
+"SELECT_READER_TITLE" = "إختيار القارئ";
+"SELECT_TAFSEER_TITLE" = "إختيار التفسير";
+
+
+"MANAGE_NOTIFICATION_FRIDAY_READING_TITLE" = "تنبيه سورة الكهف يوم الجمعة";
+"MANAGE_NOTIFICATION_FRIDAY_READING_SUBTITLE" = "تنبيه يظهر يوم الجمعة للتذكير بقراءة سورة الكهف";
+"MANAGE_NOTIFICATION_DAILY_TITLE" = "الإشعارات اليومية";
+"MANAGE_NOTIFICATION_DAILY_SUBTITLE" = "تنبيهات يومية من الفضائل و الأقوال الدينية";
+"MANAGE_NOTIFICATION_LONG_TIME_TITLE" = "تنبيه لم تقرأ القرآن منذ مدة";
+"MANAGE_NOTIFICATION_LONG_TIME_SUBTITLE" = "تنبيه يظهر إذا إنقطعت عن قراءة القرآن أكثر من ثلاث أيام";
+"MANAGE_NOTIFICATION_ATHAN_TITLE" = "إشعارات الأذان";
+"MANAGE_NOTIFICATION_ATHAN_SUBTITLE" = "إشعارت تظهر حسب إعدادات أوقات الصلاة";
+
+"MANAGE_NOTIFICATIONS_TITLE" = "إدارة التنبيهات";
+
+
+
+"Abdul-Basit (Mujawwad)" = "عبد الباسط (مجود)" ;
+"Abdullah Juhaynee" = "عبدالله الجهيني";
+"Abdullah Basfar" = "عبدالله بصفر";
+"Abdullah Matroud" = "عبدالله مطرود";
+"Abdu-Rahman As-Sudais" = "عبد الرحمن السديس";
+"Abu-Bakr Ash-Shaatree" = "أبو بكر الشاطري";
+"Ahmed Al-Ajamy" = "أحمد العجمي";
+"Mishary Al-Aafasy" = "مشاري العفاسي";
+"Saed Al-Gamidi" = "سعد الغامدي";
+"Hani Refai" = "هاني الرفاعي";
+"Al-Hudaify" = "الحذيفي";
+"Al-Husary (Mujawwad)" = "الحصري مجود";
+"Khalid Qahtaanee" = "خالد القحطاني";
+"Maher Al-Muaiqly" = "ماهر المعيقلي";
+"Mohammad Al-Tablaway" = "محمد الطبلاوي";
+"Mohammad Abdul-kareem" = "محمد عبد الكريم";
+"Mohammad Ayyoub" = "محمد ايوب";
+"Mohammad Jibreel" = "محمد جبريل";
+"Abul-Muhsin Al-Qasim" = "عبد المحسن القاسم";
+"Salaah Bukhater" = "صلاح ابو خاطر";
+"Saood Al-Shuraym" = "سعود الشريم";
+"Yaser Al-Dossary" = "ياسر الدوسري";
+"Naser Al-Qahtami" = "ناصر القطامي";
+"Khalefah Al-Tiniji" = "خليفة الطنيجي";
+"Fares Abbad" = "فارس عباد";
+"Al-Minshawi (Murattal)" = "محمد صديق المنشاوي (مرتل)";
+"Ibrahim Al-Akhdar" = "إبراهيم الأخضر";
+"Ali Jaber" = "علي جابر";
+"Aziz Al-Alili" = "عزيز العليلي";
+"Yassin Al Jazaery (Warsh)" = "ياسين الجزائري(برواية ورش)";
+"Sahl Yassin" = "سهل ياسين";
+"Ibrahim Al-Dosary (Warsh)" = "إبراهيم الدوسري (برواية ورش)";
+"Minshawy (Mujawwad)" = "محمد صديق المنشاوي (مجود)";
+"Abdul-Basit (Muratal)" = "عبد الباسط (مرتل)";
+"Abdullah Basfar (MultiLanguage ar/en)" = "عبدالله بصفر (عربي، انجليزي)";
+"Farhat Hashim (Urdu)" = "Farhat Hashim (Urdu)";
+"Shamshad Ali_khan (Urdu)" = "Shamshad Ali_khan (Urdu)";
+"Makarem Recited by Kabiri (Persian)" = "Makarem Recited by Kabiri (Persian)";
+"Fooladvand Recited by Hedayatfar (Persian)"= "Fooladvand Recited by Hedayatfar (Persian)";
+"Sahih International Recited by Ibrahim Walk (English)" = "Sahih International Recited by Ibrahim Walk (English)";
+"Yaser Salamah" = "ياسر سلامة";
 
 
 

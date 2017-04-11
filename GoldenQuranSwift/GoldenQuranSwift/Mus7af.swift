@@ -33,6 +33,7 @@ class Mus7af: NSObject {
     var createdAt:Double?
     var updatedAt:Double?
     var imagesNameFormat:String?
+    var recitationId:Int?
     
     var logo:UIImage?{
         get {

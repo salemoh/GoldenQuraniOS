@@ -43,6 +43,11 @@ class Mus7afManager: NSObject {
         }
     }
     
+    func updateMushafValues(mushaf:Mus7af) {
+        mushaf.updatedAt = Date().timeStamp
+        DBManager.shared.updateMushaf(mushafObject: mushaf)
+    }
+    
     func createNewMushaf(mushaf:Mus7af)  {
         
         mushaf.currentPage = mushaf.startOffset! + 1
@@ -56,6 +61,8 @@ class Mus7afManager: NSObject {
         mushaf.guid = guidString
         mushaf.createdAt = Date().timeStamp
         mushaf.updatedAt = Date().timeStamp
+        
+        mushaf.recitationId = RecitationManager.getRecitations()[0].id! /// set current recitation id
         
         DBManager.shared.insertNewMushaf(mushafObject: mushaf)
     }

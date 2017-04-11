@@ -19,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
          IQKeyboardManager.sharedManager().enable = true
         
+        UINavigationBar.appearance().barTintColor = UIColor(patternImage:UIImage(named:"textureHeader")!)
+        UINavigationBar.appearance().tintColor = UIColor.orange
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.orange , NSFontAttributeName:FontManager.fontWithSize(size: 16.0 , isBold: true)]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: FontManager.fontWithSize(size: 16.0)], for: .normal)
         
-//        LanguageManager.changeLanguageTo(lang: .ar)
+        
+        
         LocationManager.shared.startLocationUpdating()
         
         if Mus7afManager.shared.hasMushaf {

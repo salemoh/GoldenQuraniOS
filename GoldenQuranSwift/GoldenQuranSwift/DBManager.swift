@@ -69,12 +69,11 @@ class DBManager: NSObject {
         return mus7afList
     }
     
-    func insertNewMushaf(mushafObject:Mus7af){
+    func updateMushaf(mushafObject:Mus7af){
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
-                    "INSERT INTO Mushaf (id, guid, numberOfPages, type, baseDownloadURL, name, startOffset, dbName , imagesNameFormat , createdAt , updatedAt ) " +
-                    "VALUES (?, ?, ?, ? , ? , ? , ? , ? , ? , ? ,?)",
+                    "UPDATE Mushaf SET id = ?, guid = ?, numberOfPages = ?, type = ?, baseDownloadURL = ?, name = ?, startOffset = ?, dbName  = ?, imagesNameFormat  = ?, recitationId = ?, createdAt  = ?, updatedAt  = ? WHERE guid = ? " ,
                     arguments: [mushafObject.id,
                                 mushafObject.guid,
                                 mushafObject.numberOfPages,
@@ -84,6 +83,34 @@ class DBManager: NSObject {
                                 mushafObject.startOffset ,
                                 mushafObject.dbName,
                                 mushafObject.imagesNameFormat,
+                                mushafObject.recitationId,
+                                mushafObject.createdAt,
+                                mushafObject.updatedAt,
+                                mushafObject.guid])
+                
+            }
+        } catch  {
+            print("Failed to insert new Mushaf \(error.localizedDescription)")
+        }
+        
+    }
+    
+    func insertNewMushaf(mushafObject:Mus7af){
+        do {
+            try dbQueueLibrary?.inDatabase { db in
+                try db.execute(
+                    "INSERT INTO Mushaf (id, guid, numberOfPages, type, baseDownloadURL, name, startOffset, dbName , imagesNameFormat , recitationId, createdAt , updatedAt ) " +
+                    "VALUES (?, ?, ?, ? , ? , ? , ? , ? , ? , ? ,? , ?)",
+                    arguments: [mushafObject.id,
+                                mushafObject.guid,
+                                mushafObject.numberOfPages,
+                                mushafObject.type?.rawValue ,
+                                mushafObject.baseImagesDownloadUrl ,
+                                mushafObject.name ,
+                                mushafObject.startOffset ,
+                                mushafObject.dbName,
+                                mushafObject.imagesNameFormat,
+                                mushafObject.recitationId,
                                 mushafObject.createdAt,
                                 mushafObject.updatedAt])
                 
@@ -109,6 +136,7 @@ class DBManager: NSObject {
                     t.column("imagesNameFormat", .text)
                     t.column("createdAt", .double)
                     t.column("updatedAt", .double)
+                    t.column("recitationId", .integer)
                 })
                 
 //                try db.create(table: "Mushaf") { t in
@@ -137,7 +165,7 @@ class DBManager: NSObject {
         var mus7afList:[Mus7af] = []
         do {
             try dbQueueLibrary?.inDatabase { db in
-                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName, imagesNameFormat , createdAt, updatedAt FROM Mushaf order by updatedAt DESC")
+                let rows = try Row.fetchCursor(db, "SELECT id, guid, numberOfPages,type,baseDownloadURL,name,startOffset, dbName, imagesNameFormat , recitationId , createdAt, updatedAt  FROM Mushaf order by updatedAt DESC")
                 
                 while let row = try rows.next() {
                     let mus7afItem = Mus7af()
@@ -152,6 +180,7 @@ class DBManager: NSObject {
                     mus7afItem.createdAt = row.value(named: "createdAt")
                     mus7afItem.updatedAt = row.value(named: "updatedAt")
                     mus7afItem.imagesNameFormat = row.value(named:"imagesNameFormat")
+                    mus7afItem.recitationId = row.value(named:"recitationId")
                     
                     
                     mus7afList.append(mus7afItem)
@@ -261,4 +290,73 @@ class DBManager: NSObject {
     }
     
     
+    func getMushafRecitations(mushafType:MushafType) -> [Recitation] {
+        
+        var dbRecitationQueue:DatabaseQueue?
+        
+        do {
+            dbRecitationQueue = try DatabaseQueue(path: Constants.db.mushafRecitationAndTafseerDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        var recitationsList:[Recitation] = []
+        do {
+            try dbRecitationQueue?.inDatabase { db in
+                //"id" INTEGER, "reader" TEXT, "type" TEXT, "baseUrl" TEXT, "name" TEXT
+                let query = String(format:"SELECT id,reader,type,baseUrl,name FROM recitation WHERE type = '%@' ORDER BY reader ",mushafType.rawValue)
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let recitationItem = Recitation()
+                    recitationItem.id = row.value(named: "id")
+                    recitationItem.reader = row.value(named: "reader")
+                    recitationItem.type = MushafType(rawValue: row.value(named: "type"))
+                    recitationItem.baseUrl = row.value(named: "baseUrl")
+                    recitationItem.name = row.value(named: "name")
+                    
+                    recitationsList.append(recitationItem)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch getMushafRecitations \(error.localizedDescription)")
+        }
+        return recitationsList
+    }
+    
+    func getMushafTafseers() -> [Tafseer] {
+        
+        var dbTafseerQueue:DatabaseQueue?
+        
+        do {
+            dbTafseerQueue = try DatabaseQueue(path: Constants.db.mushafRecitationAndTafseerDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        var tafseersList:[Tafseer] = []
+        do {
+            try dbTafseerQueue?.inDatabase { db in
+                //// ("ID" INTEGER,"MadhabId" INTEGER,"TafsirName" TEXT,"DateOfDeath" TEXT,"AuthName" TEXT)
+                let query = String(format:"SELECT ID,MadhabId,TafsirName,DateOfDeath,AuthName FROM quranTfseer ORDER BY TafsirName")
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let tafseerItem = Tafseer()
+                    tafseerItem.id = row.value(named: "ID")
+                    tafseerItem.madhabId = row.value(named: "MadhabId")
+                    tafseerItem.name = row.value(named:"TafsirName")
+                    tafseerItem.dateOfDeath = row.value(named: "DateOfDeath")
+                    tafseerItem.autherName = row.value(named: "AuthName")
+                    
+                    tafseersList.append(tafseerItem)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch getMushafTafseers \(error.localizedDescription)")
+        }
+        return tafseersList
+    }
 }
