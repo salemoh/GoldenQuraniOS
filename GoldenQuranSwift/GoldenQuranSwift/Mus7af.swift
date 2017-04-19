@@ -42,6 +42,8 @@ class Mus7af: NSObject {
         }
     }
     
+    var tableOfContents:[TableOfContentItem]?
+    
     
 //    var logo:String?
     //bookmarks

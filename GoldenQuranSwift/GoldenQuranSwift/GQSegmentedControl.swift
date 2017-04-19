@@ -60,7 +60,7 @@ class GQSegmentedControl: UISegmentedControl {
     func updateToNewFont(){
         
         let font = FontManager.fontWithSize(size: self.textFontSize, isBold: self.isBoldFont)
-        let attributes = [NSFontAttributeName : font , NSForegroundColorAttributeName : self.textFontColor] as [String : Any]
+        let attributes = [NSFontAttributeName : font /*, NSForegroundColorAttributeName : self.textFontColor*/] as [String : Any]
         self.setTitleTextAttributes(attributes , for: .normal)
         self.setTitleTextAttributes(attributes , for: .highlighted)
         self.setTitleTextAttributes(attributes , for: .selected)

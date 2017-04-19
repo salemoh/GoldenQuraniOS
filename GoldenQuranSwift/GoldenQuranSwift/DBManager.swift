@@ -33,12 +33,18 @@ class DBManager: NSObject {
         } catch {
             print("could not create/ open dbQueueLibrary \(error.localizedDescription)")
         }
+        
         if shouldCreateUserDB == true {
             createUserMushafDB()
         }
+        
+        createMushafBookmarksDB()
     }
     
     //MARK: Functions
+    //MARK: ---------------------------
+    //MARK: Mushaf Functions
+    //MARK: ---------------------------
     func getDefaultMus7afs()->[Mus7af]? {
         
         var mus7afList:[Mus7af] = []
@@ -139,26 +145,15 @@ class DBManager: NSObject {
                     t.column("recitationId", .integer)
                 })
                 
-//                try db.create(table: "Mushaf") { t in
-//                    
-//                    t.column("id", .integer)
-//                    t.column("guid", .text)
-//                    t.column("numberOfPages", .integer)
-//                    t.column("type", .text)
-//                    t.column("baseDownloadURL", .text)
-//                    t.column("name", .text)
-//                    t.column("startOffset", .integer)
-//                    t.column("dbName", .text)
-//                    t.column("createdAt", .double)
-//                    t.column("updatedAt", .double)
-//                    
-//                }
+
             }
         } catch  {
             print("Failed to create UserMushafDB \(error.localizedDescription)")
         }
     
     }
+    
+    
     
     func getUserMus7afs()->[Mus7af] {
         
@@ -193,7 +188,42 @@ class DBManager: NSObject {
         return mus7afList
     }
     
+    func getMushafTOC(mushaf:Mus7af)->[TableOfContentItem] {
+        
+        var tableOfContents:[TableOfContentItem] = [TableOfContentItem]()
+        do {
+            try dbQueue?.inDatabase { db in
+                
+                let query = String(format:"SELECT MushafID , Page , Juz , Sora , VersesCount , Verse , Hizb , Place FROM tableOfContents WHERE MushafID = %d ORDER BY Page , Sora " , mushaf.id!)
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let tocItem = TableOfContentItem()
+                    tocItem.mushafID = row.value(named: "MushafID")
+                    tocItem.page = row.value(named: "Page")
+                    tocItem.juz = row.value(named: "Juz")
+                    tocItem.sora = row.value(named: "Sora")
+                    tocItem.versesCount = row.value(named: "VersesCount")
+                    tocItem.verse = row.value(named: "Verse")
+                    tocItem.hizb = row.value(named: "Hizb")
+                    tocItem.place = row.value(named:"Place")
+                    
+                    tableOfContents.append(tocItem)
+                }
+            }
+            
+        } catch  {
+            
+            print("could not fetch getMushafTOC \(error.localizedDescription)")
+            
+        }
+        return tableOfContents
+    }
 
+    //MARK: ---------------------------
+    //MARK: Mushaf Highlight
+    //MARK: ---------------------------
     func getMus7afHighlightRects(forPage:Int , fromMushafDB:String)->[HighlightRect] {
         
         
@@ -246,7 +276,54 @@ class DBManager: NSObject {
         return highlightRects
     }
     
+    
+    //MARK: ---------------------------
+    //MARK: Mushaf Mo3jam
+    //MARK: ---------------------------
+    func getMushafMo3jam(verseNo:Int , soraNo:Int)->[SearchResult] {
+        
+        /// not work just query is correct
+        var dbMushafMo3jamQueue:DatabaseQueue?
+        
+        
+        do {
+            dbMushafMo3jamQueue = try DatabaseQueue(path: Constants.db.mushafMo3jamDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        
+        var results:[SearchResult] = []
+        do {
+            
+            try dbMushafMo3jamQueue?.inDatabase { db in
+                
+                
+                let query = String(format:"SELECT Word,  Root , Original , EnglishTranslation , EnglishArabizi , SoraNo , AyahNo , WordNo  FROM QuranMo3jm WHERE  Root != \"\" AND SoraNo = %d AND AyahNo = %d ORDER BY WordNo",soraNo , verseNo)
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let result = SearchResult()
+                    result.soraNo = row.value(named:"SoraNo")
+                    result.fromVerse = row.value(named:"AyahNo")
+                    result.toVerse = row.value(named:"AyahNo")
+                    result.content = row.value(named:"Word") + " -> " + row.value(named:"Original") + " -> " + row.value(named:"Root")
+                    
+                    results.append(result)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch searchMushafVerse \(error.localizedDescription)")
+        }
+        return results
+    }
+    
 
+    //MARK: ---------------------------
+    //MARK: Mushaf By Topic
+    //MARK: ---------------------------
     
     func getMushafByTopic(formAyah:Int , toAyah:Int, soraNo: Int)->[MushafTopic] {
         
@@ -289,7 +366,9 @@ class DBManager: NSObject {
         return topics
     }
     
-    
+    //MARK: ---------------------------
+    //MARK: Mushaf Recitations
+    //MARK: ---------------------------
     func getMushafRecitations(mushafType:MushafType) -> [Recitation] {
         
         var dbRecitationQueue:DatabaseQueue?
@@ -325,6 +404,10 @@ class DBManager: NSObject {
         return recitationsList
     }
     
+    //MARK: ---------------------------
+    //MARK: Mushaf Tafseers
+    //MARK: ---------------------------
+    
     func getMushafTafseers() -> [Tafseer] {
         
         var dbTafseerQueue:DatabaseQueue?
@@ -358,5 +441,275 @@ class DBManager: NSObject {
             print("could not fetch getMushafTafseers \(error.localizedDescription)")
         }
         return tafseersList
+    }
+    
+    //MARK: ---------------------------
+    //MARK: Mushaf Bookmarks
+    //MARK: ---------------------------
+    
+    func createMushafBookmarksDB(){
+        do {
+            try dbQueueLibrary?.inDatabase { db in
+                try db.create(table: "Bookmark", temporary: false, ifNotExists: true, body: { (t) in
+                    t.column("id", .integer).primaryKey(onConflict: .rollback, autoincrement: true)
+                    t.column("mushafGuid", .text)
+                    t.column("soraNo", .integer)
+                    t.column("verseNo", .integer)
+                    t.column("page", .integer)
+                    t.column("updatedAt", .double)
+                    t.column("createdAt", .double)
+                })
+            }
+        } catch  {
+            print("Failed to create MushafBookmarksDB \(error.localizedDescription)")
+        }
+    }
+    
+    func getMushafBookmarks(mushaf:Mus7af) -> [Bookmark] {
+        
+        var bookmarksList = [Bookmark]()
+        
+        do {
+            try dbQueueLibrary?.inDatabase { db in
+                
+                let query = String(format:"SELECT id, mushafGuid,soraNo,verseNo,page,updatedAt,createdAt FROM Bookmark WHERE mushafGuid = '%@' ORDER BY updatedAt DESC",mushaf.guid!)
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let bookmarkItem = Bookmark()
+                    bookmarkItem.id = row.value(named: "id")
+                    bookmarkItem.mushafGuid = row.value(named: "mushafGuid")
+                    bookmarkItem.soraNo = row.value(named: "soraNo")
+                    bookmarkItem.verseNo = row.value(named: "verseNo")
+                    bookmarkItem.page = row.value(named: "page")
+                    bookmarkItem.updatedAt = row.value(named:"updatedAt")
+                    bookmarkItem.createdAt = row.value(named: "createdAt")
+                    
+                    bookmarksList.append(bookmarkItem)
+                }
+            }
+        } catch  {
+            print("could not fetch getMushafBookmarks \(error.localizedDescription)")
+        }
+        return bookmarksList
+    }
+    
+    func deleteMushafBookmark(bookmark:Bookmark){
+        do {
+            try dbQueueLibrary?.inDatabase { db in
+                try db.execute(
+                    "DELETE FROM Bookmark WHERE mushafGuid = ? AND id = ?",
+                    arguments: [bookmark.mushafGuid , bookmark.id])
+                
+            }
+        } catch  {
+            print("Failed to deleteMushafBookmark \(error.localizedDescription)")
+        }
+        
+    }
+    
+    func deleteAllMushafBookmark(mushaf:Mus7af){
+        do {
+            try dbQueueLibrary?.inDatabase { db in
+                try db.execute(
+                    "DELETE FROM Bookmark WHERE mushafGuid = ? ",
+                    arguments: [mushaf.guid])
+                
+            }
+        } catch  {
+            print("Failed to deleteMushafBookmark \(error.localizedDescription)")
+        }
+        
+    }
+    
+    func insertNewMushafBookmark(bookmark:Bookmark){
+        do {
+            try dbQueueLibrary?.inDatabase { db in
+                try db.execute(
+                    "INSERT INTO Bookmark ( mushafGuid, soraNo, verseNo, page,updatedAt, createdAt ) " +
+                    "VALUES ( ?, ?, ? , ? , ?,?)",
+                    arguments: [bookmark.mushafGuid,
+                                bookmark.soraNo,
+                                bookmark.verseNo ,
+                                bookmark.page ,
+                                bookmark.updatedAt,
+                                bookmark.createdAt
+                    ])
+                
+            }
+        } catch  {
+            print("Failed to insertNewMushafBookmark \(error.localizedDescription)")
+        }
+        
+    }
+    
+    //MARK: ---------------------------
+    //MARK: Search Functions
+    //MARK: ---------------------------
+    
+    func searchMushafByTopic(keyword:String)->[SearchResult] {
+        
+        
+        var dbMushafByTopicQueue:DatabaseQueue?
+        
+        
+        do {
+            dbMushafByTopicQueue = try DatabaseQueue(path: Constants.db.mushafByTopicDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        
+        var results:[SearchResult] = []
+        do {
+            
+            try dbMushafByTopicQueue?.inDatabase { db in
+                
+                let query = "SELECT SoraNo,FromAyah,ToAyah,Description ,ColorIndex  FROM data where Description like '%%" + keyword + "%%' order by SoraNo , FromAyah "
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let result = SearchResult()
+                    result.soraNo = row.value(named:"SoraNo")
+                    result.fromVerse = row.value(named:"FromAyah")
+                    result.toVerse = row.value(named:"ToAyah")
+                    result.content = row.value(named:"Description")
+                    
+                    results.append(result)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch searchMushafByTopic \(error.localizedDescription)")
+        }
+        return results
+    }
+    
+    func searchMushafVerse(keyword:String)->[SearchResult] {
+        
+        
+        var dbMushafTextQueue:DatabaseQueue?
+        
+        
+        do {
+            dbMushafTextQueue = try DatabaseQueue(path: Constants.db.mushafTextDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        
+        var results:[SearchResult] = []
+        do {
+            
+            try dbMushafTextQueue?.inDatabase { db in
+                
+                let query = "SELECT v.sura as SoraNo , v.ayah as FromAyah, v.ayah as ToAyah ,at.text as Description FROM verses v left join arabic_text at on v.ayah = at.ayah AND v.sura = at.sura where v.text like '%%"+keyword+"%%'"
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let result = SearchResult()
+                    result.soraNo = row.value(named:"SoraNo")
+                    result.fromVerse = row.value(named:"FromAyah")
+                    result.toVerse = row.value(named:"ToAyah")
+                    result.content = row.value(named:"Description")
+                    
+                    results.append(result)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch searchMushafVerse \(error.localizedDescription)")
+        }
+        return results
+    }
+    
+    func searchMushafMo3jam(keyword:String)->[SearchResult] {
+        
+        
+        var dbMushafMo3jamQueue:DatabaseQueue?
+        
+        
+        do {
+            dbMushafMo3jamQueue = try DatabaseQueue(path: Constants.db.mushafMo3jamDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        
+        var results:[SearchResult] = []
+        do {
+            
+            try dbMushafMo3jamQueue?.inDatabase { db in
+                
+
+                
+                let query = "SELECT Word,  Root , Original , EnglishTranslation , EnglishArabizi , SoraNo , AyahNo , WordNo  FROM QuranMo3jm WHERE  Root = '" + keyword + "' ORDER BY SoraNo ,AyahNo"
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let result = SearchResult()
+                    result.soraNo = row.value(named:"SoraNo")
+                    result.fromVerse = row.value(named:"AyahNo")
+                    result.toVerse = row.value(named:"AyahNo")
+                    result.content = row.value(named:"Word") + " ← " + row.value(named:"Original") + " ← " + row.value(named:"Root")
+                    
+                    results.append(result)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch searchMushafVerse \(error.localizedDescription)")
+        }
+        return results
+    }
+    
+    
+    
+    //MARK: ---------------------------
+    //MARK: Hadith functions
+    //MARK: ---------------------------
+    
+    func getHadithContent(withGroupId:Int)->[Hadith] {
+        
+        
+        var dbHadithQueue:DatabaseQueue?
+        
+        
+        do {
+            dbHadithQueue = try DatabaseQueue(path: Constants.db.hadithFortyDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        
+        var results:[Hadith] = []
+        do {
+            
+            try dbHadithQueue?.inDatabase { db in
+                
+                
+                
+                let query = "SELECT HadithSummary, HadithFullText, HadithGroupID FROM HadithTable WHERE HadithGroupID = " + String(withGroupId)
+                
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let result = Hadith()
+                    result.title = row.value(named:"HadithSummary")
+                    result.content = row.value(named:"HadithFullText")
+                    result.groupId = row.value(named:"HadithGroupID")
+                    
+                    results.append(result)
+                }
+            }
+            
+        } catch  {
+            print("could not fetch searchMushafVerse \(error.localizedDescription)")
+        }
+        return results
     }
 }

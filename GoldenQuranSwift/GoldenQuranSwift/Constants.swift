@@ -14,6 +14,10 @@ struct Constants {
     static let iOS_LANGUAGES_KEY = "AppleLanguages"
     static let CURRENT_MUSHAF_KEY = "CurrentMushafGUID"
     
+    struct color {
+        static let GQBrown = UIColor(red:152.0/255.0 , green:111.0/255.0 , blue:65.0/255.0 , alpha:1.0) as UIColor
+    }
+    
     struct path {
         static let documents = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         static let library =  NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] as String
@@ -43,7 +47,19 @@ struct Constants {
         static var mushafByTopicDBPath:String{
             get{ return Bundle.main.path(forResource: "QuranMawdoo3", ofType: "db", inDirectory: "GoldenQuranRes/db/Additions")!}
         }
+        
+        static var mushafTextDBPath:String{
+            get{ return Bundle.main.path(forResource: "quran_text_ar", ofType: "db", inDirectory: "GoldenQuranRes/db")!}
+        }
+        
+        static var mushafMo3jamDBPath:String{
+            get{ return Bundle.main.path(forResource: "QuranMo3jm", ofType: "db", inDirectory: "GoldenQuranRes/db/Additions")!}
+        }
 
+        static var hadithFortyDBPath:String{
+            get{ return Bundle.main.path(forResource: "HadithContent", ofType: "db", inDirectory: "GoldenQuranRes/db")!}
+        }
+        
         static var mushafRecitationAndTafseerDBPath:String{
             get{return Bundle.main.path(forResource: "TafseerAndRecitation", ofType: "db")!}
         }

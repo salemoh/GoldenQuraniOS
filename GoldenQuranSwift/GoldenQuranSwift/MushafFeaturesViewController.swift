@@ -13,6 +13,11 @@ enum MushafFeaturesViewControllerCells:String {
     case prayerTimes = "PrayerTimes"
     case highlightMushafTopics = "highlightMushafTopics"
     case settings = "SettingsCell"
+    case bookmarks = "BookmarksCell"
+    case search = "SearchCell"
+    case fortyHadith = "FortyHadithCell"
+    case finishDoaa = "FinishDoaaCell"
+    case audioPlayer = "AudioPlayerCell"
 }
 
 class MushafFeaturesViewController: UIViewController  {
@@ -31,6 +36,11 @@ class MushafFeaturesViewController: UIViewController  {
         cells.append(.prayerTimes)
         cells.append(.settings)
         cells.append(.highlightMushafTopics)
+        cells.append(.bookmarks)
+        cells.append(.search)
+        cells.append(.fortyHadith)
+        cells.append(.finishDoaa)
+        cells.append(.audioPlayer)
         
         self.tableView.reloadData()
     }
@@ -44,15 +54,23 @@ class MushafFeaturesViewController: UIViewController  {
         return false
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toFinishQuranDoaa" {
+            let navigationController = segue.destination as! UINavigationController
+            let rootViewController = navigationController.viewControllers[0] as! HadithViewerViewController
+            
+            rootViewController.hadiths = DBManager.shared.getHadithContent(withGroupId: 1)
+            rootViewController.startViewerIndex = 0
+        }
     }
-    */
+ 
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -100,10 +118,27 @@ extension MushafFeaturesViewController:UITableViewDelegate{
         tableView.deselectRow(at: indexPath, animated: true)
         
         switch cells[indexPath.row] {
+            
         case .prayerTimes:
             self.performSegue(withIdentifier: "toPrayerTimes", sender: nil)
+            
         case .settings:
             self.performSegue(withIdentifier: "toSettings", sender: nil)
+            
+        case .bookmarks:
+            self.performSegue(withIdentifier: "toBookmarks", sender: nil)
+            
+        case .search:
+            self.performSegue(withIdentifier: "toSearch", sender: nil)
+            
+        case .fortyHadith:
+            self.performSegue(withIdentifier: "toFortyHadith", sender: nil)
+            
+        case .finishDoaa:
+            self.performSegue(withIdentifier: "toFinishQuranDoaa", sender: nil)
+            
+        case .audioPlayer:
+            self.performSegue(withIdentifier: "toAudioPlayer", sender: nil)
             
         default:
             break
@@ -154,6 +189,25 @@ extension MushafFeaturesViewController:UITableViewDataSource{
         case .settings:
             cell.imgIcon.image = UIImage(named:"settings")
             cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_SETTINGS", comment: "")
+            
+        case .bookmarks:
+            cell.imgIcon.image = UIImage(named:"bookmarkListIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_BOOKMARKS", comment: "")
+            
+        case .search:
+            cell.imgIcon.image = UIImage(named:"searchIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_SEARCH", comment: "")
+            
+            
+        case .fortyHadith:
+            cell.imgIcon.image = UIImage(named:"fortyHadithIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_FORTY_HADITH", comment: "")
+            
+            
+        case .finishDoaa:
+            cell.imgIcon.image = UIImage(named:"finishDoaaIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_FINISH_DOAA", comment: "")
+            
             
         case .highlightMushafTopics:
             cell.switchControl.isHidden = false

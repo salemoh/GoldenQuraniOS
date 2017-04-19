@@ -85,6 +85,7 @@ class Mus7afManager: NSObject {
             for mushafObject in  mushafList {
                 if mushafObject.guid == (currentMushafGUID as! String) {
                     self._currentMus7af = mushafObject
+                    self._currentMus7af.tableOfContents = DBManager.shared.getMushafTOC(mushaf: mushafObject)
                     return
                 }
             }

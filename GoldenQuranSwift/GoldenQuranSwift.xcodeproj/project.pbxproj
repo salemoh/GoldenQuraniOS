@@ -26,6 +26,10 @@
 		17210B281E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */; };
 		17210B2A1E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */; };
 		17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */; };
+		1721C2031EA4C54900AE9A19 /* Hadith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C2021EA4C54900AE9A19 /* Hadith.swift */; };
+		1721C2051EA55C8800AE9A19 /* FortyHadithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C2041EA55C8800AE9A19 /* FortyHadithViewController.swift */; };
+		1721C2081EA55CA900AE9A19 /* FortyHadithTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C2071EA55CA900AE9A19 /* FortyHadithTableViewCell.swift */; };
+		1721C20A1EA5615800AE9A19 /* HadithViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C2091EA5615800AE9A19 /* HadithViewerViewController.swift */; };
 		172329BC1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */; };
 		172329BE1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */; };
 		172329C01E8C78F90083D4AC /* MushafTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BF1E8C78F90083D4AC /* MushafTopic.swift */; };
@@ -41,17 +45,32 @@
 		1744B2681E74276200641FA0 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2671E74276200641FA0 /* SideMenuViewController.swift */; };
 		1744B26A1E74279100641FA0 /* MushafFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */; };
 		1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1744B2701E744B2300641FA0 /* GQSegmentedControl.swift */; };
+		175164E81EA75D1E00059670 /* Mus7af.db in Resources */ = {isa = PBXBuildFile; fileRef = 175164E71EA75D1D00059670 /* Mus7af.db */; };
+		175164EA1EA75EC400059670 /* TableOfContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175164E91EA75EC400059670 /* TableOfContentItem.swift */; };
 		17548E1E1E9CB37800F1BA4F /* RecitationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17548E1D1E9CB37800F1BA4F /* RecitationManager.swift */; };
 		1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */; };
 		1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0851E677E400026A7FC /* MushafPageViewController.swift */; };
 		1761D0881E677E840026A7FC /* Mushaf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1761D0871E677E840026A7FC /* Mushaf.storyboard */; };
 		1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1761D0891E686C9C0026A7FC /* UIImageExtensions.swift */; };
 		177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177226561E6CC1AD001AA714 /* AddMushafNameViewController.swift */; };
+		1796A8C31EA612C100FF0B3A /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796A8C21EA612C100FF0B3A /* AKPickerView.swift */; };
+		1796A8C51EA6140F00FF0B3A /* AudioPlayerToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796A8C41EA6140F00FF0B3A /* AudioPlayerToolsViewController.swift */; };
+		1796A8C81EA6522000FF0B3A /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796A8C71EA6522000FF0B3A /* RangeSlider.swift */; };
+		1796A8CA1EA65B1700FF0B3A /* AudioPlayerToolsPickSoraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796A8C91EA65B1700FF0B3A /* AudioPlayerToolsPickSoraTableViewCell.swift */; };
+		1798E6701E9F57AB00ABA84C /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E66F1E9F57AB00ABA84C /* BookmarkManager.swift */; };
+		1798E6721E9F61A500ABA84C /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E6711E9F61A500ABA84C /* BookmarksViewController.swift */; };
+		1798E6751E9F61D100ABA84C /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E6741E9F61D100ABA84C /* BookmarksTableViewCell.swift */; };
+		1798E6771E9FAF6500ABA84C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E6761E9FAF6500ABA84C /* SearchViewController.swift */; };
+		1798E67A1EA3607700ABA84C /* SearchVerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E6791EA3607700ABA84C /* SearchVerseTableViewCell.swift */; };
+		1798E67C1EA360AC00ABA84C /* SearchTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E67B1EA360AC00ABA84C /* SearchTopicTableViewCell.swift */; };
+		1798E67E1EA360D500ABA84C /* SearchHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E67D1EA360D500ABA84C /* SearchHeaderTableViewCell.swift */; };
+		1798E6801EA36DBD00ABA84C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798E67F1EA36DBD00ABA84C /* SearchResult.swift */; };
 		179E5F7A1E9D5E2300E4CF1C /* TafseerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F791E9D5E2300E4CF1C /* TafseerViewController.swift */; };
 		179E5F7D1E9D5E5100E4CF1C /* TafseerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F7C1E9D5E5100E4CF1C /* TafseerTableViewCell.swift */; };
 		179E5F7F1E9D5ED300E4CF1C /* Tafseer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F7E1E9D5ED300E4CF1C /* Tafseer.swift */; };
 		179E5F811E9D608300E4CF1C /* TafseerAndRecitation.db in Resources */ = {isa = PBXBuildFile; fileRef = 179E5F801E9D608300E4CF1C /* TafseerAndRecitation.db */; };
 		179E5F831E9D613F00E4CF1C /* TafseerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F821E9D613F00E4CF1C /* TafseerManager.swift */; };
+		179E5F851E9E4F3200E4CF1C /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F841E9E4F3200E4CF1C /* Bookmark.swift */; };
 		17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */; };
 		17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */; };
 		17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7B1E5CC3BF003CC179 /* GradientView.swift */; };
@@ -80,7 +99,6 @@
 		976A89571E50F07A00697DD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A89561E50F07A00697DD2 /* Constants.swift */; };
 		976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A89591E510B0E00697DD2 /* Mus7af.swift */; };
 		976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A895B1E510B5A00697DD2 /* Mus7afManager.swift */; };
-		976A895F1E51174100697DD2 /* Mus7af.db in Resources */ = {isa = PBXBuildFile; fileRef = 976A895E1E51174100697DD2 /* Mus7af.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +121,10 @@
 		17210B271E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsLabelTableViewCell.swift; sourceTree = "<group>"; };
 		17210B291E8908710055BEF3 /* PrayerSettingsSoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerSettingsSoundTableViewCell.swift; sourceTree = "<group>"; };
 		17210B2B1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerAdjustmentTableViewCell.swift; sourceTree = "<group>"; };
+		1721C2021EA4C54900AE9A19 /* Hadith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hadith.swift; sourceTree = "<group>"; };
+		1721C2041EA55C8800AE9A19 /* FortyHadithViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortyHadithViewController.swift; sourceTree = "<group>"; };
+		1721C2071EA55CA900AE9A19 /* FortyHadithTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortyHadithTableViewCell.swift; sourceTree = "<group>"; };
+		1721C2091EA5615800AE9A19 /* HadithViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HadithViewerViewController.swift; sourceTree = "<group>"; };
 		172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesTopSummeryTableViewCell.swift; sourceTree = "<group>"; };
 		172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesIconLabelTableViewCell.swift; sourceTree = "<group>"; };
 		172329BF1E8C78F90083D4AC /* MushafTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafTopic.swift; sourceTree = "<group>"; };
@@ -118,17 +140,32 @@
 		1744B2671E74276200641FA0 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesViewController.swift; sourceTree = "<group>"; };
 		1744B2701E744B2300641FA0 /* GQSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQSegmentedControl.swift; sourceTree = "<group>"; };
+		175164E71EA75D1D00059670 /* Mus7af.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mus7af.db; sourceTree = "<group>"; };
+		175164E91EA75EC400059670 /* TableOfContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfContentItem.swift; sourceTree = "<group>"; };
 		17548E1D1E9CB37800F1BA4F /* RecitationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecitationManager.swift; sourceTree = "<group>"; };
 		1761D0821E6779A50026A7FC /* MushafViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafViewerViewController.swift; sourceTree = "<group>"; };
 		1761D0851E677E400026A7FC /* MushafPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafPageViewController.swift; sourceTree = "<group>"; };
 		1761D0871E677E840026A7FC /* Mushaf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mushaf.storyboard; sourceTree = "<group>"; };
 		1761D0891E686C9C0026A7FC /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		177226561E6CC1AD001AA714 /* AddMushafNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafNameViewController.swift; sourceTree = "<group>"; };
+		1796A8C21EA612C100FF0B3A /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
+		1796A8C41EA6140F00FF0B3A /* AudioPlayerToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerToolsViewController.swift; sourceTree = "<group>"; };
+		1796A8C71EA6522000FF0B3A /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		1796A8C91EA65B1700FF0B3A /* AudioPlayerToolsPickSoraTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerToolsPickSoraTableViewCell.swift; sourceTree = "<group>"; };
+		1798E66F1E9F57AB00ABA84C /* BookmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
+		1798E6711E9F61A500ABA84C /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		1798E6741E9F61D100ABA84C /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
+		1798E6761E9FAF6500ABA84C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1798E6791EA3607700ABA84C /* SearchVerseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVerseTableViewCell.swift; sourceTree = "<group>"; };
+		1798E67B1EA360AC00ABA84C /* SearchTopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTopicTableViewCell.swift; sourceTree = "<group>"; };
+		1798E67D1EA360D500ABA84C /* SearchHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1798E67F1EA36DBD00ABA84C /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		179E5F791E9D5E2300E4CF1C /* TafseerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TafseerViewController.swift; sourceTree = "<group>"; };
 		179E5F7C1E9D5E5100E4CF1C /* TafseerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TafseerTableViewCell.swift; sourceTree = "<group>"; };
 		179E5F7E1E9D5ED300E4CF1C /* Tafseer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tafseer.swift; sourceTree = "<group>"; };
 		179E5F801E9D608300E4CF1C /* TafseerAndRecitation.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = TafseerAndRecitation.db; sourceTree = "<group>"; };
 		179E5F821E9D613F00E4CF1C /* TafseerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TafseerManager.swift; sourceTree = "<group>"; };
+		179E5F841E9E4F3200E4CF1C /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafViewController.swift; sourceTree = "<group>"; };
 		17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafCollectionViewCell.swift; sourceTree = "<group>"; };
 		17C13D7B1E5CC3BF003CC179 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -163,7 +200,6 @@
 		976A89561E50F07A00697DD2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		976A89591E510B0E00697DD2 /* Mus7af.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mus7af.swift; sourceTree = "<group>"; };
 		976A895B1E510B5A00697DD2 /* Mus7afManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mus7afManager.swift; sourceTree = "<group>"; };
-		976A895E1E51174100697DD2 /* Mus7af.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mus7af.db; sourceTree = "<group>"; };
 		C2DFA96C066E8CAB036B33C3 /* Pods-GoldenQuranSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenQuranSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenQuranSwift/Pods-GoldenQuranSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,11 +221,16 @@
 				1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */,
 				172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */,
 				172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */,
+				1796A8C61EA6141500FF0B3A /* AudioPlayerToolsViewController */,
+				1798E6781E9FAF6E00ABA84C /* SearchViewController */,
+				1798E6731E9F61AE00ABA84C /* BookmarksViewController */,
 				179E5F7B1E9D5E2A00E4CF1C /* TafseerViewController */,
 				17C684D91E9C07950008F60B /* RecitationsViewController */,
 				17C684D01E9AB9CF0008F60B /* ManageNotificationsViewController */,
 				172329C41E9236250083D4AC /* SettingsViewController */,
 				17210B1C1E884CFB0055BEF3 /* PrayerTimesViewController */,
+				1721C2061EA55C8C00AE9A19 /* FortyHadithViewController */,
+				1721C20B1EA5615D00AE9A19 /* HadithViewerViewController */,
 			);
 			name = MushafFeaturesMainContainer;
 			sourceTree = "<group>";
@@ -209,6 +250,23 @@
 			name = PrayerTimesViewController;
 			sourceTree = "<group>";
 		};
+		1721C2061EA55C8C00AE9A19 /* FortyHadithViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1721C2041EA55C8800AE9A19 /* FortyHadithViewController.swift */,
+				1721C2071EA55CA900AE9A19 /* FortyHadithTableViewCell.swift */,
+			);
+			name = FortyHadithViewController;
+			sourceTree = "<group>";
+		};
+		1721C20B1EA5615D00AE9A19 /* HadithViewerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1721C2091EA5615800AE9A19 /* HadithViewerViewController.swift */,
+			);
+			name = HadithViewerViewController;
+			sourceTree = "<group>";
+		};
 		172329C41E9236250083D4AC /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +282,8 @@
 		1744B25D1E70563700641FA0 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				1796A8C71EA6522000FF0B3A /* RangeSlider.swift */,
+				1796A8C21EA612C100FF0B3A /* AKPickerView.swift */,
 				17C13D7B1E5CC3BF003CC179 /* GradientView.swift */,
 				1744B2601E70584400641FA0 /* GQLabel.swift */,
 				1744B2621E705E7300641FA0 /* GQButton.swift */,
@@ -241,6 +301,35 @@
 				1761D0851E677E400026A7FC /* MushafPageViewController.swift */,
 			);
 			name = MushafViewer;
+			sourceTree = "<group>";
+		};
+		1796A8C61EA6141500FF0B3A /* AudioPlayerToolsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1796A8C41EA6140F00FF0B3A /* AudioPlayerToolsViewController.swift */,
+				1796A8C91EA65B1700FF0B3A /* AudioPlayerToolsPickSoraTableViewCell.swift */,
+			);
+			name = AudioPlayerToolsViewController;
+			sourceTree = "<group>";
+		};
+		1798E6731E9F61AE00ABA84C /* BookmarksViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1798E6711E9F61A500ABA84C /* BookmarksViewController.swift */,
+				1798E6741E9F61D100ABA84C /* BookmarksTableViewCell.swift */,
+			);
+			name = BookmarksViewController;
+			sourceTree = "<group>";
+		};
+		1798E6781E9FAF6E00ABA84C /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1798E6761E9FAF6500ABA84C /* SearchViewController.swift */,
+				1798E6791EA3607700ABA84C /* SearchVerseTableViewCell.swift */,
+				1798E67B1EA360AC00ABA84C /* SearchTopicTableViewCell.swift */,
+				1798E67D1EA360D500ABA84C /* SearchHeaderTableViewCell.swift */,
+			);
+			name = SearchViewController;
 			sourceTree = "<group>";
 		};
 		179E5F7B1E9D5E2A00E4CF1C /* TafseerViewController */ = {
@@ -384,6 +473,7 @@
 				1719D0671E94858D00CECAD7 /* MushafPageColorManager.swift */,
 				17548E1D1E9CB37800F1BA4F /* RecitationManager.swift */,
 				179E5F821E9D613F00E4CF1C /* TafseerManager.swift */,
+				1798E66F1E9F57AB00ABA84C /* BookmarkManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -392,10 +482,14 @@
 			isa = PBXGroup;
 			children = (
 				976A89591E510B0E00697DD2 /* Mus7af.swift */,
+				175164E91EA75EC400059670 /* TableOfContentItem.swift */,
 				1712FA0D1E815B67004810A1 /* HighlightRect.swift */,
 				172329BF1E8C78F90083D4AC /* MushafTopic.swift */,
 				17C684D51E9BF6240008F60B /* Recitation.swift */,
 				179E5F7E1E9D5ED300E4CF1C /* Tafseer.swift */,
+				179E5F841E9E4F3200E4CF1C /* Bookmark.swift */,
+				1798E67F1EA36DBD00ABA84C /* SearchResult.swift */,
+				1721C2021EA4C54900AE9A19 /* Hadith.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -407,7 +501,7 @@
 				1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */,
 				1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */,
 				1744B2581E70512E00641FA0 /* Roboto-Regular.ttf */,
-				976A895E1E51174100697DD2 /* Mus7af.db */,
+				175164E71EA75D1D00059670 /* Mus7af.db */,
 				179E5F801E9D608300E4CF1C /* TafseerAndRecitation.db */,
 				97318D3D1E5A4D0500A4463B /* GoldenQuranRes */,
 			);
@@ -496,7 +590,7 @@
 			files = (
 				1744B25B1E70512E00641FA0 /* Roboto-Medium.ttf in Resources */,
 				1744B25C1E70512E00641FA0 /* Roboto-Regular.ttf in Resources */,
-				976A895F1E51174100697DD2 /* Mus7af.db in Resources */,
+				175164E81EA75D1E00059670 /* Mus7af.db in Resources */,
 				976A89451E50E81700697DD2 /* LaunchScreen.storyboard in Resources */,
 				1761D0881E677E840026A7FC /* Mushaf.storyboard in Resources */,
 				17EB64951E6F381700D518C2 /* Localizable.strings in Resources */,
@@ -565,17 +659,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */,
+				1796A8CA1EA65B1700FF0B3A /* AudioPlayerToolsPickSoraTableViewCell.swift in Sources */,
 				17210B1A1E8812C20055BEF3 /* PrayerTimesManager.swift in Sources */,
 				1719D0681E94858D00CECAD7 /* MushafPageColorManager.swift in Sources */,
 				17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */,
 				179E5F831E9D613F00E4CF1C /* TafseerManager.swift in Sources */,
+				1796A8C81EA6522000FF0B3A /* RangeSlider.swift in Sources */,
+				1796A8C31EA612C100FF0B3A /* AKPickerView.swift in Sources */,
 				17C684CF1E9AB9CB0008F60B /* ManageNotificationsViewController.swift in Sources */,
 				17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */,
 				179E5F7F1E9D5ED300E4CF1C /* Tafseer.swift in Sources */,
+				1798E67A1EA3607700ABA84C /* SearchVerseTableViewCell.swift in Sources */,
+				1798E67C1EA360AC00ABA84C /* SearchTopicTableViewCell.swift in Sources */,
 				1761D0861E677E400026A7FC /* MushafPageViewController.swift in Sources */,
 				172329BC1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift in Sources */,
 				976A895C1E510B5A00697DD2 /* Mus7afManager.swift in Sources */,
 				976A89571E50F07A00697DD2 /* Constants.swift in Sources */,
+				1798E6771E9FAF6500ABA84C /* SearchViewController.swift in Sources */,
 				17210B2C1E8908950055BEF3 /* PrayerAdjustmentTableViewCell.swift in Sources */,
 				1719D0701E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift in Sources */,
 				17EB64901E6F35AE00D518C2 /* DateHelper.swift in Sources */,
@@ -583,18 +683,24 @@
 				1719D06A1E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift in Sources */,
 				1744B2681E74276200641FA0 /* SideMenuViewController.swift in Sources */,
 				17EB649D1E6F4D1C00D518C2 /* LanguageManager.swift in Sources */,
+				1798E6801EA36DBD00ABA84C /* SearchResult.swift in Sources */,
 				1719D0661E93A1E900CECAD7 /* SettingsPageColorTableViewCell.swift in Sources */,
+				1721C2031EA4C54900AE9A19 /* Hadith.swift in Sources */,
 				1744B2611E70584400641FA0 /* GQLabel.swift in Sources */,
+				1721C20A1EA5615800AE9A19 /* HadithViewerViewController.swift in Sources */,
 				17EA2E301E6E05280087FFF5 /* DateExtensions.swift in Sources */,
 				172329C31E9236170083D4AC /* SettingsViewController.swift in Sources */,
 				17C684D81E9C078B0008F60B /* RecitationsViewController.swift in Sources */,
 				17C684D21E9ABC8C0008F60B /* ManageNotificationsTableViewCell.swift in Sources */,
 				1712FA101E81EAE4004810A1 /* MushafPageManager.swift in Sources */,
 				17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */,
+				179E5F851E9E4F3200E4CF1C /* Bookmark.swift in Sources */,
 				1744B2651E705F3C00641FA0 /* GQTextField.swift in Sources */,
 				17210B181E87F8570055BEF3 /* LocationManager.swift in Sources */,
 				1744B2631E705E7300641FA0 /* GQButton.swift in Sources */,
 				179E5F7D1E9D5E5100E4CF1C /* TafseerTableViewCell.swift in Sources */,
+				175164EA1EA75EC400059670 /* TableOfContentItem.swift in Sources */,
+				1798E6721E9F61A500ABA84C /* BookmarksViewController.swift in Sources */,
 				976A895A1E510B0E00697DD2 /* Mus7af.swift in Sources */,
 				976A893B1E50E81700697DD2 /* AppDelegate.swift in Sources */,
 				17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */,
@@ -604,6 +710,7 @@
 				17210B241E8907E10055BEF3 /* PrayerSettingsFullTimesTableViewCell.swift in Sources */,
 				17EB649B1E6F4C1300D518C2 /* UIApplicationExtension.swift in Sources */,
 				976A89511E50EE2500697DD2 /* NotificationsManager.swift in Sources */,
+				1798E67E1EA360D500ABA84C /* SearchHeaderTableViewCell.swift in Sources */,
 				17210B201E89072E0055BEF3 /* PrayerSwitchEnableTableViewCell.swift in Sources */,
 				1761D0831E6779A50026A7FC /* MushafViewerViewController.swift in Sources */,
 				1719D06E1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift in Sources */,
@@ -611,8 +718,12 @@
 				976A89531E50EEAA00697DD2 /* DBManager.swift in Sources */,
 				17C684DB1E9C1E7B0008F60B /* RecitationsTableViewCell.swift in Sources */,
 				1712FA0E1E815B67004810A1 /* HighlightRect.swift in Sources */,
+				1721C2051EA55C8800AE9A19 /* FortyHadithViewController.swift in Sources */,
 				177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */,
 				1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */,
+				1798E6751E9F61D100ABA84C /* BookmarksTableViewCell.swift in Sources */,
+				1798E6701E9F57AB00ABA84C /* BookmarkManager.swift in Sources */,
+				1721C2081EA55CA900AE9A19 /* FortyHadithTableViewCell.swift in Sources */,
 				17210B261E8907FD0055BEF3 /* PrayerSettingsTitleTableViewCell.swift in Sources */,
 				17210B281E8908510055BEF3 /* PrayerSettingsLabelTableViewCell.swift in Sources */,
 				172329BE1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift in Sources */,
@@ -620,6 +731,7 @@
 				17F30EB11E8403D2005EFEE3 /* GQHighlightView.swift in Sources */,
 				1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */,
 				17C684D61E9BF6240008F60B /* Recitation.swift in Sources */,
+				1796A8C51EA6140F00FF0B3A /* AudioPlayerToolsViewController.swift in Sources */,
 				170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */,
 				17C13D7F1E5CC5ED003CC179 /* UIViewExtensions.swift in Sources */,
 				17210B221E8907700055BEF3 /* PrayerTimeTableViewCell.swift in Sources */,
