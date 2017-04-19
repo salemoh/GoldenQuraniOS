@@ -338,3 +338,17 @@
 "Juz28" = "الجزء الثامن والعشرون";
 "Juz29" = "الجزء التاسع والعشرون";
 "Juz30" = "الجزء الثلاثون";
+
+"SoraVersesCountTOC" = "%d\nأياتها";
+"SoraNumberTOC" = "%d\nرقمها";
+
+
+"TableOfContentsFilterBySection" =  "حسب الأجزاء";
+"TableOfContentsFilterBySora" = "حسب السور";
+
+"TableOfContentsSearchInSoras" = "إبحث في السور";
+"TableOfContentsTitle" = "قائمة السور";
+"MUSHAF_FEATURES_TABLE_OF_CONTENTS" = "قائمة السور";
+"SoraLocation0" = "مكية";
+"SoraLocation1" = "مدنية";
+

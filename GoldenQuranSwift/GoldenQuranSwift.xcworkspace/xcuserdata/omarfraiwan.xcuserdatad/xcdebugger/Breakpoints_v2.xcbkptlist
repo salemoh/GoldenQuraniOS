@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/MushafFeaturesViewController.swift"
-            timestampString = "514238326.594514"
+            timestampString = "514325175.588173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -682,7 +682,7 @@
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514287489.160652"
+                  timestampString = "514332705.853665"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "452"
@@ -697,7 +697,7 @@
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514287489.162414"
+                  timestampString = "514332705.85927"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "453"
@@ -730,7 +730,7 @@
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514287489.165841"
+                  timestampString = "514332705.871114"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "453"
@@ -745,7 +745,7 @@
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514287489.16764"
+                  timestampString = "514332705.876535"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "454"
@@ -906,7 +906,7 @@
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514287489.194314"
+                  timestampString = "514332705.962492"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
@@ -921,7 +921,7 @@
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514287489.196009"
+                  timestampString = "514332705.967899"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "163"
@@ -934,7 +934,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/DBManager.swift"
@@ -944,6 +944,38 @@
             startingLineNumber = "201"
             endingLineNumber = "201"
             landmarkName = "getMushafTOC(mushaf:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoldenQuranSwift/Mus7afManager.swift"
+            timestampString = "514307576.475152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadCurrentMushaf()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoldenQuranSwift/TableOfContentsViewController.swift"
+            timestampString = "514333184.990628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "searchContents(keyword:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

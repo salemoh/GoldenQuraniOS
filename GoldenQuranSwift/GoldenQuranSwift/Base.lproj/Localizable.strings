@@ -253,6 +253,18 @@
 "Juz29" = "Juz’ 29";
 "Juz30" = "Juz’ 30";
 
+"SoraVersesCountTOC" = "%d\nverse";
+"SoraNumberTOC" = "%d\nNo.";
+
+"TableOfContentsFilterBySection" = "By Section" ;
+"TableOfContentsFilterBySora" = "By Sora" ;
+
+"TableOfContentsSearchInSoras" = "Search in Suras";
+"TableOfContentsTitle" = "Suras List";
+"MUSHAF_FEATURES_TABLE_OF_CONTENTS" = "Suras List";
+
+"SoraLocation0" = "Mecca";
+"SoraLocation1" = "Madina";
 
 
 

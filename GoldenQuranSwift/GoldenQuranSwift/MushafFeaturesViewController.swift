@@ -18,6 +18,7 @@ enum MushafFeaturesViewControllerCells:String {
     case fortyHadith = "FortyHadithCell"
     case finishDoaa = "FinishDoaaCell"
     case audioPlayer = "AudioPlayerCell"
+    case tableOfContents = "TableOfContents"
 }
 
 class MushafFeaturesViewController: UIViewController  {
@@ -41,6 +42,7 @@ class MushafFeaturesViewController: UIViewController  {
         cells.append(.fortyHadith)
         cells.append(.finishDoaa)
         cells.append(.audioPlayer)
+        cells.append(.tableOfContents)
         
         self.tableView.reloadData()
     }
@@ -140,6 +142,9 @@ extension MushafFeaturesViewController:UITableViewDelegate{
         case .audioPlayer:
             self.performSegue(withIdentifier: "toAudioPlayer", sender: nil)
             
+        case .tableOfContents:
+            self.performSegue(withIdentifier: "toTableOfContents", sender: nil)
+            
         default:
             break
         }
@@ -208,6 +213,9 @@ extension MushafFeaturesViewController:UITableViewDataSource{
             cell.imgIcon.image = UIImage(named:"finishDoaaIcon")
             cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_FINISH_DOAA", comment: "")
             
+        case .tableOfContents:
+            cell.imgIcon.image = UIImage(named:"tableOfContentsIcon")
+            cell.lblTitle.text = NSLocalizedString("MUSHAF_FEATURES_TABLE_OF_CONTENTS", comment: "")
             
         case .highlightMushafTopics:
             cell.switchControl.isHidden = false

@@ -116,7 +116,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rajab 1, 1438 AH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN4-Un-GJo" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="3" width="97" height="14.5"/>
+                                                            <rect key="frame" x="8" y="3" width="100" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
@@ -124,7 +124,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEX-qt-3XW" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="113" y="0.0" width="31" height="31"/>
+                                                            <rect key="frame" x="116" y="0.0" width="31" height="31"/>
                                                             <state key="normal" image="editIcon"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwT-2L-guz" customClass="GQButton" customModule="GoldenQuranSwift" customModuleProvider="target">
@@ -138,7 +138,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017 Mar 29 01:49 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOe-E4-xfc" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="237.5" y="4" width="125" height="14.5"/>
+                                                            <rect key="frame" x="229" y="4" width="133.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
@@ -256,6 +256,7 @@
                         <segue destination="TOf-GL-CtQ" kind="show" identifier="toFortyHadith" id="vTr-Kb-LFJ"/>
                         <segue destination="RP0-Ak-V6L" kind="presentation" identifier="toFinishQuranDoaa" id="dbj-gf-Xyo"/>
                         <segue destination="gfd-1X-tUU" kind="presentation" identifier="toAudioPlayer" id="36E-ea-QZc"/>
+                        <segue destination="udb-HS-RtV" kind="presentation" identifier="toTableOfContents" id="mP1-WS-HxO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ3-23-htl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -769,6 +770,189 @@
             </objects>
             <point key="canvasLocation" x="3693.5999999999999" y="384.55772113943033"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fce-gQ-ND4">
+            <objects>
+                <navigationController id="udb-HS-RtV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LC3-IN-6Ka">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="598-nQ-Ggm" kind="relationship" relationship="rootViewController" id="bZm-tS-pNb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRA-RP-gP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2806" y="1123"/>
+        </scene>
+        <!--Table Of Contents View Controller-->
+        <scene sceneID="8so-tc-Lcn">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="598-nQ-Ggm" customClass="TableOfContentsViewController" customModule="GoldenQuranSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bLd-zZ-uNy"/>
+                        <viewControllerLayoutGuide type="bottom" id="pw3-tI-huB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="glE-v8-OFh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Txd-gl-cXy">
+                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableOfContentsSectionHeaderTableViewCell" rowHeight="33" id="iq8-Ku-vIq" customClass="TableOfContentsSectionHeaderTableViewCell" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="33"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iq8-Ku-vIq" id="Pjz-dj-dSq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipt-0W-bI3" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="6" width="359" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ipt-0W-bI3" secondAttribute="bottom" constant="6" id="8l3-40-jBo"/>
+                                                <constraint firstItem="ipt-0W-bI3" firstAttribute="top" secondItem="Pjz-dj-dSq" secondAttribute="top" constant="6" id="IBN-iw-24i"/>
+                                                <constraint firstItem="ipt-0W-bI3" firstAttribute="leading" secondItem="Pjz-dj-dSq" secondAttribute="leading" constant="8" id="VW0-w6-PmU"/>
+                                                <constraint firstAttribute="trailing" secondItem="ipt-0W-bI3" secondAttribute="trailing" constant="8" id="jjQ-Si-slk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="ipt-0W-bI3" id="uQS-lA-fjw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableOfContentsSoraTableViewCell" id="y2h-Jb-FFW" customClass="TableOfContentsSoraTableViewCell" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="61" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y2h-Jb-FFW" id="dZ2-ZZ-B2l">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ICQ-8Y-BAm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="43"/>
+                                                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="pbW-39-8rU"/>
+                                                    </constraints>
+                                                    <string key="text">7
+Verses</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.55845939290000013" green="0.27339441638333334" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="soL-cg-tGn">
+                                                    <rect key="frame" x="46" y="0.0" width="40" height="43"/>
+                                                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Dst-qN-1Mv"/>
+                                                    </constraints>
+                                                    <string key="text">1
+No.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.55845939290000013" green="0.27339441638333334" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meeca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bNc-r0-It7">
+                                                    <rect key="frame" x="87" y="0.0" width="40" height="43"/>
+                                                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Ep4-Xf-Cgp"/>
+                                                        <constraint firstAttribute="width" constant="40" id="zY3-8Q-R2s"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.55845939290000002" green="0.27339441640000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7C-Sr-Y19" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="135" y="16" width="35.5" height="11.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="D7C-Sr-Y19" firstAttribute="top" secondItem="dZ2-ZZ-B2l" secondAttribute="topMargin" constant="8" id="5Ro-LD-zdz"/>
+                                                <constraint firstAttribute="bottom" secondItem="soL-cg-tGn" secondAttribute="bottom" id="F8x-PO-mdt"/>
+                                                <constraint firstItem="ICQ-8Y-BAm" firstAttribute="top" secondItem="dZ2-ZZ-B2l" secondAttribute="top" id="Kln-ej-dmW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="D7C-Sr-Y19" secondAttribute="bottom" constant="8" id="TEJ-zO-9gN"/>
+                                                <constraint firstItem="bNc-r0-It7" firstAttribute="leading" secondItem="soL-cg-tGn" secondAttribute="trailing" constant="1" id="edX-o6-ZQ3"/>
+                                                <constraint firstItem="bNc-r0-It7" firstAttribute="top" secondItem="dZ2-ZZ-B2l" secondAttribute="top" id="fJ7-Fz-Kx1"/>
+                                                <constraint firstAttribute="bottom" secondItem="ICQ-8Y-BAm" secondAttribute="bottom" id="ftt-RC-EOV"/>
+                                                <constraint firstItem="D7C-Sr-Y19" firstAttribute="leading" secondItem="bNc-r0-It7" secondAttribute="trailing" constant="8" id="kTv-Q3-SyG"/>
+                                                <constraint firstItem="soL-cg-tGn" firstAttribute="top" secondItem="dZ2-ZZ-B2l" secondAttribute="top" id="nDL-Pj-HkU"/>
+                                                <constraint firstItem="ICQ-8Y-BAm" firstAttribute="leading" secondItem="dZ2-ZZ-B2l" secondAttribute="leading" id="nYm-3P-rdw"/>
+                                                <constraint firstAttribute="bottom" secondItem="bNc-r0-It7" secondAttribute="bottom" id="pi3-Fx-7nc"/>
+                                                <constraint firstItem="soL-cg-tGn" firstAttribute="leading" secondItem="ICQ-8Y-BAm" secondAttribute="trailing" constant="1" id="unY-Hd-Z6X"/>
+                                                <constraint firstItem="soL-cg-tGn" firstAttribute="leading" secondItem="ICQ-8Y-BAm" secondAttribute="trailing" constant="1" id="zF9-ha-9jb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="lblSoraLocation" destination="bNc-r0-It7" id="7Be-KF-rRS"/>
+                                            <outlet property="lblSoraName" destination="D7C-Sr-Y19" id="Zwc-k7-V9g"/>
+                                            <outlet property="lblSoraNo" destination="soL-cg-tGn" id="8Ji-6y-hPf"/>
+                                            <outlet property="lblVersesCount" destination="ICQ-8Y-BAm" id="OYX-nV-Mfv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="598-nQ-Ggm" id="dZD-Vf-j3F"/>
+                                    <outlet property="delegate" destination="598-nQ-Ggm" id="qvT-C4-Wwr"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="owG-n7-lPf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="598-nQ-Ggm" id="nGd-Pw-MMN"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Ll-D5-pch" customClass="GQSegmentedControl" customModule="GoldenQuranSwift" customModuleProvider="target">
+                                <rect key="frame" x="8" y="116" width="359" height="29"/>
+                                <color key="backgroundColor" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" red="0.59556876790000002" green="0.43566655180000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentFilterChanged:" destination="598-nQ-Ggm" eventType="valueChanged" id="1x8-je-eZV"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pw3-tI-huB" firstAttribute="top" secondItem="Txd-gl-cXy" secondAttribute="bottom" id="2Hj-ye-BAj"/>
+                            <constraint firstItem="1Ll-D5-pch" firstAttribute="leading" secondItem="glE-v8-OFh" secondAttribute="leading" constant="8" id="79P-Uj-fuj"/>
+                            <constraint firstItem="owG-n7-lPf" firstAttribute="leading" secondItem="glE-v8-OFh" secondAttribute="leading" id="Fry-l8-6Xb"/>
+                            <constraint firstItem="1Ll-D5-pch" firstAttribute="top" secondItem="owG-n7-lPf" secondAttribute="bottom" constant="8" id="LWU-lc-eVs"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ll-D5-pch" secondAttribute="trailing" constant="8" id="MFv-rb-Rkf"/>
+                            <constraint firstItem="Txd-gl-cXy" firstAttribute="leading" secondItem="glE-v8-OFh" secondAttribute="leading" id="Msp-Ls-p8I"/>
+                            <constraint firstAttribute="trailing" secondItem="Txd-gl-cXy" secondAttribute="trailing" id="TCm-cP-KYR"/>
+                            <constraint firstItem="Txd-gl-cXy" firstAttribute="top" secondItem="bLd-zZ-uNy" secondAttribute="bottom" constant="88" id="YXM-ga-4l1"/>
+                            <constraint firstAttribute="trailing" secondItem="owG-n7-lPf" secondAttribute="trailing" id="gUk-gB-oeV"/>
+                            <constraint firstItem="owG-n7-lPf" firstAttribute="top" secondItem="bLd-zZ-uNy" secondAttribute="bottom" id="qhG-nW-p0H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xwd-nS-9Ad"/>
+                    <connections>
+                        <outlet property="searchBar" destination="owG-n7-lPf" id="Act-MU-GPL"/>
+                        <outlet property="segmentViewType" destination="1Ll-D5-pch" id="lsy-3p-ag6"/>
+                        <outlet property="tableView" destination="Txd-gl-cXy" id="aHf-do-IbY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYf-7x-0kQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3693.5999999999999" y="1121.2893553223389"/>
+        </scene>
         <!--Hadith Viewer View Controller-->
         <scene sceneID="nRJ-Yh-Hea">
             <objects>
@@ -954,7 +1138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6d-rD-RBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="1414"/>
+            <point key="canvasLocation" x="1116" y="2437"/>
         </scene>
         <!--Recitations View Controller-->
         <scene sceneID="fAD-JD-Vpa">
@@ -1058,7 +1242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lat-XO-fbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996" y="1415"/>
+            <point key="canvasLocation" x="1966" y="2437"/>
         </scene>
         <!--Tafseer View Controller-->
         <scene sceneID="za5-xV-E8D">
@@ -1147,7 +1331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0S-Wm-cxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="1414"/>
+            <point key="canvasLocation" x="3006" y="2438"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="76L-dN-zGn">
@@ -1527,12 +1711,12 @@
                                                 </label>
                                                 <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mi6-Tx-bQs" customClass="GQSegmentedControl" customModule="GoldenQuranSwift" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="39.5" width="343" height="29"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <segments>
                                                         <segment title="English"/>
                                                         <segment title="عربي"/>
                                                     </segments>
-                                                    <color key="tintColor" red="1" green="0.94004991319999998" blue="0.91726345490000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.59556876790000002" green="0.43566655180000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -1598,7 +1782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ou-Sq-qDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="884"/>
+            <point key="canvasLocation" x="1966" y="1612"/>
         </scene>
         <!--Prayer Times View Controller-->
         <scene sceneID="8ku-NW-Lx7">
@@ -1666,7 +1850,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Athan Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-SX-ae6" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="6" width="177.5" height="32"/>
+                                                            <rect key="frame" x="8" y="6" width="178.5" height="32"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1712,7 +1896,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:10 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGr-Dh-MQN" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                                    <rect key="frame" x="157" y="5" width="61.5" height="24"/>
+                                                                    <rect key="frame" x="156.5" y="5" width="62.5" height="24"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                     <color key="textColor" red="0.63921568630000003" green="0.50980392159999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -2120,7 +2304,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athan Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-Jk-kgn" customClass="GQLabel" customModule="GoldenQuranSwift" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="0.0" width="79.5" height="37"/>
+                                                            <rect key="frame" x="8" y="0.0" width="81" height="37"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.63921568630000003" green="0.50980392159999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>

@@ -71,6 +71,9 @@
 		179E5F811E9D608300E4CF1C /* TafseerAndRecitation.db in Resources */ = {isa = PBXBuildFile; fileRef = 179E5F801E9D608300E4CF1C /* TafseerAndRecitation.db */; };
 		179E5F831E9D613F00E4CF1C /* TafseerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F821E9D613F00E4CF1C /* TafseerManager.swift */; };
 		179E5F851E9E4F3200E4CF1C /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E5F841E9E4F3200E4CF1C /* Bookmark.swift */; };
+		17B9D6261EA7E6E700EAAC52 /* TableOfContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9D6251EA7E6E700EAAC52 /* TableOfContentsViewController.swift */; };
+		17B9D6291EA7EA7800EAAC52 /* TableOfContentsSectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9D6281EA7EA7800EAAC52 /* TableOfContentsSectionHeaderTableViewCell.swift */; };
+		17B9D62B1EA7EAAF00EAAC52 /* TableOfContentsSoraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9D62A1EA7EAAF00EAAC52 /* TableOfContentsSoraTableViewCell.swift */; };
 		17C13D761E5CC0F8003CC179 /* AddMushafViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */; };
 		17C13D791E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */; };
 		17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C13D7B1E5CC3BF003CC179 /* GradientView.swift */; };
@@ -166,6 +169,9 @@
 		179E5F801E9D608300E4CF1C /* TafseerAndRecitation.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = TafseerAndRecitation.db; sourceTree = "<group>"; };
 		179E5F821E9D613F00E4CF1C /* TafseerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TafseerManager.swift; sourceTree = "<group>"; };
 		179E5F841E9E4F3200E4CF1C /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		17B9D6251EA7E6E700EAAC52 /* TableOfContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfContentsViewController.swift; sourceTree = "<group>"; };
+		17B9D6281EA7EA7800EAAC52 /* TableOfContentsSectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfContentsSectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		17B9D62A1EA7EAAF00EAAC52 /* TableOfContentsSoraTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfContentsSoraTableViewCell.swift; sourceTree = "<group>"; };
 		17C13D751E5CC0F8003CC179 /* AddMushafViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafViewController.swift; sourceTree = "<group>"; };
 		17C13D781E5CC2A3003CC179 /* AddMushafCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMushafCollectionViewCell.swift; sourceTree = "<group>"; };
 		17C13D7B1E5CC3BF003CC179 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -221,6 +227,7 @@
 				1744B2691E74279100641FA0 /* MushafFeaturesViewController.swift */,
 				172329BB1E8C319A0083D4AC /* MushafFeaturesTopSummeryTableViewCell.swift */,
 				172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */,
+				17B9D6271EA7E70800EAAC52 /* TableOfContentsViewController */,
 				1796A8C61EA6141500FF0B3A /* AudioPlayerToolsViewController */,
 				1798E6781E9FAF6E00ABA84C /* SearchViewController */,
 				1798E6731E9F61AE00ABA84C /* BookmarksViewController */,
@@ -339,6 +346,16 @@
 				179E5F7C1E9D5E5100E4CF1C /* TafseerTableViewCell.swift */,
 			);
 			name = TafseerViewController;
+			sourceTree = "<group>";
+		};
+		17B9D6271EA7E70800EAAC52 /* TableOfContentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17B9D6251EA7E6E700EAAC52 /* TableOfContentsViewController.swift */,
+				17B9D6281EA7EA7800EAAC52 /* TableOfContentsSectionHeaderTableViewCell.swift */,
+				17B9D62A1EA7EAAF00EAAC52 /* TableOfContentsSoraTableViewCell.swift */,
+			);
+			name = TableOfContentsViewController;
 			sourceTree = "<group>";
 		};
 		17C13D771E5CC27E003CC179 /* AddMushafViewController */ = {
@@ -665,6 +682,7 @@
 				17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */,
 				179E5F831E9D613F00E4CF1C /* TafseerManager.swift in Sources */,
 				1796A8C81EA6522000FF0B3A /* RangeSlider.swift in Sources */,
+				17B9D6291EA7EA7800EAAC52 /* TableOfContentsSectionHeaderTableViewCell.swift in Sources */,
 				1796A8C31EA612C100FF0B3A /* AKPickerView.swift in Sources */,
 				17C684CF1E9AB9CB0008F60B /* ManageNotificationsViewController.swift in Sources */,
 				17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */,
@@ -721,6 +739,7 @@
 				1721C2051EA55C8800AE9A19 /* FortyHadithViewController.swift in Sources */,
 				177226571E6CC1AD001AA714 /* AddMushafNameViewController.swift in Sources */,
 				1744B2711E744B2300641FA0 /* GQSegmentedControl.swift in Sources */,
+				17B9D62B1EA7EAAF00EAAC52 /* TableOfContentsSoraTableViewCell.swift in Sources */,
 				1798E6751E9F61D100ABA84C /* BookmarksTableViewCell.swift in Sources */,
 				1798E6701E9F57AB00ABA84C /* BookmarkManager.swift in Sources */,
 				1721C2081EA55CA900AE9A19 /* FortyHadithTableViewCell.swift in Sources */,
@@ -730,6 +749,7 @@
 				17C13D7C1E5CC3BF003CC179 /* GradientView.swift in Sources */,
 				17F30EB11E8403D2005EFEE3 /* GQHighlightView.swift in Sources */,
 				1761D08A1E686C9C0026A7FC /* UIImageExtensions.swift in Sources */,
+				17B9D6261EA7E6E700EAAC52 /* TableOfContentsViewController.swift in Sources */,
 				17C684D61E9BF6240008F60B /* Recitation.swift in Sources */,
 				1796A8C51EA6140F00FF0B3A /* AudioPlayerToolsViewController.swift in Sources */,
 				170AFE461E5CDCA300083424 /* NSAttributedStringExtensions.swift in Sources */,
