@@ -185,9 +185,8 @@ extension TableOfContentsViewController:UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchContents(keyword: searchText)
-//        if searchText.characters.count >= 3 {
-            //doSearch()
-//        }
+        self.segmentViewType.selectedSegmentIndex = 0
+
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
