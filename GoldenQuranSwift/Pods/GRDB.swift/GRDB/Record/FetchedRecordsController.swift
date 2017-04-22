@@ -1,3 +1,4 @@
+import Foundation
 #if os(iOS)
     import UIKit
 #endif
@@ -434,14 +435,8 @@ private final class FetchedRecordsObserver<Record: RowConvertible> : Transaction
     }
     
     func observes(eventsOfKind eventKind: DatabaseEventKind) -> Bool {
-        switch eventKind {
-        case .delete(let tableName):
-            return selectionInfo.contains(anyColumnFrom: tableName)
-        case .insert(let tableName):
-            return selectionInfo.contains(anyColumnFrom: tableName)
-        case .update(let tableName, let updatedColumnNames):
-            return selectionInfo.contains(anyColumnIn: updatedColumnNames, from: tableName)
-        }
+        // If impact is unknown, assume true
+        return eventKind.impacts(selectionInfo) ?? true
     }
     
     #if SQLITE_ENABLE_PREUPDATE_HOOK
@@ -965,6 +960,6 @@ private final class Item<T: RowConvertible> : RowConvertible, Equatable {
     }
 }
 
-private func ==<T>(lhs: Item<T>, rhs: Item<T>) -> Bool {
+private func ==<T> (lhs: Item<T>, rhs: Item<T>) -> Bool {
     return lhs.row == rhs.row
 }

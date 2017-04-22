@@ -10,7 +10,7 @@ import UIKit
 
 struct FontManager {
     
-    static func fontWithSize(size:CGFloat,isBold:Bool = false) -> UIFont
+    static func fontWithSize( size:CGFloat,isBold:Bool = false) -> UIFont
     {
         if UIApplication.isEn() {
             return enFont(size: size , isBold: isBold)
@@ -19,7 +19,7 @@ struct FontManager {
         }
     }
     
-    static func enFont(size:CGFloat , isBold:Bool = false) -> UIFont
+    static func enFont( size:CGFloat , isBold:Bool = false) -> UIFont
     {
         if let font = UIFont(name:"Helvetica Neue W23 for SKY",size:size), !isBold {
             return font
@@ -36,7 +36,7 @@ struct FontManager {
         }
     }
     
-    static func arFont(size:CGFloat,isBold:Bool = false) -> UIFont
+    static func arFont( size:CGFloat,isBold:Bool = false) -> UIFont
     {
         if let font = UIFont(name:"Helvetica Neue W23 for SKY",size:size), !isBold {
             return font
@@ -62,7 +62,7 @@ struct FontManager {
         return 14
     }
     
-    static func setPreferredFontSize(size:Int) {
+    static func setPreferredFontSize( size:Int) {
         if size > 16 && size < 30 {
             UserDefaults.standard.set(size, forKey: Constants.userDefaultsKeys.preferedFontSize)
             UserDefaults.standard.synchronize()

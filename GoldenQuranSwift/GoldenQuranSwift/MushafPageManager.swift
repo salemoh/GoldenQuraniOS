@@ -58,7 +58,7 @@ class MushafPageManager: NSObject {
         print(pageTopics)
     }
     
-    func getHighlightRectForTouchPoint(point:CGPoint , inPage:Int) -> [HighlightRect] {
+    func getHighlightRectForTouchPoint( point:CGPoint , inPage:Int) -> [HighlightRect] {
         
         mushafPage?.removeHighlights(forType: .highlight)
         var foundHighlightRect:HighlightRect?

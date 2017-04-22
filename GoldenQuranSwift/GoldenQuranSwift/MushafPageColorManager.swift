@@ -78,7 +78,7 @@ struct MushafPageColorManager {
         }
     }
     
-    func getBackgroundImage(isLeft:Bool) -> UIImage? {
+    func getBackgroundImage( isLeft:Bool) -> UIImage? {
         if let color = UserDefaults.standard.object(forKey: Constants.userDefaultsKeys.preferedPageBackgroundColor) as? String {
             switch color {
             case MushafPageColor.red.rawValue:

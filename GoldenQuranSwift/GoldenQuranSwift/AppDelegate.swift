@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.windows[0].rootViewController = Constants.storyboard.mushaf.instantiateInitialViewController()
         }
         
+        NotificationsManager().fridayNotification()
+        
         return true
     }
 

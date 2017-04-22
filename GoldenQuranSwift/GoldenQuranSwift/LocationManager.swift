@@ -92,11 +92,11 @@ class LocationManager: NSObject , CLLocationManagerDelegate {
     }
     
     func DegreesToRadians (value:Double) -> Double {
-        return value * M_PI / 180.0
+        return value * Double.pi / 180.0
     }
     
     func RadiansToDegrees (value:Double) -> Double {
-        return value * 180.0 / M_PI
+        return value * 180.0 / Double.pi
     }
     
     
@@ -114,9 +114,9 @@ class LocationManager: NSObject , CLLocationManagerDelegate {
         
         //you Need to Multiply With M_PI
         
-        let needleTransform = CGAffineTransform(rotationAngle: CGFloat(((Double(needleDirection) * M_PI) / 180.0) + needleAngle))
+        let needleTransform = CGAffineTransform(rotationAngle: CGFloat(((Double(needleDirection) * Double.pi) / 180.0) + needleAngle))
         
-        let compossTransform = CGAffineTransform(rotationAngle: CGFloat((Double(compassDirection) * M_PI) / 180.0))
+        let compossTransform = CGAffineTransform(rotationAngle: CGFloat((Double(compassDirection) * Double.pi) / 180.0))
         
         /*
         print("Needle \(CGAffineTransform(rotationAngle: CGFloat(((Double(needleDirection) * M_PI) / 180.0) + needleAngle)))")
@@ -144,7 +144,7 @@ class LocationManager: NSObject , CLLocationManagerDelegate {
         var radiansBearing = atan2(y, x)
         if(radiansBearing < 0.0)
         {
-            radiansBearing += 2*M_PI;
+            radiansBearing += 2*Double.pi;
         }
         
         return radiansBearing

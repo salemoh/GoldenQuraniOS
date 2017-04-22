@@ -1,21 +1,7 @@
 import Foundation
 
-#if !USING_BUILTIN_SQLITE
-    #if os(OSX)
-        import SQLiteMacOSX
-    #elseif os(iOS)
-        #if (arch(i386) || arch(x86_64))
-            import SQLiteiPhoneSimulator
-        #else
-            import SQLiteiPhoneOS
-        #endif
-    #elseif os(watchOS)
-        #if (arch(i386) || arch(x86_64))
-            import SQLiteWatchSimulator
-        #else
-            import SQLiteWatchOS
-        #endif
-    #endif
+#if SWIFT_PACKAGE
+    import CSQLite
 #endif
 
 /// A raw SQLite statement, suitable for the SQLite C API.
@@ -220,7 +206,8 @@ public class Statement {
 ///         let moreThanThirtyCount = try Int.fetchOne(statement, arguments: [30])!
 ///     }
 public final class SelectStatement : Statement {
-    private(set) var selectionInfo: SelectionInfo
+    /// Information about the table and columns read by a SelectStatement
+    public private(set) var selectionInfo: SelectionInfo
     
     init(database: Database, sql: String) throws {
         self.selectionInfo = SelectionInfo()
@@ -270,8 +257,8 @@ public final class SelectStatement : Statement {
         return fetchCursor(arguments: arguments) { }
     }
 
-    /// Allows inspection of table and columns read by a SelectStatement
-    struct SelectionInfo {
+    /// Information about the table and columns read by a SelectStatement
+    public struct SelectionInfo : CustomStringConvertible {
         mutating func insert(column: String, ofTable table: String) {
             if selection[table] != nil {
                 selection[table]!.insert(column)
@@ -280,15 +267,40 @@ public final class SelectStatement : Statement {
             }
         }
         
+        /// If true, selection is unknown
+        let isUnknown: Bool
+        
+        /// Relevant iff isUnknown is false
         func contains(anyColumnFrom table: String) -> Bool {
             return selection.index(forKey: table) != nil
         }
         
+        /// Relevant iff isUnknown is false
         func contains(anyColumnIn columns: Set<String>, from table: String) -> Bool {
             return !(selection[table]?.isDisjoint(with: columns) ?? true)
         }
         
+        init() {
+            self.init(isUnknown: false)
+        }
+        
+        static func unknown() -> SelectionInfo {
+            return self.init(isUnknown: true)
+        }
+        
         private var selection: [String: Set<String>] = [:]  // [TableName: Set<ColumnName>]
+        
+        private init(isUnknown: Bool) {
+            self.isUnknown = isUnknown
+        }
+        
+        /// A textual representation of `self`.
+        public var description: String {
+            return selection
+                .sorted { $0.key < $1.key }
+                .map { (table, columns) in "\(table)(\(columns.sorted().joined(separator: ", ")))" }
+                .joined(separator: ", ")
+        }
     }
 }
 

@@ -26,7 +26,7 @@ import Foundation
     open var maghrib: Date?
     open var isha: Date?
     
-    private let prayerTimes: PrayerTimes?
+    fileprivate let prayerTimes: PrayerTimes?
     
     public init(coordinates: BACoordinates, date: DateComponents, calculationParameters: BACalculationParameters) {
         prayerTimes = PrayerTimes(coordinates: Coordinates(latitude: coordinates.latitude, longitude: coordinates.longitude), date: date, calculationParameters: calculationParameters.calculationParameters())
@@ -63,7 +63,7 @@ import Foundation
         return prayerTimes?.time(for: prayerForBAPrayer(prayer))
     }
     
-    private func prayerForBAPrayer(_ baPrayer: BAPrayer) -> Prayer {
+    fileprivate func prayerForBAPrayer(_ baPrayer: BAPrayer) -> Prayer {
         switch baPrayer {
         case BAPrayer.none:
             return Prayer.none
@@ -82,7 +82,7 @@ import Foundation
         }
     }
     
-    private func BAPrayerForPrayer(_ prayer: Prayer) -> BAPrayer {
+    fileprivate func BAPrayerForPrayer(_ prayer: Prayer) -> BAPrayer {
         switch prayer {
         case Prayer.none:
             return BAPrayer.none
@@ -149,7 +149,7 @@ import Foundation
         return params
     }
     
-    private static func calculationMethodForBACalculationMethod(_ baMethod: BACalculationMethod) -> CalculationMethod {
+    fileprivate static func calculationMethodForBACalculationMethod(_ baMethod: BACalculationMethod) -> CalculationMethod {
         switch baMethod {
         case .muslimWorldLeague:
             return CalculationMethod.muslimWorldLeague

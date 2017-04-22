@@ -75,7 +75,7 @@ class DBManager: NSObject {
         return mus7afList
     }
     
-    func updateMushaf(mushafObject:Mus7af){
+    func updateMushaf( mushafObject:Mus7af){
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
@@ -101,7 +101,7 @@ class DBManager: NSObject {
         
     }
     
-    func insertNewMushaf(mushafObject:Mus7af){
+    func insertNewMushaf( mushafObject:Mus7af){
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
@@ -188,7 +188,7 @@ class DBManager: NSObject {
         return mus7afList
     }
     
-    func getMushafTOC(mushaf:Mus7af)->[TableOfContentItem] {
+    func getMushafTOC( mushaf:Mus7af)->[TableOfContentItem] {
         
         var tableOfContents:[TableOfContentItem] = [TableOfContentItem]()
         do {
@@ -224,7 +224,7 @@ class DBManager: NSObject {
     //MARK: ---------------------------
     //MARK: Mushaf Highlight
     //MARK: ---------------------------
-    func getMus7afHighlightRects(forPage:Int , fromMushafDB:String)->[HighlightRect] {
+    func getMus7afHighlightRects( forPage:Int , fromMushafDB:String)->[HighlightRect] {
         
         
          var dbMushafQueue:DatabaseQueue?
@@ -280,7 +280,7 @@ class DBManager: NSObject {
     //MARK: ---------------------------
     //MARK: Mushaf Mo3jam
     //MARK: ---------------------------
-    func getMushafMo3jam(verseNo:Int , soraNo:Int)->[SearchResult] {
+    func getMushafMo3jam( verseNo:Int , soraNo:Int)->[SearchResult] {
         
         /// not work just query is correct
         var dbMushafMo3jamQueue:DatabaseQueue?
@@ -325,7 +325,7 @@ class DBManager: NSObject {
     //MARK: Mushaf By Topic
     //MARK: ---------------------------
     
-    func getMushafByTopic(formAyah:Int , toAyah:Int, soraNo: Int)->[MushafTopic] {
+    func getMushafByTopic( formAyah:Int , toAyah:Int, soraNo: Int)->[MushafTopic] {
         
         
         var dbMushafByTopicQueue:DatabaseQueue?
@@ -369,7 +369,7 @@ class DBManager: NSObject {
     //MARK: ---------------------------
     //MARK: Mushaf Recitations
     //MARK: ---------------------------
-    func getMushafRecitations(mushafType:MushafType) -> [Recitation] {
+    func getMushafRecitations( mushafType:MushafType) -> [Recitation] {
         
         var dbRecitationQueue:DatabaseQueue?
         
@@ -465,7 +465,7 @@ class DBManager: NSObject {
         }
     }
     
-    func getMushafBookmarks(mushaf:Mus7af) -> [Bookmark] {
+    func getMushafBookmarks( mushaf:Mus7af) -> [Bookmark] {
         
         var bookmarksList = [Bookmark]()
         
@@ -495,7 +495,7 @@ class DBManager: NSObject {
         return bookmarksList
     }
     
-    func deleteMushafBookmark(bookmark:Bookmark){
+    func deleteMushafBookmark( bookmark:Bookmark){
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
@@ -509,7 +509,7 @@ class DBManager: NSObject {
         
     }
     
-    func deleteAllMushafBookmark(mushaf:Mus7af){
+    func deleteAllMushafBookmark( mushaf:Mus7af){
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
@@ -523,7 +523,7 @@ class DBManager: NSObject {
         
     }
     
-    func insertNewMushafBookmark(bookmark:Bookmark){
+    func insertNewMushafBookmark( bookmark:Bookmark){
         do {
             try dbQueueLibrary?.inDatabase { db in
                 try db.execute(
@@ -548,7 +548,7 @@ class DBManager: NSObject {
     //MARK: Search Functions
     //MARK: ---------------------------
     
-    func searchMushafByTopic(keyword:String)->[SearchResult] {
+    func searchMushafByTopic( keyword:String)->[SearchResult] {
         
         
         var dbMushafByTopicQueue:DatabaseQueue?
@@ -587,7 +587,7 @@ class DBManager: NSObject {
         return results
     }
     
-    func searchMushafVerse(keyword:String)->[SearchResult] {
+    func searchMushafVerse( keyword:String)->[SearchResult] {
         
         
         var dbMushafTextQueue:DatabaseQueue?
@@ -626,7 +626,7 @@ class DBManager: NSObject {
         return results
     }
     
-    func searchMushafMo3jam(keyword:String)->[SearchResult] {
+    func searchMushafMo3jam( keyword:String)->[SearchResult] {
         
         
         var dbMushafMo3jamQueue:DatabaseQueue?
@@ -673,7 +673,7 @@ class DBManager: NSObject {
     //MARK: Hadith functions
     //MARK: ---------------------------
     
-    func getHadithContent(withGroupId:Int)->[Hadith] {
+    func getHadithContent( withGroupId:Int)->[Hadith] {
         
         
         var dbHadithQueue:DatabaseQueue?

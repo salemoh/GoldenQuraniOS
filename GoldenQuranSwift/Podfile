@@ -26,6 +26,6 @@ target 'GoldenQuranSwift' do
 #  pod 'AFDateHelper'
 
   # MoviePlayer
-  pod 'MobilePlayer'
+  #pod 'MobilePlayer'
 
 end

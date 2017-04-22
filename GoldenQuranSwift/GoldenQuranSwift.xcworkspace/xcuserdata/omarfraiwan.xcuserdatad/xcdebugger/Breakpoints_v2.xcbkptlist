@@ -175,8 +175,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "Mus7afManager"
-            landmarkType = "3">
+            landmarkName = "hasMushaf"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -319,8 +319,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "Mus7afManager"
-            landmarkType = "3">
+            landmarkName = "currentMus7af"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -351,7 +351,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "getHighlightRectForTouchPoint(point:inPage:)"
+            landmarkName = "getHighlightRectForTouchPoint(_:inPage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -607,7 +607,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "getPrayerTimes(forDate:)"
+            landmarkName = "getPrayerTimes(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -662,7 +662,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/DBManager.swift"
@@ -675,14 +675,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GoldenQuranSwift.DBManager.createMushafBookmarksDB () -&gt; ()"
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514332705.853665"
+                  timestampString = "514592779.831764"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "452"
@@ -690,14 +690,14 @@
                   offsetFromSymbolStart = "30">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GoldenQuranSwift.DBManager.(createMushafBookmarksDB () -&gt; ()).(closure #1)"
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514332705.85927"
+                  timestampString = "514592779.833971"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "453"
@@ -710,7 +710,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/DBManager.swift"
@@ -723,14 +723,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GoldenQuranSwift.DBManager.(createMushafBookmarksDB () -&gt; ()).(closure #1)"
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514332705.871114"
+                  timestampString = "514592779.838135"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "453"
@@ -738,14 +738,14 @@
                   offsetFromSymbolStart = "36">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GoldenQuranSwift.DBManager.(createMushafBookmarksDB () -&gt; ()).(closure #1).(closure #1)"
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514332705.876535"
+                  timestampString = "514592779.840004"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "454"
@@ -758,7 +758,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/DBManager.swift"
@@ -774,7 +774,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/DBManager.swift"
@@ -886,7 +886,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/DBManager.swift"
@@ -899,14 +899,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GoldenQuranSwift.DBManager.getUserMus7afs () -&gt; Swift.Array&lt;GoldenQuranSwift.Mus7af&gt;"
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514332705.962492"
+                  timestampString = "514592779.872677"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
@@ -914,14 +914,14 @@
                   offsetFromSymbolStart = "75">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GoldenQuranSwift.DBManager.(getUserMus7afs () -&gt; Swift.Array&lt;GoldenQuranSwift.Mus7af&gt;).(closure #1)"
                   moduleName = "GoldenQuranSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/omarfraiwan/Documents/GoldenQuraniOS/GoldenQuranSwift/GoldenQuranSwift/DBManager.swift"
-                  timestampString = "514332705.967899"
+                  timestampString = "514592779.87478"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "163"
@@ -950,7 +950,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoldenQuranSwift/Mus7afManager.swift"
@@ -975,7 +975,39 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
             endingLineNumber = "135"
-            landmarkName = "searchContents(keyword:)"
+            landmarkName = "searchContents(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoldenQuranSwift/NotificationsManager.swift"
+            timestampString = "514592249.427808"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "fridayNotification()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoldenQuranSwift/NotificationsManager.swift"
+            timestampString = "514592802.796246"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getDateOfWeekDay(direction:dayName:considerToday:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

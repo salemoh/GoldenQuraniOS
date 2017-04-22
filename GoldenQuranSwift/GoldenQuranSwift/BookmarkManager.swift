@@ -10,7 +10,7 @@ import UIKit
 
 class BookmarkManager: NSObject {
     
-    class func addBookmark(forPage:Int = -1 , forSora:Int = -1 , forVerse:Int = -1){
+    class func addBookmark( forPage:Int = -1 , forSora:Int = -1 , forVerse:Int = -1){
         let bookmark = Bookmark()
         bookmark.page = forPage
         bookmark.soraNo = forSora
@@ -22,15 +22,15 @@ class BookmarkManager: NSObject {
         DBManager.shared.insertNewMushafBookmark(bookmark: bookmark)
     }
     
-    class func getMushafBookmarks(mushaf:Mus7af) -> [Bookmark] {
+    class func getMushafBookmarks( mushaf:Mus7af) -> [Bookmark] {
         return DBManager.shared.getMushafBookmarks(mushaf: mushaf)
     }
 
-    class func deleteBookmark(bookmark:Bookmark){
+    class func deleteBookmark( bookmark:Bookmark){
         DBManager.shared.deleteMushafBookmark(bookmark: bookmark)
     }
     
-    class func deleteAllBookmarks(mushaf:Mus7af){
+    class func deleteAllBookmarks( mushaf:Mus7af){
         DBManager.shared.deleteAllMushafBookmark(mushaf: mushaf)
     }
     

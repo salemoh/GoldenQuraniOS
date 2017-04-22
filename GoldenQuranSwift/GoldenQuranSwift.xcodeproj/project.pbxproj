@@ -578,6 +578,7 @@
 					976A89361E50E81700697DD2 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = R3BUTRB464;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};

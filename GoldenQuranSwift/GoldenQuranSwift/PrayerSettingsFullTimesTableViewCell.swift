@@ -38,7 +38,7 @@ class PrayerSettingsFullTimesTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected( _ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -46,7 +46,7 @@ class PrayerSettingsFullTimesTableViewCell: UITableViewCell {
 
     
     
-    func fillWithPrayer( prayerTimes:PrayerTimes? ) {
+    func fillWithPrayer(prayerTimes:PrayerTimes? ) {
         
         lblFajr.text = NSLocalizedString("FAJR_PRAY_TIME", comment: "")
         lblFajrTime.text = self.getFormattedPrayerTime(time: prayerTimes?.fajr)
@@ -67,7 +67,7 @@ class PrayerSettingsFullTimesTableViewCell: UITableViewCell {
         
     }
     
-    func getFormattedPrayerTime(time:Date?) -> String{
+    func getFormattedPrayerTime( time:Date?) -> String{
         if let prayerTime = time {
             let formatter = DateFormatter()
             formatter.dateFormat = "hh:mm a"

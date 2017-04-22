@@ -15,11 +15,11 @@ class TafseerManager: NSObject {
     }
     //static let favouriteTafseer = "FavoriteTafseer"
     //static let activeTafseer = "ActiveTafseer"
-    class func setActiveTafseer(tafseer:Tafseer){
+    class func setActiveTafseer( tafseer:Tafseer){
         UserDefaults.standard.set(tafseer.id!, forKey: Constants.userDefaultsKeys.activeTafseer)
         UserDefaults.standard.synchronize()
     }
-    class func isActiveTafseer(tafseer:Tafseer) -> Bool{
+    class func isActiveTafseer( tafseer:Tafseer) -> Bool{
         
         let activeTafseerId = UserDefaults.standard.integer(forKey: Constants.userDefaultsKeys.activeTafseer)
         
@@ -35,7 +35,7 @@ class TafseerManager: NSObject {
         return false
     }
     
-    class func isFavouriteTafseer(tafseer:Tafseer) -> Bool{
+    class func isFavouriteTafseer( tafseer:Tafseer) -> Bool{
         let favoriteTafseers = UserDefaults.standard.object(forKey: Constants.userDefaultsKeys.favouriteTafseers)
         if let favs = favoriteTafseers as? Array<Int> {
             if favs.contains(tafseer.id!) {
@@ -50,14 +50,14 @@ class TafseerManager: NSObject {
         return favoriteTafseers
     }
     
-    class func addTafseerToFavourite(tafseer:Tafseer) {
+    class func addTafseerToFavourite( tafseer:Tafseer) {
         var favoriteTafseers:[Int] = UserDefaults.standard.object(forKey: Constants.userDefaultsKeys.favouriteTafseers) as! [Int]? ?? [Int]()
         favoriteTafseers.append(tafseer.id!)
         UserDefaults.standard.set(favoriteTafseers, forKey: Constants.userDefaultsKeys.favouriteTafseers)
         UserDefaults.standard.synchronize()
     }
     
-    class func removeTafseerFromFavourite(tafseer:Tafseer) {
+    class func removeTafseerFromFavourite( tafseer:Tafseer) {
         var favoriteTafseers:[Int] = UserDefaults.standard.object(forKey: Constants.userDefaultsKeys.favouriteTafseers) as! [Int]? ?? [Int]()
         if favoriteTafseers.contains(tafseer.id!) {
             let index = favoriteTafseers.index(of: tafseer.id!)!

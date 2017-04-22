@@ -22,7 +22,7 @@ struct LanguageManager {
         return languages.firstObject as! String
     }
     
-    static func changeLanguageTo(lang: LanguageType) {
+    static func changeLanguageTo( lang: LanguageType) {
         
         UserDefaults.standard.set([lang.rawValue,deviceLanguage()], forKey: Constants.iOS_LANGUAGES_KEY)
         UserDefaults.standard.synchronize()
@@ -102,7 +102,7 @@ extension UILabel {
 }
 
 extension Bundle {
-    func specialLocalizedStringForKey(_ key: String, value: String?, table tableName: String?) -> String {
+    func specialLocalizedStringForKey(key: String, value: String?, table tableName: String?) -> String {
         let currentLanguage = LanguageManager.deviceLanguage()
         var bundle = Bundle()
         if let _path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj") {
@@ -112,7 +112,7 @@ extension Bundle {
             bundle = Bundle(path: _path)!
         }
         
-        return (bundle.specialLocalizedStringForKey(key, value: value, table: tableName))
+        return (bundle.specialLocalizedStringForKey(key: key, value: value, table: tableName))
     }
 }
 
@@ -129,7 +129,7 @@ func MethodSwizzleGivenClassName(cls: AnyClass, originalSelector: Selector, over
 
 class LocalizerHelper: NSObject {
     class func DoTheSwizzling() {
-        MethodSwizzleGivenClassName(cls: Bundle.self, originalSelector: #selector(Bundle.localizedString), overrideSelector: #selector(Bundle.specialLocalizedStringForKey(_:value:table:)))
+        MethodSwizzleGivenClassName(cls: Bundle.self, originalSelector: #selector(Bundle.localizedString), overrideSelector: #selector(Bundle.specialLocalizedStringForKey(key:value:table:)))
         
         MethodSwizzleGivenClassName(cls: UIApplication.self, originalSelector: #selector(getter: UIApplication.userInterfaceLayoutDirection), overrideSelector: #selector(getter: UIApplication.cstm_userInterfaceLayoutDirection))
         

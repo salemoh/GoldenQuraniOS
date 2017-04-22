@@ -201,9 +201,9 @@ public struct PrayerTimes {
         
         let solarTime = SolarTime(date: date, coordinates: coordinates)
         
-        guard let transit = solarTime.transit.timeComponents()?.dateComponents(date),
-            let sunriseComponents = solarTime.sunrise.timeComponents()?.dateComponents(date),
-            let sunsetComponents = solarTime.sunset.timeComponents()?.dateComponents(date),
+        guard let transit = solarTime.transit.timeComponents()?.dateComponents(date: date),
+            let sunriseComponents = solarTime.sunrise.timeComponents()?.dateComponents(date: date),
+            let sunsetComponents = solarTime.sunset.timeComponents()?.dateComponents(date: date),
             let sunriseDate = cal.date(from: sunriseComponents),
             let sunsetDate = cal.date(from: sunsetComponents) else {
                 // unable to determine transit, sunrise and sunset aborting calculations
@@ -214,7 +214,7 @@ public struct PrayerTimes {
         tempSunrise = cal.date(from: sunriseComponents)
         tempMaghrib = cal.date(from: sunsetComponents)
         
-        if let asrComponents = solarTime.afternoon(shadowLength: calculationParameters.madhab.shadowLength).timeComponents()?.dateComponents(date) {
+        if let asrComponents = solarTime.afternoon(shadowLength: calculationParameters.madhab.shadowLength).timeComponents()?.dateComponents(date: date) {
             tempAsr = cal.date(from: asrComponents)
         }
         
@@ -224,7 +224,7 @@ public struct PrayerTimes {
             return nil
         }
         
-        if let fajrComponents = solarTime.hourAngle(angle: -calculationParameters.fajrAngle, afterTransit: false).timeComponents()?.dateComponents(date) {
+        if let fajrComponents = solarTime.hourAngle(angle: -calculationParameters.fajrAngle, afterTransit: false).timeComponents()?.dateComponents(date: date) {
             tempFajr = cal.date(from: fajrComponents)
         }
         
@@ -255,7 +255,7 @@ public struct PrayerTimes {
         if calculationParameters.ishaInterval > 0 {
             tempIsha = tempMaghrib?.addingTimeInterval(calculationParameters.ishaInterval.timeInterval())
         } else {
-            if let ishaComponents = solarTime.hourAngle(angle: -calculationParameters.ishaAngle, afterTransit: true).timeComponents()?.dateComponents(date) {
+            if let ishaComponents = solarTime.hourAngle(angle: -calculationParameters.ishaAngle, afterTransit: true).timeComponents()?.dateComponents(date: date) {
                 tempIsha = cal.date(from: ishaComponents)
             }
             
@@ -402,9 +402,9 @@ struct SolarTime {
     let sunrise: Double
     let sunset: Double
     
-    private let prevSolar: SolarCoordinates
-    private let nextSolar: SolarCoordinates
-    private let approxTransit: Double
+    fileprivate let prevSolar: SolarCoordinates
+    fileprivate let nextSolar: SolarCoordinates
+    fileprivate let approxTransit: Double
     
     init(date: DateComponents, coordinates: Coordinates) {
         // calculations need to occur at 0h0m UTC
@@ -443,14 +443,14 @@ struct SolarTime {
             declination: solar.declination, previousDeclination: prevSolar.declination, nextDeclination: nextSolar.declination)
     }
     
-    func hourAngle(angle: Double, afterTransit: Bool) -> Double {
+    func hourAngle( angle: Double, afterTransit: Bool) -> Double {
         return Astronomical.correctedHourAngle(approximateTransit: approxTransit, angle: angle, coordinates: observer, afterTransit: afterTransit, siderealTime: solar.apparentSiderealTime,
             rightAscension: solar.rightAscension, previousRightAscension: prevSolar.rightAscension, nextRightAscension: nextSolar.rightAscension,
             declination: solar.declination, previousDeclination: prevSolar.declination, nextDeclination: nextSolar.declination)
     }
     
     // hours from transit
-    func afternoon(shadowLength: ShadowLength) -> Double {
+    func afternoon( shadowLength: ShadowLength) -> Double {
         // TODO source shadow angle calculation
         let tangent = fabs(observer.latitude - solar.declination)
         let inverse = shadowLength.rawValue + tan(tangent.degreesToRadians())
@@ -681,7 +681,7 @@ struct Astronomical {
     }
     
     /* The Julian Day for a given Gregorian date. */
-    static func julianDay(year: Int, month: Int, day: Int, hours: Double = 0) -> Double {
+    static func julianDay( year: Int, month: Int, day: Int, hours: Double = 0) -> Double {
         
         /* Equation from Astronomical Algorithms page 60 */
         
@@ -706,7 +706,7 @@ struct Astronomical {
     }
     
     /* Whether or not a year is a leap year (has 366 days). */
-    static func isLeap(year: Int) -> Bool {
+    static func isLeap( year: Int) -> Bool {
         if year % 4 != 0 {
             return false
         }
@@ -718,7 +718,7 @@ struct Astronomical {
         return true
     }
     
-    static func seasonAdjustedMorningTwilight(latitude: Double, day: Int, year: Int, sunrise: Date) -> Date {
+    static func seasonAdjustedMorningTwilight( latitude: Double, day: Int, year: Int, sunrise: Date) -> Date {
         let a: Double = 75 + ((28.65 / 55.0) * fabs(latitude))
         let b: Double = 75 + ((19.44 / 55.0) * fabs(latitude))
         let c: Double = 75 + ((32.74 / 55.0) * fabs(latitude))
@@ -744,7 +744,7 @@ struct Astronomical {
         return sunrise.addingTimeInterval(round(adjustment * -60.0))
     }
     
-    static func seasonAdjustedEveningTwilight(latitude: Double, day: Int, year: Int, sunset: Date) -> Date {
+    static func seasonAdjustedEveningTwilight( latitude: Double, day: Int, year: Int, sunset: Date) -> Date {
         let a: Double = 75 + ((25.60 / 55.0) * fabs(latitude))
         let b: Double = 75 + ((2.050 / 55.0) * fabs(latitude))
         let c: Double = 75 - ((9.210 / 55.0) * fabs(latitude))
@@ -770,7 +770,7 @@ struct Astronomical {
         return sunset.addingTimeInterval(round(adjustment * 60.0))
     }
     
-    static func daysSinceSolstice(dayOfYear: Int, year: Int, latitude: Double) -> Int {
+    static func daysSinceSolstice( dayOfYear: Int, year: Int, latitude: Double) -> Int {
         var daysSinceSolstice = 0
         let northernOffset = 10
         let southernOffset = Astronomical.isLeap(year: year) ? 173 : 172
@@ -806,7 +806,7 @@ struct TimeComponents {
     let minutes: Int
     let seconds: Int
     
-    func dateComponents(_ date: DateComponents) -> DateComponents {
+    func dateComponents( date: DateComponents) -> DateComponents {
         var comps = DateComponents()
         comps.year = date.year
         comps.month = date.month
@@ -857,14 +857,14 @@ extension Int {
 extension Double {
     
     func degreesToRadians() -> Double {
-        return (self * M_PI) / 180.0
+        return (self * Double.pi) / 180.0
     }
     
     func radiansToDegrees() -> Double {
-        return (self * 180.0) / M_PI
+        return (self * 180.0) / Double.pi
     }
     
-    func normalizeWithBound(max: Double) -> Double {
+    func normalizeWithBound( max: Double) -> Double {
         return self - (max * (floor(self / max)))
     }
     

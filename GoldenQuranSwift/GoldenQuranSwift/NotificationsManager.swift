@@ -14,7 +14,7 @@ class NotificationsManager: NSObject {
 
     
     func getWeekDaysInEnglish() -> [String] {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+        var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         calendar.locale = Locale(identifier: "en_US_POSIX")
         return calendar.weekdaySymbols
     }
@@ -23,12 +23,12 @@ class NotificationsManager: NSObject {
         case next
         case previous
         
-        var calendarOptions: NSCalendar.Options {
+        var calendarOptions: Calendar.SearchDirection {
             switch self {
             case .next:
-                return .matchNextTime
+                return .forward
             case .previous:
-                return [.searchBackwards, .matchNextTime]
+                return .backward
             }
         }
     }
@@ -45,7 +45,7 @@ class NotificationsManager: NSObject {
         
     }
     
-    func getDateOfWeekDay(direction: SearchWeekDayDirection, _ dayName: SearchWeekDayName, considerToday consider: Bool = false) -> Date {
+    func getDateOfWeekDay( direction: SearchWeekDayDirection, dayName: SearchWeekDayName, considerToday consider: Bool = false) -> Date {
         let weekdaysName = getWeekDaysInEnglish()
         
         assert(weekdaysName.contains(dayName.rawValue), "weekday symbol should be in form \(weekdaysName)")
@@ -54,7 +54,7 @@ class NotificationsManager: NSObject {
         
         let today = Date()
         
-        let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
         if consider && calendar.component(.weekday, from: today ) == nextWeekDayIndex {
             
@@ -64,8 +64,8 @@ class NotificationsManager: NSObject {
         var nextDateComponent = DateComponents()
         nextDateComponent.weekday = nextWeekDayIndex
         
-        
-        let date = calendar.nextDate(after: today, matching: nextDateComponent , options: direction.calendarOptions)
+        let date = calendar.nextDate(after: today, matching: nextDateComponent, matchingPolicy: Calendar.MatchingPolicy.nextTime, repeatedTimePolicy: Calendar.RepeatedTimePolicy.first, direction: direction.calendarOptions)
+//        let date = calendar.nextDate(after: today, matching: nextDateComponent , matchingPolicy: direction.calendarOptions)
         
         return date!
     }
@@ -73,8 +73,8 @@ class NotificationsManager: NSObject {
     
     func fridayNotification(){
         
-        var nextFridayTimeStamp = getDateOfWeekDay(direction: .next, .sunday , considerToday: false /*it has issue plese fix*/).timeIntervalSince1970
-        nextFridayTimeStamp += 23 * 60 * 60 + 12 * 60 //3:00 -- 15:00 PM
+        var nextFridayTimeStamp = getDateOfWeekDay(direction: .next, dayName: .friday , considerToday: false /*it has issue plese fix*/).timeIntervalSince1970
+        nextFridayTimeStamp += 15 * 60 * 60  //3:00 -- 15:00 PM
         
         let nextFridayDate = Date(timeIntervalSince1970:nextFridayTimeStamp)
         

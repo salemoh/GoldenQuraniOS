@@ -1,21 +1,7 @@
 import Foundation
 
-#if !USING_BUILTIN_SQLITE
-    #if os(OSX)
-        import SQLiteMacOSX
-    #elseif os(iOS)
-        #if (arch(i386) || arch(x86_64))
-            import SQLiteiPhoneSimulator
-        #else
-            import SQLiteiPhoneOS
-        #endif
-    #elseif os(watchOS)
-        #if (arch(i386) || arch(x86_64))
-            import SQLiteWatchSimulator
-        #else
-            import SQLiteWatchOS
-        #endif
-    #endif
+#if SWIFT_PACKAGE
+    import CSQLite
 #endif
 
 /// Configuration for a DatabaseQueue or DatabasePool.
@@ -84,7 +70,8 @@ public struct Configuration {
     var SQLiteConnectionWillClose: ((SQLiteConnection) -> ())?
     var SQLiteConnectionDidClose: (() -> ())?
     var SQLiteOpenFlags: Int32 {
-        return threadingMode.SQLiteOpenFlags | (readonly ? SQLITE_OPEN_READONLY : (SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE))
+        let readWriteFlags = readonly ? SQLITE_OPEN_READONLY : (SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE)
+        return threadingMode.SQLiteOpenFlags | readWriteFlags
     }
 }
 

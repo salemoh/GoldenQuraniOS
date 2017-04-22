@@ -76,7 +76,7 @@ class PrayerTimesManager: NSObject {
         return params
     }
     
-    func getPrayerTimes(forLocation:CLLocation , forDate:Date = Date()) -> PrayerTimes? {
+    func getPrayerTimes( forLocation:CLLocation , forDate:Date = Date()) -> PrayerTimes? {
     
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = cal.dateComponents([.year, .month, .day], from: forDate)
@@ -106,7 +106,7 @@ class PrayerTimesManager: NSObject {
         return nil
     }
     
-    func getPrayerTimes(forDate:Date = Date())->PrayerTimes?{
+    func getPrayerTimes( forDate:Date = Date())->PrayerTimes?{
         if let location = LocationManager.shared.getLocation() {
             if let prayer = self.getPrayerTimes(forLocation: location , forDate:forDate) {
                 return prayer

@@ -1,21 +1,7 @@
 import Foundation
 
-#if !USING_BUILTIN_SQLITE
-    #if os(OSX)
-        import SQLiteMacOSX
-    #elseif os(iOS)
-        #if (arch(i386) || arch(x86_64))
-            import SQLiteiPhoneSimulator
-        #else
-            import SQLiteiPhoneOS
-        #endif
-    #elseif os(watchOS)
-        #if (arch(i386) || arch(x86_64))
-            import SQLiteWatchSimulator
-        #else
-            import SQLiteWatchOS
-        #endif
-    #endif
+#if SWIFT_PACKAGE
+    import CSQLite
 #endif
 
 /// A database row.
@@ -771,7 +757,7 @@ extension Row : Equatable {
     
     /// Returns true if and only if both rows have the same columns and values,
     /// in the same order. Columns are compared in a case-sensitive way.
-    public static func ==(lhs: Row, rhs: Row) -> Bool {
+    public static func == (lhs: Row, rhs: Row) -> Bool {
         if lhs === rhs {
             return true
         }
@@ -839,11 +825,11 @@ public struct RowIndex : Comparable {
     let index: Int
     init(_ index: Int) { self.index = index }
     
-    public static func ==(lhs: RowIndex, rhs: RowIndex) -> Bool {
+    public static func == (lhs: RowIndex, rhs: RowIndex) -> Bool {
         return lhs.index == rhs.index
     }
     
-    public static func <(lhs: RowIndex, rhs: RowIndex) -> Bool {
+    public static func < (lhs: RowIndex, rhs: RowIndex) -> Bool {
         return lhs.index < rhs.index
     }
 }

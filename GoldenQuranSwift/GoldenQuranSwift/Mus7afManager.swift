@@ -13,7 +13,7 @@ class Mus7afManager: NSObject {
     
     static let shared:Mus7afManager = Mus7afManager()
     
-    private var _currentMus7af:Mus7af = Mus7af()
+    fileprivate var _currentMus7af:Mus7af = Mus7af()
     var currentMus7af:Mus7af {
         get{
             if let _ = _currentMus7af.id {
@@ -43,12 +43,12 @@ class Mus7afManager: NSObject {
         }
     }
     
-    func updateMushafValues(mushaf:Mus7af) {
+    func updateMushafValues( mushaf:Mus7af) {
         mushaf.updatedAt = Date().timeStamp
         DBManager.shared.updateMushaf(mushafObject: mushaf)
     }
     
-    func createNewMushaf(mushaf:Mus7af)  {
+    func createNewMushaf( mushaf:Mus7af)  {
         
         mushaf.currentPage = mushaf.startOffset! + 1
         mushaf.currentSurah = 1

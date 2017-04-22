@@ -38,7 +38,7 @@ class GQTextField: UITextField {
         self.font = FontManager.fontWithSize(size: (self.font?.pointSize)!, isBold: self.isBoldFont)
         
         if let _ = self.placeholder {
-            let attributes = [NSFontAttributeName : self.font]
+            let attributes = [NSFontAttributeName : self.font!] as [String : Any]
             self.attributedPlaceholder = NSAttributedString(string: self.placeholder!,attributes:attributes)
         }
         

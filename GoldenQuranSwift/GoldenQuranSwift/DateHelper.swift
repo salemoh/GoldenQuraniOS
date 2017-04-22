@@ -42,7 +42,7 @@ public extension Date {
             default:
                 break
         }
-        let formatter = Date.cachedFormatter(format.stringFormat, timeZone: timeZone.timeZone, locale: locale)
+        let formatter = Date.cachedFormatter(format: format.stringFormat, timeZone: timeZone.timeZone, locale: locale)
         guard let date = formatter.date(from: string) else {
             return nil
         }
@@ -65,23 +65,23 @@ public extension Date {
             return self.toString(dateStyle: .full, timeStyle: .full, isRelative: false)
         case .weekday:
             let weekdaySymbols = Date.cachedFormatter().weekdaySymbols!
-            let string = weekdaySymbols[component(.weekday)!-1] as String
+            let string = weekdaySymbols[component(component: .weekday)!-1] as String
             return string
         case .shortWeekday:
             let shortWeekdaySymbols = Date.cachedFormatter().shortWeekdaySymbols!
-            return shortWeekdaySymbols[component(.weekday)!-1] as String
+            return shortWeekdaySymbols[component(component: .weekday)!-1] as String
         case .veryShortWeekday:
             let veryShortWeekdaySymbols = Date.cachedFormatter().veryShortWeekdaySymbols!
-            return veryShortWeekdaySymbols[component(.weekday)!-1] as String
+            return veryShortWeekdaySymbols[component(component: .weekday)!-1] as String
         case .month:
             let monthSymbols = Date.cachedFormatter().monthSymbols!
-            return monthSymbols[component(.weekday)!-1] as String
+            return monthSymbols[component(component: .weekday)!-1] as String
         case .shortMonth:
             let shortMonthSymbols = Date.cachedFormatter().shortMonthSymbols!
-            return shortMonthSymbols[component(.weekday)!-1] as String
+            return shortMonthSymbols[component(component: .weekday)!-1] as String
         case .veryShortMonth:
             let veryShortMonthSymbols = Date.cachedFormatter().veryShortMonthSymbols!
-            return veryShortMonthSymbols[component(.weekday)!-1] as String
+            return veryShortMonthSymbols[component(component: .weekday)!-1] as String
         }
     }
     
@@ -97,13 +97,13 @@ public extension Date {
         default:
             break
         }
-        let formatter = Date.cachedFormatter(format.stringFormat, timeZone: timeZone.timeZone, locale: locale)
+        let formatter = Date.cachedFormatter(format: format.stringFormat, timeZone: timeZone.timeZone, locale: locale)
         return formatter.string(from: self)
     }
     
     /// Converts the date to string based on DateFormatter's date style and time style with optional relative date formatting, optional time zone and optional locale.
     func toString(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, isRelative: Bool = false, timeZone: Foundation.TimeZone = Foundation.NSTimeZone.local, locale: Locale = Locale.current) -> String {
-        let formatter = Date.cachedFormatter(dateStyle, timeStyle: timeStyle, doesRelativeDateFormatting: isRelative, timeZone: timeZone, locale: locale)
+        let formatter = Date.cachedFormatter(dateStyle: dateStyle, timeStyle: timeStyle, doesRelativeDateFormatting: isRelative, timeZone: timeZone, locale: locale)
         return formatter.string(from: self)
     }
     
@@ -191,120 +191,120 @@ public extension Date {
         }
         if d < 28 {
             if isPast {
-                if compare(.isLastWeek) {
+                if compareDate(comparison: .isLastWeek) {
                     return strings?[.oneWeekPast] ?? NSLocalizedString("last week", comment: "Date format")
                 } else {
                     let string = strings?[.weeksPast] ?? NSLocalizedString("%.f weeks ago", comment: "Date format")
-                    return String(format: string, Double(abs(since(Date(), in: .week))))
+                    return String(format: string, Double(abs(since(date: Date(), in: .week))))
                 }
             } else {
-                if compare(.isNextWeek) {
+                if compareDate(comparison: .isNextWeek) {
                     return strings?[.oneWeekFuture] ?? NSLocalizedString("next week", comment: "Date format")
                 } else {
                     let string = strings?[.weeksFuture] ?? NSLocalizedString("in %.f weeks", comment: "Date format")
-                    return String(format: string, Double(abs(since(Date(), in: .week))))
+                    return String(format: string, Double(abs(since(date: Date(), in: .week))))
                 }
             }
         }
-        if compare(.isThisYear) {
+        if compareDate(comparison: .isThisYear) {
             if isPast {
-                if compare(.isLastMonth) {
+                if compareDate(comparison: .isLastMonth) {
                     return strings?[.oneMonthPast] ?? NSLocalizedString("last month", comment: "Date format")
                 } else {
                     let string = strings?[.monthsPast] ?? NSLocalizedString("%.f months ago", comment: "Date format")
-                    return String(format: string, Double(abs(since(Date(), in: .month))))
+                    return String(format: string, Double(abs(since(date: Date(), in: .month))))
                 }
             } else {
-                if compare(.isNextMonth) {
+                if compareDate(comparison: .isNextMonth) {
                     return strings?[.oneMonthFuture] ?? NSLocalizedString("next month", comment: "Date format")
                 } else {
                     let string = strings?[.monthsFuture] ?? NSLocalizedString("in %.f months", comment: "Date format")
-                    return String(format: string, Double(abs(since(Date(), in: .month))))
+                    return String(format: string, Double(abs(since(date: Date(), in: .month))))
                 }
             }
         }
         if isPast {
-            if compare(.isLastYear) {
+            if compareDate(comparison: .isLastYear) {
                 return strings?[.oneYearPast] ?? NSLocalizedString("last year", comment: "Date format")
             } else {
                 let string = strings?[.yearsPast] ?? NSLocalizedString("%.f years ago", comment: "Date format")
-                return String(format: string, Double(abs(since(Date(), in: .year))))
+                return String(format: string, Double(abs(since(date: Date(), in: .year))))
             }
         } else {
-            if compare(.isNextYear) {
+            if compareDate(comparison: .isNextYear) {
                 return strings?[.oneYearFuture] ?? NSLocalizedString("next year", comment: "Date format")
             } else {
                 let string = strings?[.yearsFuture] ?? NSLocalizedString("in %.f years", comment: "Date format")
-                return String(format: string, Double(abs(since(Date(), in: .year))))
+                return String(format: string, Double(abs(since(date: Date(), in: .year))))
             }
         }
     }
     
     
-    // MARK: Compare Dates
+    // MARK: compareDate Dates
     
-    /// Compares dates to see if they are equal while ignoring time.
-    func compare(_ comparison:DateComparisonType) -> Bool {
+    /// compareDates dates to see if they are equal while ignoring time.
+    func compareDate( comparison:DateComparisonType) -> Bool {
         switch comparison {
             case .isToday:
-                return compare(.isSameDay(as: Date()))
+                return compareDate(comparison: .isSameDay(as: Date()))
             case .isTomorrow:
-                let comparison = Date().adjust(.day, offset:1)
-                return compare(.isSameDay(as: comparison))
+                let comparison = Date().adjust(component: .day, offset:1)
+                return compareDate(comparison: .isSameDay(as: comparison))
             case .isYesterday:
-                let comparison = Date().adjust(.day, offset: -1)
-                return compare(.isSameDay(as: comparison))
+                let comparison = Date().adjust(component: .day, offset: -1)
+                return compareDate(comparison: .isSameDay(as: comparison))
             case .isSameDay(let date):
-                return component(.year) == date.component(.year)
-                    && component(.month) == date.component(.month)
-                    && component(.day) == date.component(.day)
+                return component(component: .year) == date.component(component: .year)
+                    && component(component: .month) == date.component(component: .month)
+                    && component(component: .day) == date.component(component: .day)
             case .isThisWeek:
-                return self.compare(.isSameWeek(as: Date()))
+                return self.compareDate(comparison: .isSameWeek(as: Date()))
             case .isNextWeek:
-                let comparison = Date().adjust(.week, offset:1)
-                return compare(.isSameWeek(as: comparison))
+                let comparison = Date().adjust(component: .week, offset:1)
+                return compareDate(comparison: .isSameWeek(as: comparison))
             case .isLastWeek:
-                let comparison = Date().adjust(.week, offset:-1)
-                return compare(.isSameWeek(as: comparison))
+                let comparison = Date().adjust(component: .week, offset:-1)
+                return compareDate(comparison: .isSameWeek(as: comparison))
             case .isSameWeek(let date):
-                if component(.week) != date.component(.week) {
+                if component(component: .week) != date.component(component: .week) {
                     return false
                 }
                 // Ensure time interval is under 1 week
                 return abs(self.timeIntervalSince(date)) < Date.weekInSeconds
             case .isThisMonth:
-                return self.compare(.isSameMonth(as: Date()))
+                return self.compareDate(comparison: .isSameMonth(as: Date()))
             case .isNextMonth:
-                let comparison = Date().adjust(.month, offset:1)
-                return compare(.isSameMonth(as: comparison))
+                let comparison = Date().adjust(component: .month, offset:1)
+                return compareDate(comparison: .isSameMonth(as: comparison))
             case .isLastMonth:
-                let comparison = Date().adjust(.month, offset:-1)
-                return compare(.isSameMonth(as: comparison))
+                let comparison = Date().adjust(component: .month, offset:-1)
+                return compareDate(comparison: .isSameMonth(as: comparison))
             case .isSameMonth(let date):
-                return component(.year) == date.component(.year) && component(.month) == date.component(.month)
+                return component(component: .year) == date.component(component: .year) && component(component: .month) == date.component(component: .month)
             case .isThisYear:
-                return self.compare(.isSameYear(as: Date()))
+                return self.compareDate(comparison: .isSameYear(as: Date()))
             case .isNextYear:
-                let comparison = Date().adjust(.year, offset:1)
-                return compare(.isSameYear(as: comparison))
+                let comparison = Date().adjust(component: .year, offset:1)
+                return compareDate(comparison: .isSameYear(as: comparison))
             case .isLastYear:
-                let comparison = Date().adjust(.year, offset:-1)
-                return compare(.isSameYear(as: comparison))
+                let comparison = Date().adjust(component: .year, offset:-1)
+                return compareDate(comparison: .isSameYear(as: comparison))
             case .isSameYear(let date):
-                return component(.year) == date.component(.year)
+                return component(component: .year) == date.component(component: .year)
             case .isInTheFuture:
-                return self.compare(.isLater(than: Date()))
+                return self.compareDate(comparison: .isLater(than: Date()))
             case .isInThePast:
-                return self.compare(.isEarlier(than: Date()))
+                return self.compareDate(comparison: .isEarlier(than: Date()))
             case .isEarlier(let date):
                 return (self as NSDate).earlierDate(date) == self
             case .isLater(let date):
                 return (self as NSDate).laterDate(date) == self
         case .isWeekday:
-            return !compare(.isWeekend)
+            return !compareDate(comparison: .isWeekend)
         case .isWeekend:
             let range = Calendar.current.maximumRange(of: Calendar.Component.weekday)!
-            return (component(.weekday) == range.lowerBound || component(.weekday) == range.upperBound - range.lowerBound)
+            return (component(component: .weekday) == range.lowerBound || component(component: .weekday) == range.upperBound - range.lowerBound)
         }
         
     }
@@ -314,7 +314,7 @@ public extension Date {
     
     /// Creates a new date with adjusted components
     
-    func adjust(_ component:DateComponentType, offset:Int) -> Date {
+    func adjust( component:DateComponentType, offset:Int) -> Date {
         var dateComp = DateComponents()
         switch component {
             case .second:
@@ -340,8 +340,8 @@ public extension Date {
     }
     
     /// Return a new Date object with the new hour, minute and seconds values.
-    func adjust(hour: Int?, minute: Int?, second: Int?, day: Int? = nil, month: Int? = nil) -> Date {
-        var comp = Date.components(self)
+    func adjust( hour: Int?, minute: Int?, second: Int?, day: Int? = nil, month: Int? = nil) -> Date {
+        var comp = Date.components(fromDate: self)
         comp.month = month ?? comp.month
         comp.day = day ?? comp.day
         comp.hour = hour ?? comp.hour
@@ -352,39 +352,39 @@ public extension Date {
     
     // MARK: Date for...
     
-    func dateFor(_ type:DateForType) -> Date {
+    func dateFor( type:DateForType) -> Date {
         switch type {
         case .startOfDay:
             return adjust(hour: 0, minute: 0, second: 0)
         case .endOfDay:
             return adjust(hour: 23, minute: 59, second: 29)
         case .startOfWeek:
-            let offset = component(.weekday)!-1
-            return adjust(.day, offset: -(offset))
+            let offset = component(component: .weekday)!-1
+            return adjust(component: .day, offset: -(offset))
         case .endOfWeek:
-            let offset = 7 - component(.weekday)!
-            return adjust(.day, offset: offset)
+            let offset = 7 - component(component: .weekday)!
+            return adjust(component: .day, offset: offset)
         case .startOfMonth:
             return adjust(hour: 0, minute: 0, second: 0, day: 1)
         case .endOfMonth:
-            let month = (component(.month) ?? 0) + 1
+            let month = (component(component: .month) ?? 0) + 1
             return adjust(hour: 0, minute: 0, second: 0, day: 0, month: month)
         case .tomorrow:
-            return adjust(.day, offset:1)
+            return adjust(component: .day, offset:1)
         case .yesterday:
-            return adjust(.day, offset:-1)
+            return adjust(component: .day, offset:-1)
         case .nearestMinute(let nearest):
-            let minutes = (component(.minute)! + nearest/2) / nearest * nearest
+            let minutes = (component(component: .minute)! + nearest/2) / nearest * nearest
             return adjust(hour: nil, minute: minutes, second: nil)
         case .nearestHour(let nearest):
-            let hours = (component(.hour)! + nearest/2) / nearest * nearest
+            let hours = (component(component: .hour)! + nearest/2) / nearest * nearest
             return adjust(hour: hours, minute: 0, second: nil)
         }
     }
     
     // MARK: Time since...
     
-    func since(_ date:Date, in component:DateComponentType) -> Int64 {
+    func since( date:Date, in component:DateComponentType) -> Int64 {
         switch component {
         case .second:
             return Int64(timeIntervalSince(date))
@@ -431,8 +431,8 @@ public extension Date {
     
     // MARK: Extracting components
     
-    func component(_ component:DateComponentType) -> Int? {
-        let components = Date.components(self)
+    func component( component:DateComponentType) -> Int? {
+        let components = Date.components(fromDate: self)
         switch component {
         case .second:
             return components.second
@@ -461,23 +461,23 @@ public extension Date {
     }
     
     func firstDayOfWeek() -> Int {
-        let distanceToStartOfWeek = Date.dayInSeconds * Double(self.component(.weekday)! - 1)
+        let distanceToStartOfWeek = Date.dayInSeconds * Double(self.component(component: .weekday)! - 1)
         let interval: TimeInterval = self.timeIntervalSinceReferenceDate - distanceToStartOfWeek
-        return Date(timeIntervalSinceReferenceDate: interval).component(.day)!
+        return Date(timeIntervalSinceReferenceDate: interval).component(component: .day)!
     }
     
     func lastDayOfWeek() -> Int {
-        let distanceToStartOfWeek = Date.dayInSeconds * Double(self.component(.weekday)! - 1)
+        let distanceToStartOfWeek = Date.dayInSeconds * Double(self.component(component: .weekday)! - 1)
         let distanceToEndOfWeek = Date.dayInSeconds * Double(7)
         let interval: TimeInterval = self.timeIntervalSinceReferenceDate - distanceToStartOfWeek + distanceToEndOfWeek
-        return Date(timeIntervalSinceReferenceDate: interval).component(.day)!
+        return Date(timeIntervalSinceReferenceDate: interval).component(component: .day)!
     }
     
     
     // MARK: Internal Components
     
     internal static func componentFlags() -> Set<Calendar.Component> { return [Calendar.Component.year, Calendar.Component.month, Calendar.Component.day, Calendar.Component.weekOfYear, Calendar.Component.hour, Calendar.Component.minute, Calendar.Component.second, Calendar.Component.weekday, Calendar.Component.weekdayOrdinal, Calendar.Component.weekOfYear] }
-    internal static func components(_ fromDate: Date) -> DateComponents {
+    internal static func components( fromDate: Date) -> DateComponents {
         return Calendar.current.dateComponents(Date.componentFlags(), from: fromDate)
     }
   
@@ -485,7 +485,7 @@ public extension Date {
     // MARK: Static Cached Formatters
     
     /// A cached static array of DateFormatters so that thy are only created once.
-    private static func cachedDateFormatters() -> [String: DateFormatter] {
+    fileprivate static func cachedDateFormatters() -> [String: DateFormatter] {
         struct Static {
             static var formatters: [String: DateFormatter]? = [String: DateFormatter]()
         }
@@ -493,7 +493,7 @@ public extension Date {
     }
     
     /// Generates a cached formatter based on the specified format, timeZone and locale. Formatters are cached in a singleton array using hashkeys.
-    private static func cachedFormatter(_ format:String = DateFormatType.standard.stringFormat, timeZone: Foundation.TimeZone = Foundation.TimeZone.current, locale: Locale = Locale.current) -> DateFormatter {
+    fileprivate static func cachedFormatter( format:String = DateFormatType.standard.stringFormat, timeZone: Foundation.TimeZone = Foundation.TimeZone.current, locale: Locale = Locale.current) -> DateFormatter {
         let hashKey = "\(format.hashValue)\(timeZone.hashValue)\(locale.hashValue)"
         var formatters = Date.cachedDateFormatters()
         if let cachedDateFormatter = formatters[hashKey] {
@@ -509,7 +509,7 @@ public extension Date {
     }
     
     /// Generates a cached formatter based on the provided date style, time style and relative date. Formatters are cached in a singleton array using hashkeys.
-    private static func cachedFormatter(_ dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, doesRelativeDateFormatting: Bool, timeZone: Foundation.TimeZone = Foundation.NSTimeZone.local, locale: Locale = Locale.current) -> DateFormatter {
+    fileprivate static func cachedFormatter( dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, doesRelativeDateFormatting: Bool, timeZone: Foundation.TimeZone = Foundation.NSTimeZone.local, locale: Locale = Locale.current) -> DateFormatter {
         var formatters = Date.cachedDateFormatters()
         let hashKey = "\(dateStyle.hashValue)\(timeStyle.hashValue)\(doesRelativeDateFormatting.hashValue)\(timeZone.hashValue)\(locale.hashValue)"
         if let cachedDateFormatter = formatters[hashKey] {
@@ -640,7 +640,7 @@ public enum DateComparisonType {
     case isTomorrow
     /// Checks if date is yesterday.
     case isYesterday
-    /// Compares date days
+    /// compareDates date days
     case isSameDay(as:Date)
     
     // Weeks
@@ -651,7 +651,7 @@ public enum DateComparisonType {
     case isNextWeek
     /// Checks if date is in last week.
     case isLastWeek
-    /// Compares date weeks
+    /// compareDates date weeks
     case isSameWeek(as:Date)
     
     // Months
@@ -662,7 +662,7 @@ public enum DateComparisonType {
     case isNextMonth
     /// Checks if date is in last month.
     case isLastMonth
-    /// Compares date months
+    /// compareDates date months
     case isSameMonth(as:Date)
     
     // Years
@@ -673,7 +673,7 @@ public enum DateComparisonType {
     case isNextYear
     /// Checks if date is in last year.
     case isLastYear
-    /// Compare date years
+    /// compareDate date years
     case isSameYear(as:Date)
     
     // Relative Time

@@ -15,7 +15,7 @@ class AddMus7afCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblMushafName: UILabel!
     @IBOutlet weak var lblMushafType: UILabel!
     
-    func fillFromMushaf(mushaf:Mus7af){
+    func fillFromMushaf( mushaf:Mus7af){
         
         self.lblMushafName.text = mushaf.name
         self.lblMushafType.text = NSLocalizedString("\((mushaf.type!))_NOVEL", comment: "")
