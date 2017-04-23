@@ -50,5 +50,11 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Prayer times | أوقات الصلاة</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!--Include to allow all connections (DANGER)-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

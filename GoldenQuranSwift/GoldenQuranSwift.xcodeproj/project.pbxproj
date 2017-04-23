@@ -16,6 +16,7 @@
 		1719D06A1E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D0691E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift */; };
 		1719D06E1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D06D1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift */; };
 		1719D0701E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1719D06F1E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift */; };
+		171DD6271EACE57F002AC021 /* RecitationDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171DD6261EACE57F002AC021 /* RecitationDownloadManager.swift */; };
 		17210B181E87F8570055BEF3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B171E87F8570055BEF3 /* LocationManager.swift */; };
 		17210B1A1E8812C20055BEF3 /* PrayerTimesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */; };
 		17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */; };
@@ -34,6 +35,7 @@
 		172329BE1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */; };
 		172329C01E8C78F90083D4AC /* MushafTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329BF1E8C78F90083D4AC /* MushafTopic.swift */; };
 		172329C31E9236170083D4AC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172329C21E9236170083D4AC /* SettingsViewController.swift */; };
+		1737A2D41EACC97300E2A197 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737A2D31EACC97300E2A197 /* NetworkManager.swift */; };
 		1744B2591E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */; };
 		1744B25A1E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */; };
 		1744B25B1E70512E00641FA0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */; };
@@ -114,6 +116,7 @@
 		1719D0691E94F2E700CECAD7 /* SettingsFontSizeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFontSizeTableViewCell.swift; sourceTree = "<group>"; };
 		1719D06D1E95985300CECAD7 /* SettingsLabelWithIconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLabelWithIconTableViewCell.swift; sourceTree = "<group>"; };
 		1719D06F1E95A87400CECAD7 /* SettingsLanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLanguageTableViewCell.swift; sourceTree = "<group>"; };
+		171DD6261EACE57F002AC021 /* RecitationDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecitationDownloadManager.swift; sourceTree = "<group>"; };
 		17210B171E87F8570055BEF3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesManager.swift; sourceTree = "<group>"; };
 		17210B1D1E884D1D0055BEF3 /* PrayerTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		172329BD1E8C31B80083D4AC /* MushafFeaturesIconLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafFeaturesIconLabelTableViewCell.swift; sourceTree = "<group>"; };
 		172329BF1E8C78F90083D4AC /* MushafTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MushafTopic.swift; sourceTree = "<group>"; };
 		172329C21E9236170083D4AC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1737A2D31EACC97300E2A197 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1744B2551E70512E00641FA0 /* HelveticaNeueW23-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Bd.ttf"; sourceTree = "<group>"; };
 		1744B2561E70512E00641FA0 /* HelveticaNeueW23-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueW23-Reg.ttf"; sourceTree = "<group>"; };
 		1744B2571E70512E00641FA0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -480,6 +484,8 @@
 			isa = PBXGroup;
 			children = (
 				976A89501E50EE2500697DD2 /* NotificationsManager.swift */,
+				1737A2D31EACC97300E2A197 /* NetworkManager.swift */,
+				171DD6261EACE57F002AC021 /* RecitationDownloadManager.swift */,
 				17210B191E8812C20055BEF3 /* PrayerTimesManager.swift */,
 				17210B171E87F8570055BEF3 /* LocationManager.swift */,
 				976A89521E50EEAA00697DD2 /* DBManager.swift */,
@@ -636,7 +642,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		60ADD95CEDD1E668EA317D85 /* [CP] Embed Pods Frameworks */ = {
@@ -679,6 +685,7 @@
 				170AFE481E5EDB7A00083424 /* StringExtensions.swift in Sources */,
 				1796A8CA1EA65B1700FF0B3A /* AudioPlayerToolsPickSoraTableViewCell.swift in Sources */,
 				17210B1A1E8812C20055BEF3 /* PrayerTimesManager.swift in Sources */,
+				1737A2D41EACC97300E2A197 /* NetworkManager.swift in Sources */,
 				1719D0681E94858D00CECAD7 /* MushafPageColorManager.swift in Sources */,
 				17210B1E1E884D1D0055BEF3 /* PrayerTimesViewController.swift in Sources */,
 				179E5F831E9D613F00E4CF1C /* TafseerManager.swift in Sources */,
@@ -686,6 +693,7 @@
 				17B9D6291EA7EA7800EAAC52 /* TableOfContentsSectionHeaderTableViewCell.swift in Sources */,
 				1796A8C31EA612C100FF0B3A /* AKPickerView.swift in Sources */,
 				17C684CF1E9AB9CB0008F60B /* ManageNotificationsViewController.swift in Sources */,
+				171DD6271EACE57F002AC021 /* RecitationDownloadManager.swift in Sources */,
 				17EA2E2E1E6E02D20087FFF5 /* MushafListTableViewCell.swift in Sources */,
 				179E5F7F1E9D5ED300E4CF1C /* Tafseer.swift in Sources */,
 				1798E67A1EA3607700ABA84C /* SearchVerseTableViewCell.swift in Sources */,

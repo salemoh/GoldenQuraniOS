@@ -404,6 +404,45 @@ class DBManager: NSObject {
         return recitationsList
     }
     
+    
+    func getMushafRecitationWithID(id:Int, mushafType:MushafType  ) -> Recitation {
+        
+        var dbRecitationQueue:DatabaseQueue?
+        
+        do {
+            dbRecitationQueue = try DatabaseQueue(path: Constants.db.mushafRecitationAndTafseerDBPath)
+        } catch {
+            print("could not create/ open dbQueue \(error.localizedDescription)")
+        }
+        
+        var recitation:Recitation = Recitation()
+        do {
+            try dbRecitationQueue?.inDatabase { db in
+                //"id" INTEGER, "reader" TEXT, "type" TEXT, "baseUrl" TEXT, "name" TEXT
+                let query = String(format:"SELECT id,reader,type,baseUrl,name FROM recitation WHERE type = '%@' AND id = %d  ORDER BY reader ",mushafType.rawValue , id)
+                let rows = try Row.fetchCursor(db, query)
+                
+                while let row = try rows.next() {
+                    let recitationItem = Recitation()
+                    recitationItem.id = row.value(named: "id")
+                    recitationItem.reader = row.value(named: "reader")
+                    recitationItem.type = MushafType(rawValue: row.value(named: "type"))
+                    recitationItem.baseUrl = row.value(named: "baseUrl")
+                    recitationItem.name = row.value(named: "name")
+                    
+                    recitation = recitationItem
+                    break
+                }
+            }
+            
+        } catch  {
+            print("could not fetch getMushafRecitations \(error.localizedDescription)")
+        }
+        return recitation
+    }
+    
+    
+    
     //MARK: ---------------------------
     //MARK: Mushaf Tafseers
     //MARK: ---------------------------

@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = UIColor(patternImage:UIImage(named:"textureHeader")!)
         UINavigationBar.appearance().tintColor = UIColor.orange
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.orange , NSFontAttributeName:FontManager.fontWithSize(size: 16.0 , isBold: true)]
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: FontManager.fontWithSize(size: 16.0)], for: .normal)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.orange , NSFontAttributeName:FontManager.fontWithSize(size: 17.0 , isBold: true)]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: FontManager.fontWithSize(size: 15.0)], for: .normal)
         
         
         
@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         NotificationsManager().fridayNotification()
+        let currentRecititation =  RecitationManager.getRecitationWithId(id: Mus7afManager.shared.currentMus7af.recitationId!)
+        RecitationDownloadManager.downloadRecitation(recitation: currentRecititation, soraNo: 2, verseNo: 3)
         
         return true
     }

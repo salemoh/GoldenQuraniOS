@@ -14,6 +14,10 @@ class RecitationManager: NSObject {
         return DBManager.shared.getMushafRecitations(mushafType: Mus7afManager.shared.currentMus7af.type!)
     }
     
+    class func getRecitationWithId(id:Int) -> Recitation{
+        return DBManager.shared.getMushafRecitationWithID(id: id, mushafType: Mus7afManager.shared.currentMus7af.type!)
+    }
+    
     class func setActiveRecitation( recitation:Recitation){
         Mus7afManager.shared.currentMus7af.recitationId = recitation.id!
         Mus7afManager.shared.updateMushafValues(mushaf: Mus7afManager.shared.currentMus7af)

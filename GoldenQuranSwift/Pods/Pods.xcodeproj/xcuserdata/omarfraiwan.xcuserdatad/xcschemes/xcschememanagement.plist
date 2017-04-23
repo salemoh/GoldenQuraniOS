@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GRDB.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15072B341B0AC49F204FE3C5AE89010E</key>
+		<key>21EE0983832077F2C88BFC93B94CA415</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>21EE0983832077F2C88BFC93B94CA415</key>
+		<key>2D6048FC796035B35C92EF2A71B44E9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE0D957D14E62332D7DF9C0540D1172F</key>
+		<key>7E08C0B05D4000AD55E6CE9BB548AF76</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,21 +1,24 @@
 PODS:
   - Adhan (0.1.4)
-  - GRDB.swift (0.103.0)
-  - IQKeyboardManagerSwift (4.0.8)
-  - SideMenu (2.2.0)
+  - Alamofire (4.4.0)
+  - GRDB.swift (0.106.1)
+  - IQKeyboardManagerSwift (4.0.9)
+  - SideMenu (2.3.1)
 
 DEPENDENCIES:
   - Adhan
+  - Alamofire
   - GRDB.swift
   - IQKeyboardManagerSwift
   - SideMenu
 
 SPEC CHECKSUMS:
   Adhan: 05c1a5fb29fa32aafc66b49c67b44e2e40942c54
-  GRDB.swift: c2a344a7559f9ade1a6dcb9ccf4540e7f6e39dea
-  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
-  SideMenu: eeff6b85456c5c6e14165655691d2033f6b24969
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  GRDB.swift: 55f0c6d9c2cffa2330c7acf6b033732400322c18
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  SideMenu: 2a3c3da0b3d5f78a047b2271bb7398260fcd7e3d
 
-PODFILE CHECKSUM: 415e0fe4b540c61968920db5d4827aa749b405fa
+PODFILE CHECKSUM: 2d275ad63d8b1c39f571978002b994175d46e9e2
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
